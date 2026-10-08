@@ -1,4 +1,4 @@
-# MindInMotion software
+# Backlot and Dumptruck
 
 Download page for [Backlot](https://github.com/MIM18-code/homebrew-backlot) and [Dumptruck](https://github.com/MIM18-code/dumptruck), served by GitHub Pages at https://mim18-code.github.io/software/.
 
