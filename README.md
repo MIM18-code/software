@@ -1,6 +1,6 @@
 # MindInMotion software
 
-Download page for [Backlot](https://github.com/MIM18-code/homebrew-backlot) and [Dumptruck](https://github.com/MIM18-code/dumptruck), served by GitHub Pages at https://mim18-code.github.io/.
+Download page for [Backlot](https://github.com/MIM18-code/homebrew-backlot) and [Dumptruck](https://github.com/MIM18-code/dumptruck), served by GitHub Pages at https://mim18-code.github.io/software/.
 
 The page is one static file, `index.html`. When it loads, it asks the GitHub API for the newest release of each app and updates the version, size, download link and checksum. The links written into the HTML are the fallback if that request fails.
 
