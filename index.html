@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MindInMotion Software</title>
+<meta name="description" content="Backlot and Dumptruck: free, open-source Mac apps for indie film production, from MindInMotion.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='6' width='28' height='8' rx='1.5' fill='%237EA6EE'/%3E%3Crect x='2' y='18' width='28' height='8' rx='1.5' fill='%23F0AE3C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --page: #EEF0F2;
+  --ink: #18202E;
+  --ink-soft: #4A5466;
+  --rule: #C4CAD3;
+  --panel: #FFFFFF;
+  --strip-blue: #A9C4F2;
+  --strip-yellow: #F7CB62;
+  --strip-ink: #18202E;
+  --strip-rule: rgba(24, 32, 46, .22);
+  --break: #18202E;
+  --break-ink: #EEF0F2;
+  --button: #18202E;
+  --button-ink: #FFFFFF;
+  --code-bg: #E3E7EC;
+  --focus: #2F6BD8;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #141A24;
+    --ink: #E4E8EE;
+    --ink-soft: #A3ACBA;
+    --rule: #2E3848;
+    --panel: #1B2330;
+    --strip-blue: #7EA6EE;
+    --strip-yellow: #F0AE3C;
+    --strip-rule: rgba(24, 32, 46, .3);
+    --break: #000000;
+    --break-ink: #E4E8EE;
+    --button: #E4E8EE;
+    --button-ink: #141A24;
+    --code-bg: #10151E;
+    --focus: #8DB4FF;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #141A24;
+  --ink: #E4E8EE;
+  --ink-soft: #A3ACBA;
+  --rule: #2E3848;
+  --panel: #1B2330;
+  --strip-blue: #7EA6EE;
+  --strip-yellow: #F0AE3C;
+  --strip-rule: rgba(24, 32, 46, .3);
+  --break: #000000;
+  --break-ink: #E4E8EE;
+  --button: #E4E8EE;
+  --button-ink: #141A24;
+  --code-bg: #10151E;
+  --focus: #8DB4FF;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: "Archivo", system-ui, sans-serif;
+  font-variation-settings: "wdth" 100;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 3px; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+/* Masthead */
+.masthead {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 28px 0 0;
+  font-variation-settings: "wdth" 75;
+  font-size: 15px;
+}
+.masthead strong { font-weight: 700; font-size: 17px; letter-spacing: .01em; }
+.masthead span { color: var(--ink-soft); margin-left: 6px; }
+.masthead nav a { margin-left: 20px; color: var(--ink-soft); text-decoration: none; }
+.masthead nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* Intro */
+.intro { padding: 72px 0 40px; max-width: 760px; }
+h1 {
+  margin: 0 0 20px;
+  font-variation-settings: "wdth" 62;
+  font-weight: 750;
+  font-size: clamp(48px, 8.4vw, 104px);
+  line-height: .9;
+  letter-spacing: -.01em;
+}
+.intro p { margin: 0; font-size: 19px; color: var(--ink-soft); max-width: 62ch; }
+
+/* The stripboard */
+.board { margin: 8px 0 0; }
+.board-head, .strip {
+  display: grid;
+  grid-template-columns: 64px minmax(150px, 1.25fr) minmax(200px, 2.2fr) 96px 88px 92px 180px;
+  align-items: stretch;
+}
+.board-head {
+  font-variation-settings: "wdth" 70;
+  font-size: 13px;
+  color: var(--ink-soft);
+  padding-bottom: 6px;
+}
+.board-head > span { padding: 0 12px; }
+.strip {
+  color: var(--strip-ink);
+  font-variation-settings: "wdth" 72;
+  min-height: 64px;
+  border-top: 1px solid var(--strip-rule);
+}
+.strip.blue { background: var(--strip-blue); }
+.strip.yellow { background: var(--strip-yellow); }
+.strip > *, .strip .meta {
+  padding: 10px 12px;
+  display: flex; align-items: center;
+  border-left: 1px solid var(--strip-rule);
+}
+.strip > *:first-child { border-left: 0; justify-content: center; }
+.strip .num { padding: 6px; }
+.strip .num img { display: block; width: 40px; height: 40px; }
+.strip .num .strip-truck { width: 52px; height: 52px; margin: -6px; }
+.strip .name a {
+  font-weight: 750; font-size: 26px; letter-spacing: .01em;
+  text-decoration: none;
+}
+.strip .name a:hover { text-decoration: underline; }
+.strip .job { font-size: 16px; line-height: 1.3; }
+.strip .meta { font-size: 15px; font-variant-numeric: tabular-nums; }
+.strip .get { padding: 8px 10px; justify-content: stretch; }
+.strip .get a {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center;
+  height: 100%; min-height: 44px;
+  background: var(--break); color: var(--break-ink);
+  gap: 6px;
+  font-weight: 650; font-size: 15px; text-decoration: none;
+  border-radius: 3px;
+}
+.strip .get a:hover { filter: brightness(1.25); }
+@media (prefers-reduced-motion: no-preference) {
+  .strip { animation: strip-in .42s cubic-bezier(.2, .7, .2, 1) both; }
+  .strip.yellow { animation-delay: .12s; }
+  @keyframes strip-in {
+    from { transform: translateX(-28px); opacity: 0; }
+    to { transform: none; opacity: 1; }
+  }
+}
+.daybreak {
+  background: var(--break); color: var(--break-ink);
+  font-variation-settings: "wdth" 72;
+  font-size: 15px;
+  padding: 10px 16px;
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.daybreak span:last-child { opacity: .75; }
+
+/* Product sections */
+.product { padding: 104px 0 24px; scroll-margin-top: 16px; }
+.product-head { display: flex; align-items: center; gap: 22px; margin-bottom: 32px; }
+.product-head img { width: 88px; height: 88px; flex: none; }
+.product-head .truck { width: 120px; height: auto; margin: -16px -8px -16px -12px; }
+h2 {
+  margin: 0;
+  font-variation-settings: "wdth" 62;
+  font-weight: 750;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: .95;
+}
+.product-head p { margin: 6px 0 0; font-size: 19px; color: var(--ink-soft); }
+
+.columns { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.lede { font-size: 19px; margin: 0 0 24px; max-width: 60ch; }
+.features { list-style: none; padding: 0; margin: 0 0 28px; border-top: 1px solid var(--rule); }
+.features li { padding: 14px 0; border-bottom: 1px solid var(--rule); max-width: 64ch; }
+.features b { font-weight: 650; }
+h3 {
+  margin: 32px 0 10px;
+  font-variation-settings: "wdth" 75;
+  font-size: 19px; font-weight: 700;
+}
+.small { font-size: 15px; color: var(--ink-soft); }
+.small ul { margin: 0; padding-left: 18px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.small li { margin: 4px 0; }
+
+/* Install panel */
+.install { background: var(--panel); border-radius: 4px; overflow: hidden; }
+.install::before { content: ""; display: block; height: 10px; }
+.install.blue::before { background: var(--strip-blue); }
+.install.yellow::before { background: var(--strip-yellow); }
+.install-body { padding: 24px 24px 26px; }
+.install h3:first-child { margin-top: 0; }
+.dl {
+  display: block; text-align: center;
+  background: var(--button); color: var(--button-ink);
+  padding: 15px 18px; border-radius: 4px;
+  font-weight: 650; font-size: 18px; text-decoration: none;
+}
+.dl:hover { filter: brightness(1.2); }
+.dl small { display: block; font-weight: 400; font-size: 14px; opacity: .8; margin-top: 2px; }
+.after-dl { font-size: 14px; color: var(--ink-soft); margin: 10px 0 0; }
+.code {
+  display: flex; align-items: flex-start;
+  background: var(--code-bg); border-radius: 4px;
+  margin: 0;
+}
+.after-dl code { font-family: var(--mono); font-size: 13px; white-space: nowrap; }
+.code pre {
+  flex: 1; min-width: 0;
+  margin: 0; padding: 14px 16px;
+  font-family: var(--mono); font-size: 13.5px; line-height: 1.7;
+  overflow-x: auto; white-space: pre;
+}
+.copy {
+  flex: none; margin: 8px 8px 0 0;
+  font: inherit; font-size: 13px; font-variation-settings: "wdth" 75;
+  background: var(--panel); color: var(--ink);
+  border: 1px solid var(--rule); border-radius: 3px;
+  padding: 4px 10px; cursor: pointer;
+}
+.copy:hover { border-color: var(--ink-soft); }
+.links { list-style: none; padding: 0; margin: 0; font-size: 15px; }
+.links li { padding: 8px 0; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 12px; }
+.links li:last-child { border-bottom: 0; }
+.links .note { color: var(--ink-soft); white-space: nowrap; }
+.hash { font-family: var(--mono); font-size: 12px; word-break: break-all; color: var(--ink-soft); margin: 8px 0 0; }
+
+.beta-note {
+  margin: 0 0 28px; padding: 14px 16px;
+  border-left: 4px solid var(--strip-yellow);
+  background: var(--panel);
+  max-width: 64ch; font-size: 16px;
+}
+
+footer {
+  margin-top: 96px; padding: 28px 0 48px;
+  border-top: 1px solid var(--rule);
+  font-size: 15px; color: var(--ink-soft);
+  display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+}
+footer p { margin: 0; max-width: 70ch; }
+
+@media (max-width: 980px) {
+  .board-head { display: none; }
+  .strip {
+    grid-template-columns: 52px 1fr auto;
+    grid-template-areas:
+      "num name get"
+      "num job job"
+      "num meta meta";
+  }
+  .strip > * { border-left: 0; padding: 4px 12px; }
+  .strip .num { grid-area: num; border-right: 1px solid var(--strip-rule); }
+  .strip .name { grid-area: name; padding-top: 12px; }
+  .strip .job { grid-area: job; }
+  .strip .meta { display: inline; padding: 0; border-left: 0; }
+  .strip .metas { grid-area: meta; padding: 2px 12px 14px; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+  .strip .get { grid-area: get; padding: 10px 10px 0 0; }
+  .strip .get a { padding: 0 16px; }
+  .columns { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (min-width: 981px) {
+  .strip .metas { display: contents; }
+}
+@media (max-width: 520px) {
+  .wrap { padding: 0 16px; }
+  .intro { padding-top: 48px; }
+  .product { padding-top: 72px; }
+  .product-head { gap: 14px; }
+  .product-head img { width: 64px; height: 64px; }
+  .product-head .truck { width: 88px; }
+  .strip .name a { font-size: 22px; }
+  .strip .get a { font-size: 14px; padding: 0 12px; }
+  .masthead nav a { margin-left: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <div><strong>MindInMotion</strong><span>software</span></div>
+  <nav aria-label="Apps">
+    <a href="#backlot">Backlot</a>
+    <a href="#dumptruck">Dumptruck</a>
+  </nav>
+</header>
+
+<main>
+<section class="intro">
+  <h1>Free Mac apps for making films</h1>
+  <p>MindInMotion has shot seven low-budget features. We wrote Backlot to run the production office and Dumptruck to offload camera cards, and we're giving both away as open source. Each one is signed and notarized by Apple, so it opens like any other Mac app.</p>
+</section>
+
+<div class="board" role="table" aria-label="Downloads">
+  <div class="board-head" role="row">
+    <span role="columnheader"><span class="sr-only">Icon</span></span>
+    <span role="columnheader">App</span>
+    <span role="columnheader">What it does</span>
+    <span role="columnheader">Version</span>
+    <span role="columnheader">macOS</span>
+    <span role="columnheader">License</span>
+    <span role="columnheader"><span class="sr-only">Download</span></span>
+  </div>
+
+  <div class="strip blue" role="row">
+    <span class="num" role="cell"><img src="assets/backlot-mark.svg" alt="" width="40" height="40"></span>
+    <span class="name" role="cell"><a href="#backlot">Backlot</a></span>
+    <span class="job" role="cell">Budget, breakdown, stripboard, call sheets, daily reports</span>
+    <span class="metas">
+      <span class="meta" role="cell" data-app="backlot" data-field="version">0.7.0 beta 1</span>
+      <span class="meta" role="cell">13 or later</span>
+      <span class="meta" role="cell">GPL-3.0</span>
+    </span>
+    <span class="get" role="cell"><a data-app="backlot" data-href="dmg" href="https://github.com/MIM18-code/homebrew-backlot/releases/download/v0.7.0-beta.1/Backlot-0.7.0-beta.1.dmg">Download <span data-app="backlot" data-field="size">135 MB</span></a></span>
+  </div>
+
+  <div class="strip yellow" role="row">
+    <span class="num" role="cell"><img src="assets/dumptruck-512.png" alt="" width="52" height="52" class="strip-truck"></span>
+    <span class="name" role="cell"><a href="#dumptruck">Dumptruck</a></span>
+    <span class="job" role="cell">Copies camera cards to backup drives and checks every copy</span>
+    <span class="metas">
+      <span class="meta" role="cell" data-app="dumptruck" data-field="version">0.5.6 beta</span>
+      <span class="meta" role="cell">14 or later</span>
+      <span class="meta" role="cell">Apache-2.0</span>
+    </span>
+    <span class="get" role="cell"><a data-app="dumptruck" data-href="dmg" href="https://github.com/MIM18-code/dumptruck/releases/download/v0.5.6-beta/Dumptruck-0.5.6-beta-arm64.dmg">Download <span data-app="dumptruck" data-field="size">94 MB</span></a></span>
+  </div>
+
+  <div class="daybreak">
+    <span>Apple Silicon Macs only. There are no Intel builds.</span>
+    <span>Both apps are betas.</span>
+  </div>
+</div>
+
+<!-- Backlot -->
+<section class="product" id="backlot" aria-labelledby="backlot-title">
+  <div class="product-head">
+    <img src="assets/backlot-mark.svg" alt="" width="88" height="88">
+    <div>
+      <h2 id="backlot-title">Backlot</h2>
+      <p>A production office that lives on your Mac</p>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div>
+      <p class="lede">Backlot keeps the budget, script breakdown, stripboard, day out of days, call sheets and daily reports in one project file on your own disk, and prints them the way a production office expects to see them.</p>
+
+      <ul class="features">
+        <li><b>Budgets that track the money.</b> Fringes, globals and budget alternatives, plus purchase orders, invoices and petty cash posted against each line, so every account shows committed, spent and variance.</li>
+        <li><b>Breakdowns from your script.</b> Import a Final Draft or Fountain draft. When a revised draft comes in, Backlot shows what changed before it touches anything and marks the pages in the standard revision colors.</li>
+        <li><b>A real stripboard.</b> Drag strips, sort by location or time of day, keep named board alternatives, pin shoot days to a calendar, and get a cast and element day out of days from the same board.</li>
+        <li><b>Call sheets you can send.</b> Issue a call sheet as a PDF, send it by email or text, and see who confirmed. Daily reports, a take log and a one-click production book come from the same project.</li>
+        <li><b>Works with Claude.</b> A built-in MCP server lets Claude and other MCP clients read and edit the same project, with the same validation and undo history as the app.</li>
+      </ul>
+
+      <h3>Optional extras</h3>
+      <div class="small">
+        <p style="margin:0 0 6px">Backlot checks for these at startup and tells you what's missing.</p>
+        <ul>
+          <li>PDF printing and issuing call sheets need Google Chrome.</li>
+          <li>Reading FDX and Fountain scripts and printing sides need a separately installed screenwriting engine.</li>
+          <li>Gorilla workbook and Movie Magic XML export need a separately installed budget engine.</li>
+          <li>Email goes through your own Resend account or Google Workspace.</li>
+          <li>AI assists run on a local Ollama model or your own API key.</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside class="install blue" aria-label="Get Backlot">
+      <div class="install-body">
+        <a class="dl" data-app="backlot" data-href="dmg" href="https://github.com/MIM18-code/homebrew-backlot/releases/download/v0.7.0-beta.1/Backlot-0.7.0-beta.1.dmg">
+          Download Backlot
+          <small><span data-app="backlot" data-field="version">0.7.0 beta 1</span>, <span data-app="backlot" data-field="size">135 MB</span> disk image</small>
+        </a>
+        <p class="after-dl">Open the disk image and drag Backlot to Applications. Needs an Apple Silicon Mac with macOS 13 Ventura or later.</p>
+
+        <h3>Or install with Homebrew</h3>
+        <div class="code">
+          <pre id="brew-backlot">brew tap MIM18-code/backlot
+brew trust MIM18-code/backlot
+brew install --cask backlot</pre>
+          <button class="copy" type="button" data-copy="brew-backlot">Copy</button>
+        </div>
+        <p class="after-dl">Homebrew asks you to trust a third-party tap once, which is the second line. Update later with <code>brew upgrade --cask backlot</code>.</p>
+
+        <h3>Source and checksums</h3>
+        <ul class="links">
+          <li><a data-app="backlot" data-href="source" href="https://github.com/MIM18-code/homebrew-backlot/releases/download/v0.7.0-beta.1/Backlot-0.7.0-beta.1-source.tar.gz">Source code</a><span class="note">GPL-3.0, 3.2 MB</span></li>
+          <li><a data-app="backlot" data-href="sums" href="https://github.com/MIM18-code/homebrew-backlot/releases/download/v0.7.0-beta.1/SHA256SUMS">SHA-256 checksums</a><span class="note">All release files</span></li>
+          <li><a data-app="backlot" data-href="release" href="https://github.com/MIM18-code/homebrew-backlot/releases/tag/v0.7.0-beta.1">Release notes</a><span class="note">On GitHub</span></li>
+        </ul>
+        <p class="hash" data-app="backlot" data-field="sha" data-file="Backlot-0.7.0-beta.1.dmg">DMG SHA-256: 7c2e9b7201a7af566aa13164c4a0f6314d0d486dc8c64d47c11d15b80da953b1</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- Dumptruck -->
+<section class="product" id="dumptruck" aria-labelledby="dumptruck-title">
+  <div class="product-head">
+    <img class="truck" src="assets/dumptruck-512.png" alt="" width="120" height="120">
+    <div>
+      <h2 id="dumptruck-title">Dumptruck</h2>
+      <p>Camera card offload that checks every copy</p>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div>
+      <p class="lede">Dumptruck copies a camera card to your backup drives, reads each copy back off the drive to check it against the card, and writes an HTML and PDF report with ASC MHL manifests. A card shows SAFE TO WIPE only when two separate drives hold verified copies. There is no erase button. Wiping the card is still your call.</p>
+
+      <p class="beta-note">This is a beta. SAFE TO WIPE means the job passed Dumptruck's verification when it ran. It can't protect you from a drive that fails later. Keep your usual backup routine alongside it, and read the report before you erase a card.</p>
+
+      <ul class="features">
+        <li><b>Verification that reads the drive.</b> Copies are written past the macOS file cache, so the verify pass reads the data back from the drive itself instead of from memory.</li>
+        <li><b>Cards that keep shooting.</b> Bring back a card that wasn't formatted and Dumptruck copies only the new clips into the same folder, adding a new manifest generation. Changed or reused clip names get a loud warning, never a silent skip.</li>
+        <li><b>Reports for the client.</b> Every offload gets an HTML and PDF report with clip thumbnails and metadata, a JSON receipt, ASC MHL v2.0 and legacy MHL v1.1.</li>
+        <li><b>Camera formats.</b> Dumptruck reads R3D and BRAW files for metadata and thumbnails through bundled helpers, which ask you to accept their terms the first time. ARRIRAW metadata needs the ARRI Reference Tool installed separately. Copying and verification work either way.</li>
+      </ul>
+    </div>
+
+    <aside class="install yellow" aria-label="Get Dumptruck">
+      <div class="install-body">
+        <a class="dl" data-app="dumptruck" data-href="dmg" href="https://github.com/MIM18-code/dumptruck/releases/download/v0.5.6-beta/Dumptruck-0.5.6-beta-arm64.dmg">
+          Download Dumptruck
+          <small><span data-app="dumptruck" data-field="version">0.5.6 beta</span>, <span data-app="dumptruck" data-field="size">94 MB</span> disk image</small>
+        </a>
+        <p class="after-dl">Open the disk image and drag Dumptruck to Applications. Needs an Apple Silicon Mac with macOS 14 Sonoma or later.</p>
+
+        <h3>Or install with Homebrew</h3>
+        <div class="code">
+          <pre id="brew-dumptruck">brew tap MIM18-code/dumptruck
+brew trust MIM18-code/dumptruck
+brew install --cask dumptruck</pre>
+          <button class="copy" type="button" data-copy="brew-dumptruck">Copy</button>
+        </div>
+        <p class="after-dl">Same notarized build as the download. Update later with <code>brew upgrade --cask dumptruck</code>.</p>
+
+        <h3>Build from source</h3>
+        <div class="code">
+          <pre id="src-dumptruck">git clone https://github.com/MIM18-code/dumptruck.git</pre>
+          <button class="copy" type="button" data-copy="src-dumptruck">Copy</button>
+        </div>
+        <p class="after-dl">The README walks through the Python engine, FFmpeg and the SwiftUI app build.</p>
+
+        <h3>Source and checksums</h3>
+        <ul class="links">
+          <li><a href="https://github.com/MIM18-code/dumptruck">Source code</a><span class="note">Apache-2.0, on GitHub</span></li>
+          <li><a data-app="dumptruck" data-href="release" href="https://github.com/MIM18-code/dumptruck/releases/tag/v0.5.6-beta">Release notes</a><span class="note">On GitHub</span></li>
+        </ul>
+        <p class="hash" data-app="dumptruck" data-field="sha" data-file="Dumptruck-0.5.6-beta-arm64.dmg">DMG SHA-256: 64b9d0af0f8a3f969881068a93a19c18e1ea841a4a3448dd22d3e1c73a4b1a39</p>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>Made by MindInMotion LLC. Backlot is licensed under GPL-3.0 and Dumptruck under Apache-2.0. Both come without warranty. Third-party components keep their own licenses, listed in each release.</p>
+  <p><a href="https://github.com/MIM18-code">MindInMotion on GitHub</a></p>
+</footer>
+
+</div>
+
+<script>
+// Copy buttons
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = document.getElementById(btn.dataset.copy).textContent;
+    var done = function () {
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+    };
+    try {
+      navigator.clipboard.writeText(text).then(done, function () { btn.textContent = 'Select and copy'; });
+    } catch (e) { btn.textContent = 'Select and copy'; }
+  });
+});
+
+// Pick up new releases from GitHub so the page doesn't go stale.
+// The links written into the HTML above are the fallback if this fails.
+var APPS = {
+  backlot:   { repo: 'MIM18-code/homebrew-backlot', prefix: /^Backlot\s+/i,   dmg: /^Backlot-.*\.dmg$/, source: /-source\.tar\.gz$/, sums: /^SHA256SUMS$/ },
+  dumptruck: { repo: 'MIM18-code/dumptruck',        prefix: /^Dumptruck\s+/i, dmg: /\.dmg$/ }
+};
+function setAll(app, attr, key, fn) {
+  document.querySelectorAll('[data-app="' + app + '"][' + attr + '="' + key + '"]').forEach(fn);
+}
+Object.keys(APPS).forEach(function (app) {
+  var cfg = APPS[app];
+  fetch('https://api.github.com/repos/' + cfg.repo + '/releases?per_page=10')
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (list) {
+      var rel = list.filter(function (r) { return !r.draft; })[0];
+      if (!rel) return;
+      var find = function (re) { return re && rel.assets.filter(function (a) { return re.test(a.name); })[0]; };
+      var dmg = find(cfg.dmg);
+      if (!dmg) return;
+      var version = (rel.name || rel.tag_name).replace(cfg.prefix, '').replace(/^v/, '');
+      var mb = Math.round(dmg.size / 1e6) + ' MB';
+      setAll(app, 'data-field', 'version', function (el) { el.textContent = version; });
+      setAll(app, 'data-field', 'size', function (el) { el.textContent = mb; });
+      setAll(app, 'data-href', 'dmg', function (el) { el.href = dmg.browser_download_url; });
+      setAll(app, 'data-href', 'release', function (el) { el.href = rel.html_url; });
+      ['source', 'sums'].forEach(function (k) {
+        var a = find(cfg[k]);
+        if (a) setAll(app, 'data-href', k, function (el) { el.href = a.browser_download_url; });
+      });
+      // The checksum written in the HTML belongs to that exact file. Keep it only if the file hasn't changed.
+      var shaInBody = (rel.body || '').match(/SHA-256:\s*`?([0-9a-f]{64})/i);
+      setAll(app, 'data-field', 'sha', function (el) {
+        if (shaInBody) el.textContent = 'DMG SHA-256: ' + shaInBody[1];
+        else if (el.dataset.file !== dmg.name) el.hidden = true;
+      });
+    })
+    .catch(function () { /* keep the built-in links */ });
+});
+</script>
+</body>
+</html>
