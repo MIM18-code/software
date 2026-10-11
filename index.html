@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Backlot and Dumptruck</title>
-<meta name="description" content="Backlot and Dumptruck: free, open-source Mac apps for film production.">
+<title>Backlot, Dumptruck and Writers Block</title>
+<meta name="description" content="Backlot, Dumptruck and Writers Block: free Mac apps for writing and making films.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='6' width='28' height='8' rx='1.5' fill='%237EA6EE'/%3E%3Crect x='2' y='18' width='28' height='8' rx='1.5' fill='%23F0AE3C'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,7 @@
   --panel: #FFFFFF;
   --strip-blue: #A9C4F2;
   --strip-yellow: #F7CB62;
+  --strip-teal: #8FD3C8;
   --strip-ink: #18202E;
   --strip-rule: rgba(24, 32, 46, .22);
   --break: #18202E;
@@ -38,6 +39,8 @@
     --panel: #1B2330;
     --strip-blue: #7EA6EE;
     --strip-yellow: #F0AE3C;
+  --strip-teal: #4FB3A4;
+    --strip-teal: #4FB3A4;
     --strip-rule: rgba(24, 32, 46, .3);
     --break: #000000;
     --break-ink: #E4E8EE;
@@ -56,6 +59,7 @@
   --panel: #1B2330;
   --strip-blue: #7EA6EE;
   --strip-yellow: #F0AE3C;
+  --strip-teal: #4FB3A4;
   --strip-rule: rgba(24, 32, 46, .3);
   --break: #000000;
   --break-ink: #E4E8EE;
@@ -130,6 +134,7 @@ h1 {
 }
 .strip.blue { background: var(--strip-blue); }
 .strip.yellow { background: var(--strip-yellow); }
+.strip.teal { background: var(--strip-teal); }
 .strip > *, .strip .meta {
   padding: 10px 12px;
   display: flex; align-items: center;
@@ -139,6 +144,7 @@ h1 {
 .strip .num { padding: 6px; }
 .strip .num img { display: block; width: 40px; height: 40px; }
 .strip .num .strip-truck { width: 52px; height: 52px; margin: -6px; }
+.strip .num .strip-icon { width: 46px; height: 46px; margin: -3px; }
 .strip .name a {
   font-weight: 750; font-size: 26px; letter-spacing: .01em;
   text-decoration: none;
@@ -160,6 +166,7 @@ h1 {
 @media (prefers-reduced-motion: no-preference) {
   .strip { animation: strip-in .42s cubic-bezier(.2, .7, .2, 1) both; }
   .strip.yellow { animation-delay: .12s; }
+  .strip.teal { animation-delay: .24s; }
   @keyframes strip-in {
     from { transform: translateX(-28px); opacity: 0; }
     to { transform: none; opacity: 1; }
@@ -208,6 +215,7 @@ h3 {
 .install::before { content: ""; display: block; height: 10px; }
 .install.blue::before { background: var(--strip-blue); }
 .install.yellow::before { background: var(--strip-yellow); }
+.install.teal::before { background: var(--strip-teal); }
 .install-body { padding: 24px 24px 26px; }
 .install h3:first-child { margin-top: 0; }
 .dl {
@@ -305,17 +313,18 @@ footer p { margin: 0; max-width: 70ch; }
 <div class="wrap">
 
 <header class="masthead">
-  <div><strong>Backlot and Dumptruck</strong></div>
+  <div><strong>Backlot, Dumptruck and Writers Block</strong></div>
   <nav aria-label="Apps">
     <a href="#backlot">Backlot</a>
     <a href="#dumptruck">Dumptruck</a>
+    <a href="#writers-block">Writers Block</a>
   </nav>
 </header>
 
 <main>
 <section class="intro">
   <h1>Free Mac apps for making films</h1>
-  <p>Backlot runs the production office: budget, breakdown, schedule, call sheets and daily reports. Dumptruck offloads camera cards and checks every copy. Both are free and open source, and both are signed and notarized by Apple, so they open like any other Mac app.</p>
+  <p>Backlot runs the production office: budget, breakdown, schedule, call sheets and daily reports. Dumptruck offloads camera cards and checks every copy. Writers Block lets you say a scene out loud and pastes it into Final Draft as screenplay paragraphs. All three are free, and all three are signed and notarized by Apple, so they open like any other Mac app. Backlot and Dumptruck are open source.</p>
 </section>
 
 <div class="board" role="table" aria-label="Downloads">
@@ -353,9 +362,21 @@ footer p { margin: 0; max-width: 70ch; }
     <span class="get" role="cell"><a data-app="dumptruck" data-href="dmg" href="https://github.com/MIM18-code/dumptruck/releases/download/v0.5.6-beta/Dumptruck-0.5.6-beta-arm64.dmg">Download <span data-app="dumptruck" data-field="size">94 MB</span></a></span>
   </div>
 
+  <div class="strip teal" role="row">
+    <span class="num" role="cell"><img src="assets/writers-block-512.png" alt="" width="46" height="46" class="strip-icon"></span>
+    <span class="name" role="cell"><a href="#writers-block">Writers Block</a></span>
+    <span class="job" role="cell">Turns a scene you say out loud into Final Draft paragraphs</span>
+    <span class="metas">
+      <span class="meta" role="cell" data-app="writersblock" data-field="version">0.3.0 beta</span>
+      <span class="meta" role="cell">14 or later</span>
+      <span class="meta" role="cell">MIT</span>
+    </span>
+    <span class="get" role="cell"><a data-app="writersblock" data-href="dmg" href="https://github.com/MIM18-code/writers-block-releases/releases/download/v0.3.0-beta/WritersBlock-0.3.0-arm64.dmg">Download <span data-app="writersblock" data-field="size">165 MB</span></a></span>
+  </div>
+
   <div class="daybreak">
     <span>Apple Silicon Macs only. There are no Intel builds.</span>
-    <span>Both apps are betas.</span>
+    <span>All three apps are betas.</span>
   </div>
 </div>
 
@@ -482,10 +503,53 @@ brew install --cask dumptruck</pre>
     </aside>
   </div>
 </section>
+<!-- Writers Block -->
+<section class="product" id="writers-block" aria-labelledby="writers-block-title">
+  <div class="product-head">
+    <img src="assets/writers-block-512.png" alt="" width="88" height="88">
+    <div>
+      <h2 id="writers-block-title">Writers Block</h2>
+      <p>Screenplay dictation that runs on your Mac</p>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div>
+      <p class="lede">Click an empty paragraph in Final Draft, press Command-Option-D and talk through the scene: where you are, what happens, who says what. Press it again and the scene lands at your cursor as real Final Draft paragraphs, with the scene heading, action, character names, parentheticals and dialogue each in its own element. The speech recognition and the formatting both run on your Mac.</p>
+
+      <p class="beta-note">This is a beta. The formatting model gets most takes right, not every one. Read what it pasted the way you'd read any dictated draft. Every recording and transcript is saved, so a take that goes wrong can be fixed or run again.</p>
+
+      <ul class="features">
+        <li><b>Your words, labeled.</b> The model decides which of your sentences is action and which is dialogue. It isn't asked to rewrite them. When a take drops or changes words, Writers Block pastes it anyway and tells you which words to check.</li>
+        <li><b>Talk the way you think.</b> "Scratch that", "no wait" and corrections partway through a sentence are handled. So is a heading you say in the middle of a sentence, like "she walks in, interior kitchen, night".</li>
+        <li><b>Nothing is uploaded.</b> Parakeet transcribes your recording and a writing model running in Ollama formats it, both on your Mac. On first launch, Writers Block walks you through installing Ollama and downloading the two models, about 6 GB in all.</li>
+        <li><b>Other writing apps too.</b> In the Writers Block workspace you can record or paste a transcript, check the scene, then copy it, send it to any open app, or export Fountain, FDX or plain text.</li>
+        <li><b>Use the dictation app you have.</b> If you already dictate with another app, paste its text into the workspace and Writers Block formats it the same way.</li>
+      </ul>
+    </div>
+
+    <aside class="install teal" aria-label="Get Writers Block">
+      <div class="install-body">
+        <a class="dl" data-app="writersblock" data-href="dmg" href="https://github.com/MIM18-code/writers-block-releases/releases/download/v0.3.0-beta/WritersBlock-0.3.0-arm64.dmg">
+          Download Writers Block
+          <small><span data-app="writersblock" data-field="version">0.3.0 beta</span>, <span data-app="writersblock" data-field="size">165 MB</span> disk image</small>
+        </a>
+        <p class="after-dl">Open the disk image and drag Writers Block to Applications. Needs an Apple Silicon Mac with macOS 14 Sonoma or later and about 8 GB free for the models. On first launch it asks for the microphone, and for Accessibility so it can paste into Final Draft. It also helps you install Ollama, the free app that runs the writing model.</p>
+
+        <h3>Checksums</h3>
+        <ul class="links">
+          <li><a data-app="writersblock" data-href="sums" href="https://github.com/MIM18-code/writers-block-releases/releases/download/v0.3.0-beta/SHA256SUMS">SHA-256 checksums</a><span class="note">All release files</span></li>
+          <li><a data-app="writersblock" data-href="release" href="https://github.com/MIM18-code/writers-block-releases/releases/tag/v0.3.0-beta">Release notes</a><span class="note">On GitHub</span></li>
+        </ul>
+        <p class="hash" data-app="writersblock" data-field="sha" data-file="WritersBlock-0.3.0-arm64.dmg">DMG SHA-256: 507131d08c8f3a46142fb7454bc790a548275328ea4790f8bbeb3ea04b4a722d</p>
+      </div>
+    </aside>
+  </div>
+</section>
 </main>
 
 <footer>
-  <p>Backlot is licensed under GPL-3.0 and Dumptruck under Apache-2.0, both copyright MindInMotion LLC. Both come without warranty. Third-party components keep their own licenses, listed in each release.</p>
+  <p>Backlot is licensed under GPL-3.0, Dumptruck under Apache-2.0 and Writers Block under MIT, all copyright MindInMotion LLC. All three come without warranty. Third-party components keep their own licenses, listed in each release.</p>
 </footer>
 
 </div>
@@ -509,7 +573,8 @@ document.querySelectorAll('.copy').forEach(function (btn) {
 // The links written into the HTML above are the fallback if this fails.
 var APPS = {
   backlot:   { repo: 'MIM18-code/homebrew-backlot', prefix: /^Backlot\s+/i,   dmg: /^Backlot-.*\.dmg$/, source: /-source\.tar\.gz$/, sums: /^SHA256SUMS$/ },
-  dumptruck: { repo: 'MIM18-code/dumptruck',        prefix: /^Dumptruck\s+/i, dmg: /\.dmg$/ }
+  dumptruck: { repo: 'MIM18-code/dumptruck',        prefix: /^Dumptruck\s+/i, dmg: /\.dmg$/ },
+  writersblock: { repo: 'MIM18-code/writers-block-releases', prefix: /^Writers Block\s+/i, dmg: /^WritersBlock-.*\.dmg$/, sums: /^SHA256SUMS$/ }
 };
 function setAll(app, attr, key, fn) {
   document.querySelectorAll('[data-app="' + app + '"][' + attr + '="' + key + '"]').forEach(fn);
