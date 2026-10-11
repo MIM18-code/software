@@ -323,7 +323,7 @@ footer p { margin: 0; max-width: 70ch; }
 <main>
 <section class="intro">
   <h1>Free Mac apps for making films</h1>
-  <p>Backlot runs the production office: budget, breakdown, schedule, call sheets and daily reports. Dumptruck offloads camera cards and checks every copy. Lacquer turns a finished film into a Blu-ray. All three are free and open source, and all three are signed and notarized by Apple, so they open like any other Mac app.</p>
+  <p>Backlot runs the production office: budget, breakdown, schedule, call sheets and daily reports. Dumptruck offloads camera cards and checks every copy. Lacquer turns a finished film into a Blu-ray with a proper menu. All three are free and open source, and all three are signed and notarized by Apple, so they open like any other Mac app.</p>
 </section>
 
 <div class="board" role="table" aria-label="Downloads">
@@ -364,7 +364,7 @@ footer p { margin: 0; max-width: 70ch; }
   <div class="strip red" role="row">
     <span class="num" role="cell"><img src="assets/lacquer-512.png" alt="" width="46" height="46" class="strip-icon"></span>
     <span class="name" role="cell"><a href="#lacquer">Lacquer</a></span>
-    <span class="job" role="cell">Turns a finished film master into a Blu-ray disc or ISO</span>
+    <span class="job" role="cell">Turns a finished film into a Blu-ray disc or ISO, menus included</span>
     <span class="metas">
       <span class="meta" role="cell" data-app="lacquer" data-field="version">0.2.0 beta</span>
       <span class="meta" role="cell">13 or later</span>
@@ -514,15 +514,16 @@ brew install --cask dumptruck</pre>
 
   <div class="columns">
     <div>
-      <p class="lede">Lacquer takes the ProRes, DNxHR, H.264 or HEVC master you exported and makes a Blu-ray from it: a BDMV folder, a disc image you can upload to a duplicator, or an M2TS for Toast. It works out the bitrate to fill the disc and warns you before it starts if anything is off.</p>
+      <p class="lede">Lacquer takes the ProRes, DNxHR, H.264 or HEVC master you exported and makes a Blu-ray from it, with an on-screen menu if you want one. It writes a BDMV folder, a disc image you can upload to a duplicator, or an M2TS for Toast. It works out the bitrate to fill the disc and warns you before it starts if anything is off.</p>
 
-      <p class="beta-note">This is a beta. Discs auto-play and the remote's Next and Previous buttons jump between chapters; there are no on-screen menus yet. If you need menus, use the M2TS output in Toast. Test a burned disc on a player before sending a run to a duplicator.</p>
+      <p class="beta-note">This is a beta. Menus are checked with libbluray, the library VLC uses to play Blu-ray menus, but players differ. Burn one disc and try it on your own player before sending a run to a duplicator.</p>
 
       <ul class="features">
+        <li><b>Menus that look like your film.</b> Pick a frame from the film or your poster, choose one of three styles, and name your scenes. The preview shows the menu as a TV will draw it, and you can drive it with the arrow keys. On the disc, Play, scene buttons, subtitles on and off, and Top Menu all work from the remote.</li>
         <li><b>The right format for your frame rate.</b> Blu-ray has no 1080p at 25 or 29.97, so Lacquer carries those masters as 1080i without dropping a frame, and tells you when a format you picked would.</li>
         <li><b>Audio the way editors export it.</b> A 5.1 track is used as is. Six separate mono tracks from Resolve or Premiere are combined into 5.1, in either common channel order. Audio is AC-3, which every Blu-ray player decodes.</li>
         <li><b>Fits the disc.</b> Pick BD-25 or BD-50 and Lacquer sets the video bitrate from the running time. A film that can't fit is caught before encoding, not after.</li>
-        <li><b>Subtitles and chapters.</b> Add an .srt and viewers can turn the subtitles on and off. Chapter stops go every 5 or 10 minutes or wherever you list them.</li>
+        <li><b>Subtitles and chapters.</b> Add an .srt and viewers can turn the subtitles on and off. Chapter stops go every 5 or 10 minutes or wherever you list them, and each one lands on its exact frame.</li>
         <li><b>HDR and older footage.</b> HDR masters are tonemapped to standard Rec.709, SD footage gets its color converted, and interlaced sources are deinterlaced before scaling.</li>
         <li><b>A log for every disc.</b> Each job writes a log next to its output with every command it ran, so a problem disc can be traced.</li>
       </ul>
