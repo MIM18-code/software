@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Backlot and Dumptruck</title>
-<meta name="description" content="Backlot and Dumptruck: free, open-source Mac apps for film production.">
+<title>Backlot, Dumptruck and Lacquer</title>
+<meta name="description" content="Backlot, Dumptruck and Lacquer: free, open-source Mac apps for film production.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='6' width='28' height='8' rx='1.5' fill='%237EA6EE'/%3E%3Crect x='2' y='18' width='28' height='8' rx='1.5' fill='%23F0AE3C'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,7 @@
   --panel: #FFFFFF;
   --strip-blue: #A9C4F2;
   --strip-yellow: #F7CB62;
+  --strip-red: #F2A69C;
   --strip-ink: #18202E;
   --strip-rule: rgba(24, 32, 46, .22);
   --break: #18202E;
@@ -38,6 +39,7 @@
     --panel: #1B2330;
     --strip-blue: #7EA6EE;
     --strip-yellow: #F0AE3C;
+    --strip-red: #E8796C;
     --strip-rule: rgba(24, 32, 46, .3);
     --break: #000000;
     --break-ink: #E4E8EE;
@@ -56,6 +58,7 @@
   --panel: #1B2330;
   --strip-blue: #7EA6EE;
   --strip-yellow: #F0AE3C;
+  --strip-red: #E8796C;
   --strip-rule: rgba(24, 32, 46, .3);
   --break: #000000;
   --break-ink: #E4E8EE;
@@ -130,6 +133,7 @@ h1 {
 }
 .strip.blue { background: var(--strip-blue); }
 .strip.yellow { background: var(--strip-yellow); }
+.strip.red { background: var(--strip-red); }
 .strip > *, .strip .meta {
   padding: 10px 12px;
   display: flex; align-items: center;
@@ -139,6 +143,7 @@ h1 {
 .strip .num { padding: 6px; }
 .strip .num img { display: block; width: 40px; height: 40px; }
 .strip .num .strip-truck { width: 52px; height: 52px; margin: -6px; }
+.strip .num .strip-icon { width: 46px; height: 46px; margin: -3px; }
 .strip .name a {
   font-weight: 750; font-size: 26px; letter-spacing: .01em;
   text-decoration: none;
@@ -160,6 +165,7 @@ h1 {
 @media (prefers-reduced-motion: no-preference) {
   .strip { animation: strip-in .42s cubic-bezier(.2, .7, .2, 1) both; }
   .strip.yellow { animation-delay: .12s; }
+  .strip.red { animation-delay: .24s; }
   @keyframes strip-in {
     from { transform: translateX(-28px); opacity: 0; }
     to { transform: none; opacity: 1; }
@@ -208,6 +214,7 @@ h3 {
 .install::before { content: ""; display: block; height: 10px; }
 .install.blue::before { background: var(--strip-blue); }
 .install.yellow::before { background: var(--strip-yellow); }
+.install.red::before { background: var(--strip-red); }
 .install-body { padding: 24px 24px 26px; }
 .install h3:first-child { margin-top: 0; }
 .dl {
@@ -305,17 +312,18 @@ footer p { margin: 0; max-width: 70ch; }
 <div class="wrap">
 
 <header class="masthead">
-  <div><strong>Backlot and Dumptruck</strong></div>
+  <div><strong>Backlot, Dumptruck and Lacquer</strong></div>
   <nav aria-label="Apps">
     <a href="#backlot">Backlot</a>
     <a href="#dumptruck">Dumptruck</a>
+    <a href="#lacquer">Lacquer</a>
   </nav>
 </header>
 
 <main>
 <section class="intro">
   <h1>Free Mac apps for making films</h1>
-  <p>Backlot runs the production office: budget, breakdown, schedule, call sheets and daily reports. Dumptruck offloads camera cards and checks every copy. Both are free and open source, and both are signed and notarized by Apple, so they open like any other Mac app.</p>
+  <p>Backlot runs the production office: budget, breakdown, schedule, call sheets and daily reports. Dumptruck offloads camera cards and checks every copy. Lacquer turns a finished film into a Blu-ray. All three are free and open source, and all three are signed and notarized by Apple, so they open like any other Mac app.</p>
 </section>
 
 <div class="board" role="table" aria-label="Downloads">
@@ -353,9 +361,21 @@ footer p { margin: 0; max-width: 70ch; }
     <span class="get" role="cell"><a data-app="dumptruck" data-href="dmg" href="https://github.com/MIM18-code/dumptruck/releases/download/v0.5.6-beta/Dumptruck-0.5.6-beta-arm64.dmg">Download <span data-app="dumptruck" data-field="size">94 MB</span></a></span>
   </div>
 
+  <div class="strip red" role="row">
+    <span class="num" role="cell"><img src="assets/lacquer-512.png" alt="" width="46" height="46" class="strip-icon"></span>
+    <span class="name" role="cell"><a href="#lacquer">Lacquer</a></span>
+    <span class="job" role="cell">Turns a finished film master into a Blu-ray disc or ISO</span>
+    <span class="metas">
+      <span class="meta" role="cell" data-app="lacquer" data-field="version">0.2.0 beta</span>
+      <span class="meta" role="cell">13 or later</span>
+      <span class="meta" role="cell">GPL-3.0</span>
+    </span>
+    <span class="get" role="cell"><a data-app="lacquer" data-href="dmg" href="https://github.com/MIM18-code/lacquer/releases/download/v0.2.0-beta/Lacquer-0.2.0-arm64.dmg">Download <span data-app="lacquer" data-field="size">26 MB</span></a></span>
+  </div>
+
   <div class="daybreak">
     <span>Apple Silicon Macs only. There are no Intel builds.</span>
-    <span>Both apps are betas.</span>
+    <span>All three apps are betas.</span>
   </div>
 </div>
 
@@ -482,10 +502,55 @@ brew install --cask dumptruck</pre>
     </aside>
   </div>
 </section>
+<!-- Lacquer -->
+<section class="product" id="lacquer" aria-labelledby="lacquer-title">
+  <div class="product-head">
+    <img src="assets/lacquer-512.png" alt="" width="88" height="88">
+    <div>
+      <h2 id="lacquer-title">Lacquer</h2>
+      <p>Blu-ray discs from your finished master</p>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div>
+      <p class="lede">Lacquer takes the ProRes, DNxHR, H.264 or HEVC master you exported and makes a Blu-ray from it: a BDMV folder, a disc image you can upload to a duplicator, or an M2TS for Toast. It works out the bitrate to fill the disc and warns you before it starts if anything is off.</p>
+
+      <p class="beta-note">This is a beta. Discs auto-play and the remote's Next and Previous buttons jump between chapters; there are no on-screen menus yet. If you need menus, use the M2TS output in Toast. Test a burned disc on a player before sending a run to a duplicator.</p>
+
+      <ul class="features">
+        <li><b>The right format for your frame rate.</b> Blu-ray has no 1080p at 25 or 29.97, so Lacquer carries those masters as 1080i without dropping a frame, and tells you when a format you picked would.</li>
+        <li><b>Audio the way editors export it.</b> A 5.1 track is used as is. Six separate mono tracks from Resolve or Premiere are combined into 5.1, in either common channel order. Audio is AC-3, which every Blu-ray player decodes.</li>
+        <li><b>Fits the disc.</b> Pick BD-25 or BD-50 and Lacquer sets the video bitrate from the running time. A film that can't fit is caught before encoding, not after.</li>
+        <li><b>Subtitles and chapters.</b> Add an .srt and viewers can turn the subtitles on and off. Chapter stops go every 5 or 10 minutes or wherever you list them.</li>
+        <li><b>HDR and older footage.</b> HDR masters are tonemapped to standard Rec.709, SD footage gets its color converted, and interlaced sources are deinterlaced before scaling.</li>
+        <li><b>A log for every disc.</b> Each job writes a log next to its output with every command it ran, so a problem disc can be traced.</li>
+      </ul>
+    </div>
+
+    <aside class="install red" aria-label="Get Lacquer">
+      <div class="install-body">
+        <a class="dl" data-app="lacquer" data-href="dmg" href="https://github.com/MIM18-code/lacquer/releases/download/v0.2.0-beta/Lacquer-0.2.0-arm64.dmg">
+          Download Lacquer
+          <small><span data-app="lacquer" data-field="version">0.2.0 beta</span>, <span data-app="lacquer" data-field="size">26 MB</span> disk image</small>
+        </a>
+        <p class="after-dl">Open the disk image and drag Lacquer to Applications. Needs an Apple Silicon Mac with macOS 13 Ventura or later. FFmpeg and tsMuxeR are built in, so there's nothing else to install.</p>
+
+        <h3>Source and checksums</h3>
+        <ul class="links">
+          <li><a data-app="lacquer" data-href="source" href="https://github.com/MIM18-code/lacquer/releases/download/v0.2.0-beta/Lacquer-0.2.0-source.tar.gz">Source code</a><span class="note">GPL-3.0, 16 MB</span></li>
+          <li><a data-app="lacquer" data-href="sums" href="https://github.com/MIM18-code/lacquer/releases/download/v0.2.0-beta/SHA256SUMS">SHA-256 checksums</a><span class="note">All release files</span></li>
+          <li><a data-app="lacquer" data-href="release" href="https://github.com/MIM18-code/lacquer/releases/tag/v0.2.0-beta">Release notes</a><span class="note">On GitHub</span></li>
+        </ul>
+        <p class="hash" data-app="lacquer" data-field="sha" data-file="Lacquer-0.2.0-arm64.dmg">DMG SHA-256: 223d05ce00dbe78d5d014a8dca510fbe73ccab7c38a21346f9aa9f8feef609cc</p>
+      </div>
+    </aside>
+  </div>
+</section>
 </main>
 
 <footer>
-  <p>Backlot is licensed under GPL-3.0 and Dumptruck under Apache-2.0, both copyright MindInMotion LLC. Both come without warranty. Third-party components keep their own licenses, listed in each release.</p>
+  <p>Backlot and Lacquer are licensed under GPL-3.0 and Dumptruck under Apache-2.0, all copyright MindInMotion LLC. All three come without warranty. Third-party components keep their own licenses, listed in each release.</p>
 </footer>
 
 </div>
@@ -509,7 +574,8 @@ document.querySelectorAll('.copy').forEach(function (btn) {
 // The links written into the HTML above are the fallback if this fails.
 var APPS = {
   backlot:   { repo: 'MIM18-code/homebrew-backlot', prefix: /^Backlot\s+/i,   dmg: /^Backlot-.*\.dmg$/, source: /-source\.tar\.gz$/, sums: /^SHA256SUMS$/ },
-  dumptruck: { repo: 'MIM18-code/dumptruck',        prefix: /^Dumptruck\s+/i, dmg: /\.dmg$/ }
+  dumptruck: { repo: 'MIM18-code/dumptruck',        prefix: /^Dumptruck\s+/i, dmg: /\.dmg$/ },
+  lacquer:   { repo: 'MIM18-code/lacquer',          prefix: /^Lacquer\s+/i,   dmg: /^Lacquer-.*\.dmg$/, source: /-source\.tar\.gz$/, sums: /^SHA256SUMS$/ }
 };
 function setAll(app, attr, key, fn) {
   document.querySelectorAll('[data-app="' + app + '"][' + attr + '="' + key + '"]').forEach(fn);
