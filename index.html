@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Backlot, Dumptruck, Lacquer and Writers Block</title>
-<meta name="description" content="Backlot, Dumptruck, Lacquer and Writers Block: free Mac apps for writing and making films.">
+<title>Cold Open, Backlot, Dumptruck, Lacquer and Writers Block</title>
+<meta name="description" content="Cold Open, Backlot, Dumptruck, Lacquer and Writers Block: free Mac apps for writing and making films.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='6' width='28' height='8' rx='1.5' fill='%237EA6EE'/%3E%3Crect x='2' y='18' width='28' height='8' rx='1.5' fill='%23F0AE3C'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,7 @@
   --strip-yellow: #F7CB62;
   --strip-red: #F2A69C;
   --strip-teal: #8FD3C8;
+  --strip-green: #ACD79A;
   --strip-ink: #18202E;
   --strip-rule: rgba(24, 32, 46, .22);
   --break: #18202E;
@@ -41,6 +42,7 @@
     --strip-blue: #7EA6EE;
     --strip-yellow: #F0AE3C;
     --strip-red: #E8796C;
+    --strip-green: #6DB653;
   --strip-teal: #4FB3A4;
     --strip-teal: #4FB3A4;
     --strip-rule: rgba(24, 32, 46, .3);
@@ -62,6 +64,7 @@
   --strip-blue: #7EA6EE;
   --strip-yellow: #F0AE3C;
   --strip-red: #E8796C;
+  --strip-green: #6DB653;
   --strip-teal: #4FB3A4;
   --strip-rule: rgba(24, 32, 46, .3);
   --break: #000000;
@@ -139,6 +142,7 @@ h1 {
 .strip.yellow { background: var(--strip-yellow); }
 .strip.red { background: var(--strip-red); }
 .strip.teal { background: var(--strip-teal); }
+.strip.green { background: var(--strip-green); }
 .strip > *, .strip .meta {
   padding: 10px 12px;
   display: flex; align-items: center;
@@ -172,6 +176,7 @@ h1 {
   .strip.yellow { animation-delay: .12s; }
   .strip.red { animation-delay: .24s; }
   .strip.teal { animation-delay: .36s; }
+  .strip.green { animation-delay: .48s; }
   @keyframes strip-in {
     from { transform: translateX(-28px); opacity: 0; }
     to { transform: none; opacity: 1; }
@@ -222,6 +227,7 @@ h3 {
 .install.yellow::before { background: var(--strip-yellow); }
 .install.red::before { background: var(--strip-red); }
 .install.teal::before { background: var(--strip-teal); }
+.install.green::before { background: var(--strip-green); }
 .install-body { padding: 24px 24px 26px; }
 .install h3:first-child { margin-top: 0; }
 .dl {
@@ -319,8 +325,9 @@ footer p { margin: 0; max-width: 70ch; }
 <div class="wrap">
 
 <header class="masthead">
-  <div><strong>Backlot, Dumptruck, Lacquer and Writers Block</strong></div>
+  <div><strong>Cold Open, Backlot, Dumptruck, Lacquer and Writers Block</strong></div>
   <nav aria-label="Apps">
+    <a href="#cold-open">Cold Open</a>
     <a href="#backlot">Backlot</a>
     <a href="#dumptruck">Dumptruck</a>
     <a href="#lacquer">Lacquer</a>
@@ -331,7 +338,7 @@ footer p { margin: 0; max-width: 70ch; }
 <main>
 <section class="intro">
   <h1>Free Mac apps for making films</h1>
-  <p>Backlot runs the production office: budget, breakdown, schedule, call sheets and daily reports. Dumptruck offloads camera cards and checks every copy. Lacquer turns a finished film into a Blu-ray with a proper menu. Writers Block lets you say a scene out loud and pastes it into Final Draft as screenplay paragraphs. All four are free, and all four are signed and notarized by Apple, so they open like any other Mac app. Backlot, Dumptruck and Lacquer are open source.</p>
+  <p>Cold Open is a screenwriting app that opens and saves Final Draft files. Backlot runs the production office: budget, breakdown, schedule, call sheets and daily reports. Dumptruck offloads camera cards and checks every copy. Lacquer turns a finished film into a Blu-ray with a proper menu. Writers Block lets you say a scene out loud and pastes it into Final Draft as screenplay paragraphs. All five are free, and all five are signed and notarized by Apple, so they open like any other Mac app. Cold Open, Backlot, Dumptruck and Lacquer are open source.</p>
 </section>
 
 <div class="board" role="table" aria-label="Downloads">
@@ -343,6 +350,18 @@ footer p { margin: 0; max-width: 70ch; }
     <span role="columnheader">macOS</span>
     <span role="columnheader">License</span>
     <span role="columnheader"><span class="sr-only">Download</span></span>
+  </div>
+
+  <div class="strip green" role="row">
+    <span class="num" role="cell"><img src="assets/cold-open-512.png" alt="" width="46" height="46" class="strip-icon"></span>
+    <span class="name" role="cell"><a href="#cold-open">Cold Open</a></span>
+    <span class="job" role="cell">Writes screenplays and opens and saves Final Draft files</span>
+    <span class="metas">
+      <span class="meta" role="cell" data-app="coldopen" data-field="version">0.1.0 beta 1</span>
+      <span class="meta" role="cell">14 or later</span>
+      <span class="meta" role="cell">GPL-3.0</span>
+    </span>
+    <span class="get" role="cell"><a data-app="coldopen" data-href="dmg" href="https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.1/ColdOpen-0.1.0-beta.1.dmg">Download <span data-app="coldopen" data-field="size">162 MB</span></a></span>
   </div>
 
   <div class="strip blue" role="row">
@@ -395,9 +414,64 @@ footer p { margin: 0; max-width: 70ch; }
 
   <div class="daybreak">
     <span>Apple Silicon Macs only. There are no Intel builds.</span>
-    <span>All four apps are betas.</span>
+    <span>All five apps are betas.</span>
   </div>
 </div>
+
+<!-- Cold Open -->
+<section class="product" id="cold-open" aria-labelledby="cold-open-title">
+  <div class="product-head">
+    <img src="assets/cold-open-512.png" alt="" width="88" height="88">
+    <div>
+      <h2 id="cold-open-title">Cold Open</h2>
+      <p>A screenwriting app that speaks Final Draft</p>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div>
+      <p class="lede">Cold Open writes screenplays with Final Draft's elements and keys, paginates the way Final Draft does, and opens and saves .fdx files, keeping the Final Draft data it doesn't edit. It also reads and writes Fountain.</p>
+
+      <ul class="features">
+        <li><b>Writes like Final Draft.</b> Tab and Return move through scene headings, action, characters and dialogue. Scene numbers lock and take A-numbers, revisions get their page colors, and script notes and breakdown tags survive a trip through FDX.</li>
+        <li><b>Templates for the format you're in.</b> Features, one-hour drama, half-hour single-camera, multi-camera and stage plays, with act breaks and page breaks where those formats put them.</li>
+        <li><b>Write together.</b> Co-writers on the same network, or through a relay, type in the same script at once and see each other's cursors.</li>
+        <li><b>Dictate scenes.</b> Say the scene out loud and Cold Open formats it into screenplay elements, with speech recognition running on your Mac.</li>
+        <li><b>Hear the table read.</b> Download local voices and Cold Open reads the script with a cast picked from what the script says about each character.</li>
+        <li><b>AI only if you want it.</b> Proofreading suggestions, questions about the script, casting help and an optional sentence completion that stays off until you turn it on. It runs on a local Ollama model, your own API key, or your ChatGPT plan, and nothing changes in the script until you accept it.</li>
+        <li><b>Use your ChatGPT plan.</b> Sign in with ChatGPT and Cold Open's AI features use your ChatGPT plan. Cold Open itself is free. <a href="https://help.openai.com/en/articles/20001542">Learn more</a></li>
+      </ul>
+    </div>
+
+    <aside class="install green" aria-label="Get Cold Open">
+      <div class="install-body">
+        <a class="dl" data-app="coldopen" data-href="dmg" href="https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.1/ColdOpen-0.1.0-beta.1.dmg">
+          Download Cold Open
+          <small><span data-app="coldopen" data-field="version">0.1.0 beta 1</span>, <span data-app="coldopen" data-field="size">162 MB</span> disk image</small>
+        </a>
+        <p class="after-dl">Open the disk image and drag Cold Open to Applications. Needs an Apple Silicon Mac with macOS 14 Sonoma or later; local table-read voices need macOS 15.</p>
+
+        <h3>Or install with Homebrew</h3>
+        <div class="code">
+          <pre id="brew-coldopen">brew tap MIM18-code/cold-open
+brew trust MIM18-code/cold-open
+brew install --cask cold-open</pre>
+          <button class="copy" type="button" data-copy="brew-coldopen">Copy</button>
+        </div>
+        <p class="after-dl">Homebrew asks you to trust a third-party tap once, which is the second line. Update later with <code>brew upgrade --cask cold-open</code>.</p>
+
+        <h3>Source and checksums</h3>
+        <ul class="links">
+          <li><a href="https://github.com/MIM18-code/cold-open">Source code</a><span class="note">GPL-3.0, on GitHub</span></li>
+          <li><a data-app="coldopen" data-href="source" href="https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.1/ColdOpen-0.1.0-beta.1-source.tar.gz">Source archive</a><span class="note">5.6 MB</span></li>
+          <li><a data-app="coldopen" data-href="sums" href="https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.1/SHA256SUMS">SHA-256 checksums</a><span class="note">All release files</span></li>
+          <li><a data-app="coldopen" data-href="release" href="https://github.com/MIM18-code/cold-open/releases/tag/v0.1.0-beta.1">Release notes</a><span class="note">On GitHub</span></li>
+        </ul>
+        <p class="hash" data-app="coldopen" data-field="sha" data-file="ColdOpen-0.1.0-beta.1.dmg">DMG SHA-256: 3bef5fd6d12977f7ac7a03f139d0b0ba80bb411d7e8984fadab59915c0342149</p>
+      </div>
+    </aside>
+  </div>
+</section>
 
 <!-- Backlot -->
 <section class="product" id="backlot" aria-labelledby="backlot-title">
@@ -615,7 +689,7 @@ brew install --cask dumptruck</pre>
 </main>
 
 <footer>
-  <p>Backlot and Lacquer are licensed under GPL-3.0, Dumptruck under Apache-2.0 and Writers Block under MIT, all copyright MindInMotion LLC. All four come without warranty. Third-party components keep their own licenses, listed in each release.</p>
+  <p>Cold Open, Backlot and Lacquer are licensed under GPL-3.0, Dumptruck under Apache-2.0 and Writers Block under MIT, all copyright MindInMotion LLC. All five come without warranty. Third-party components keep their own licenses, listed in each release.</p>
 </footer>
 
 </div>
@@ -638,6 +712,7 @@ document.querySelectorAll('.copy').forEach(function (btn) {
 // Pick up new releases from GitHub so the page doesn't go stale.
 // The links written into the HTML above are the fallback if this fails.
 var APPS = {
+  coldopen:  { repo: 'MIM18-code/cold-open', prefix: /^Cold Open\s+/i, dmg: /^ColdOpen-.*\.dmg$/, source: /-source\.tar\.gz$/, sums: /^SHA256SUMS$/ },
   backlot:   { repo: 'MIM18-code/homebrew-backlot', prefix: /^Backlot\s+/i,   dmg: /^Backlot-.*\.dmg$/, source: /-source\.tar\.gz$/, sums: /^SHA256SUMS$/ },
   dumptruck: { repo: 'MIM18-code/dumptruck',        prefix: /^Dumptruck\s+/i, dmg: /\.dmg$/ },
   lacquer:   { repo: 'MIM18-code/lacquer',          prefix: /^Lacquer\s+/i,   dmg: /^Lacquer-.*\.dmg$/, source: /-source\.tar\.gz$/, sums: /^SHA256SUMS$/ },
