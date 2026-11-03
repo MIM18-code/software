@@ -2,7 +2,7 @@
 
 Cold Open is a free, open-source screenwriting app for Apple silicon Macs (macOS 14+). It writes screenplays with Final Draft's elements and pagination, works with Final Draft and Fountain files, and shares one live script with co-writers, an iPhone and the Backlot production app.
 
-Cold Open is in beta. This guide covers 0.1.0 beta 8 and the newer AI setup and co-writing screens, with notes for the earlier buttons in the public beta 8 release.
+Cold Open is in beta. This guide covers 0.1.0 beta 9, including bundled offline Parakeet dictation and the current AI setup and co-writing screens. Some recordings show earlier screens, which the guide identifies.
 
 ## Pages
 
