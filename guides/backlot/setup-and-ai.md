@@ -10,14 +10,12 @@ Extra setup belongs to the feature you choose to use. A warning about one missin
 | --- | --- | --- |
 | Manual scenes, scheduling, budgets, contacts and draft forms | Backlot | Yes |
 | AI suggestions | A working local model, a ChatGPT connection with plan usage, or a supported API key | No |
-| Script import and actor sides | Separate script-reading tools not included in the current installer | No, but import cannot work without them |
-| Saving PDFs and issuing call sheets | Google Chrome installed in Applications | No |
+| Script import, tagged FDX export and actor sides | Backlot, with its included screenplay engine | No extra setup |
+| Saving PDFs and issuing call sheets | Backlot, with its included desktop PDF renderer | No extra setup |
 | Gorilla and Movie Magic interchange files | Separate budget-export tools not included in the current installer | No |
 | In-app call-sheet email and receipt confirmations | An email service and a configured confirmation site | No |
 
-A fresh install currently has no button that installs the script-reading or budget-export tools. If Backlot reports those missing, this is an application setup gap. Opening a Fountain file instead, installing Chrome or signing into AI will not supply them. Use manual scene entry or ask for support for the blocked import/export feature.
-
-For PDFs, install [Google Chrome](https://www.google.com/chrome/) in Applications. Then quit and reopen Backlot so it checks again. Chrome does not supply the script-reading tools.
+Backlot beta 8 includes script reading, tag writing, sides and desktop PDF output. Gorilla/Movie Magic budget and schedule interchange tools remain separate integrations, with their buttons disabled when absent. AI setup does not install those integrations.
 
 ## Choose whether you want AI
 
@@ -31,13 +29,13 @@ AI is optional. It helps with tasks such as suggested breakdown elements and syn
 
 Pick one provider. Backlot does not silently switch between your local model, plan or API billing. Responses name the provider and model that answered. Saved account connections and keys are kept on this Mac, outside the project file. Cloud requests use that provider's connection.
 
-## Newer builds: guided AI setup
+## Guided AI setup
 
 Click the AI pill at the top, then Set up AI…. The sheet also appears when an AI assist needs setup.
 
 ![Backlot AI setup choices](images/ai-setup.png)
 
-The public beta 7 installer has the earlier provider settings and no Set up AI… button. Use the next section if that button is absent.
+Older beta 7 installations have earlier provider settings and no Set up AI… button. Update to beta 8 for the current setup sheet, or use the earlier-settings notes below.
 
 ### Use your ChatGPT plan
 
@@ -77,4 +75,4 @@ To send a sheet without that setup, save the issued PDF and attach it in your us
 
 ## Technical configuration reference
 
-A technician configuring an existing installation can use [optional external programs](reference/OPTIONAL_ENGINES.md) and [the AI provider policy](reference/AI_PROVIDER_POLICY_BACKLOT.md). These references contain interpreter, environment and credential-storage details. They are not prerequisites for the manual practice project.
+Technical configuration and the optional integration notes are included in the source archive on the [Backlot release page](https://github.com/MIM18-code/homebrew-backlot/releases/latest). They are not prerequisites for the practice project.

@@ -6,7 +6,7 @@ Breakdown tags each scene's cast, props, vehicles, special equipment and other p
 
 ## Bring in a script
 
-Script import needs separate reading tools that the current installer does not include. If the startup notice names missing script tools, use [manual scene entry](getting-started.md#add-one-scene-without-importing-a-script) for now. FDX and Fountain both need the reader; AI setup does not install it.
+Script import is included in Backlot beta 8. FDX and Fountain work without Python, another reader or AI. You can also use [manual scene entry](getting-started.md#add-one-scene-without-importing-a-script).
 
 
 1. Breakdown, then choose Import FDX (Breakdown · `⌘1`).

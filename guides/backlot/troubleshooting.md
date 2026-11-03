@@ -8,11 +8,9 @@
 4. For dated fringes, the board's dates decide how much of the fringe is charged, so fixing the Calendar can fix the fringe math.
 5. Actuals and estimated final cost overrides are the same in every alternative: switching alternatives changes budget figures, never what was spent.
 
-## A first-launch notice mentions missing tools
+## An older version reports missing tools
 
-Read the feature named in the notice. Script import, budget interchange exports and PDF printing have different requirements. You can still create a project, add scenes manually and work on the board or budget.
-
-The installer currently does not provide a setup button for the separate script-import and budget-export tools. Report the missing feature and the exact message. AI setup does not install those tools.
+Beta 8 includes FDX/Fountain reading, tagged FDX export, actor sides and desktop PDF output. Update an older Backlot if script import asks for a Python reader or desktop PDF output asks for Chrome. Gorilla/Movie Magic budget interchange remains separate and is disabled when unavailable.
 
 ## A project will not create
 
@@ -22,23 +20,17 @@ If Backlot says the project file already exists, choose Open file… to reopen t
 
 ## Reports will not save as PDF
 
-1. If Backlot says PDFs need Google Chrome, install [Chrome](https://www.google.com/chrome/) in Applications.
-2. Quit Backlot and open it again, then retry Save PDF or Issue.
-3. If Chrome is already in Applications and the error remains, report the message. Choosing an unusual browser location currently requires technical configuration; the app does not offer a browser chooser.
+The desktop app includes its PDF renderer. Keep the project open, retry Save PDF or Issue, and report the exact message if it fails. An issue that fails to produce its PDF remains a draft. A separately launched headless service still needs Chrome; this does not apply to the packaged desktop workflow.
 
 ## Script import fails
 
-If the error says the screenwriting bridge, Python interpreter or engine is missing, the separate import tools are unavailable. The current installer does not include them or provide a point-and-click installer.
+Import first previews the changes; it does not change the project until you confirm. If a file cannot be parsed, dismiss the error and keep the original. Check that it is a real FDX or Fountain screenplay and report a valid file that fails. No separate reader or AI connection is required in beta 8.
 
-![A fresh-install import failure with the separate script tools missing](images/first-run-import-error.png)
+If an older app reports a missing screenwriting bridge or Python interpreter, update Backlot. Do not install development repositories to make the basic import workflow work.
 
-Dismiss the error with its × button and return to Breakdown > Add scene to enter scenes manually. FDX and Fountain use the same reader, so changing the file extension will not fix a missing reader. Sign-in and local AI downloads are unrelated to this requirement.
+## Gorilla or Movie Magic export is disabled
 
-If the import tools are available but one file fails, keep the original script and report the error. An import preview must succeed before you confirm any scene changes.
-
-## Gorilla or Movie Magic export fails
-
-An error naming the budget bridge or its Python interpreter means the separate budget-export tools are unavailable. Your project and ordinary budget edits remain available. The app needs an installation or repair flow for this feature; changing your AI provider will not repair it.
+These budget/schedule interchange formats use a separate integration that this installer does not supply. PDF reports and CSV exports still work. Signing into AI does not enable those formats.
 
 ## Call sheet delivery looks stuck
 

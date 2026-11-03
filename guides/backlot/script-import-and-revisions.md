@@ -4,14 +4,18 @@ Scripts get into Backlot three ways, and revised drafts re-import with a review 
 
 ## Import
 
-Script import needs separate reading tools that the current installer does not include. If the startup notice names missing script tools, use [manual scene entry](getting-started.md#add-one-scene-without-importing-a-script) for now. FDX and Fountain both need the reader; AI setup does not install it.
+Script import is included in Backlot beta 8. FDX and Fountain work without Python, another reader or AI. You can also use [manual scene entry](getting-started.md#add-one-scene-without-importing-a-script).
 
 
 1. In the Breakdown view, choose Import FDX.
 2. Pick an `.fdx` (tagged or not) or a `.fountain` file.
 3. Review the proposed changes and choose Confirm import. Backlot reads the scenes, the cast from dialogue cues, and from a tagged FDX the breakdown elements in their categories.
 
-Reading scripts needs the screenwriting engine and its Python interpreter (see [Troubleshooting](troubleshooting.md) if it goes missing). If the reader works but a particular FDX fails, try re-exporting that script as Fountain.
+The screenplay reader is included. If a valid script cannot be read, keep the original and see [Troubleshooting](troubleshooting.md).
+
+Review the cast and page changes before confirming. Cue extensions such as V.O. and CONT'D share the speaker's identity; different cue names such as NELL and YOUNG NELL remain separate. Known speakers mentioned silently in action can also appear in the scene cast.
+
+Backlot preserves reliable page lengths stored in an FDX. When those lengths are missing or are converter placeholders, it estimates them with the included screenplay engine and marks them as estimated. These estimates can differ from older Backlot versions. Re-import previews the proposed page changes before applying them.
 
 ## Re-import a revised draft
 

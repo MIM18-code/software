@@ -30,4 +30,4 @@ FDX with breakdown tags, Fountain files, and the "Review Draft in Backlot…" ha
 
 ## Printing prerequisites
 
-PDF printing uses a locally installed Google Chrome: see [Troubleshooting](troubleshooting.md) if reports will not print.
+Desktop PDF printing uses Backlot’s included browser. No separate Chrome installation is needed. See [Troubleshooting](troubleshooting.md) if a report will not print.
