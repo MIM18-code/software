@@ -1,6 +1,6 @@
 # Backlot user guide
 
-Backlot is a Mac application for film production: script breakdown, scheduling, day out of days, budgets, cost tracking, call sheets and daily reports, all in standard printed forms. Version 0.7.0 beta 7, for Apple silicon Macs running macOS 13 or later. Backlot stores each project as a folder on the local disk, with a change journal, undo and backups.
+Backlot is a Mac application for film production: script breakdown, scheduling, day out of days, budgets, cost tracking, call sheets and daily reports, all in standard printed forms. Version 0.7.0 beta 8, for Apple silicon Macs running macOS 13 or later. Backlot stores each project as a folder on the local disk, with a change journal, undo and backups.
 
 ## Start here
 
@@ -23,7 +23,7 @@ New to Backlot? [Install it and make an empty practice project](getting-started.
 | [Script import, revisions, and live script](script-import-and-revisions.md) | FDX and Fountain import, revised-draft reviews, following a Cold Open draft. |
 | [Projects, backups, and sending a copy](projects-and-sending.md) | The journal, undo, backups, and the `.backlot` file. |
 | [How do I…?](how-do-i.md) | Short recipes: import and schedule, Movie Magic export, call sheets, live script. |
-| [Troubleshooting](troubleshooting.md) | Totals, Chrome, engines, delivery, providers. |
+| [Troubleshooting](troubleshooting.md) | Totals, import, PDF output, delivery and providers. |
 
 ## Videos
 
@@ -35,4 +35,4 @@ The images folder holds screenshots of the running app (light mode, 1440x900), c
 
 ## This guide and the app
 
-This guide covers Backlot 0.7.0-beta.7 and the newer guided AI setup. Report guide problems on the [public issue tracker](https://github.com/MIM18-code/homebrew-backlot/issues).
+This guide covers Backlot 0.7.0-beta.8, including its bundled script reader, desktop PDF output and guided AI setup. Report guide problems on the [public issue tracker](https://github.com/MIM18-code/homebrew-backlot/issues).

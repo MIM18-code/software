@@ -1,6 +1,6 @@
 # Getting started with Backlot
 
-Start by making one empty project and adding a scene. This needs Backlot alone. AI, script import, printing and email have separate setup, so you can leave them until you need them.
+Start by making a project and importing your screenplay, or add a scene by hand. Backlot includes script import, scene reading, actor sides and PDF output. AI and in-app email are optional setup.
 
 The downloadable app requires an Apple silicon Mac running macOS 13 or later.
 
@@ -22,9 +22,7 @@ The app does not update itself. To update without Terminal, repeat these steps w
 
 Projects is the starting screen. On a new installation, Recent says Nothing opened yet. Create a project or open a file. An empty list is expected.
 
-You may see a yellow notice about missing script-reading or budget-export tools. That notice does not prevent making a project, adding scenes by hand, arranging the board or editing a budget. It does mean the named import or export feature is unavailable. Setting up AI does not fix those tools.
-
-The current installer has no point-and-click setup for the missing script-import tools. You can continue with the manual example below. See [what is required for each task](setup-and-ai.md) before trying an import.
+Version 0.7.0 beta 8 includes the script reader and desktop PDF renderer. No Python environment, separate Chrome installation or AI download is needed for the workflows below.
 
 ## Make an empty practice project
 
@@ -44,6 +42,18 @@ The current form shows technical file and JSON fields even when you only want an
 
 Keep the whole project folder when you back it up or move it. Its project file, attachments, journal and saved documents belong together.
 
+## Import a screenplay
+
+1. In the left sidebar, click Breakdown.
+2. Click Import FDX and choose a `.fdx` or `.fountain` screenplay. You can use the [six-scene Fountain sample](sample/Night-Ferry.fountain) or [tagged Final Draft sample](sample/Night-Ferry-tagged.fdx).
+3. Review the proposed scenes, page lengths, cast and tags. Cancel returns to the unchanged project.
+4. Click Confirm import when the preview matches your script. The scenes appear in Breakdown and in Stripboard's unscheduled drawer.
+5. Use Read scene to check a scene's source text. An invalid file leaves the project unchanged; keep the original and report the error if a valid script cannot be read.
+
+Fountain carries no breakdown tags. Both formats work without AI or another reader. [Script import and revisions](script-import-and-revisions.md) explains revised drafts and missing-scene choices.
+
+![Imported screenplay scenes in a practice project](images/first-run-import-success.png)
+
 ## Add one scene without importing a script
 
 1. In the left sidebar, click Breakdown.
@@ -53,7 +63,7 @@ Keep the whole project folder when you back it up or move it. Its project file, 
 5. Click Create. The scene is now in the breakdown.
 6. Click Stripboard to start arranging your scenes. The new scene waits in the unscheduled drawer until you add it to the board. Follow [Stripboard](stripboard.md) when you are ready to build shooting days.
 
-![A manually created scene without script-import tools](images/first-run-manual-scene.png)
+![A manually created scene](images/first-run-manual-scene.png)
 
 A created scene is saved in the project folder. You can stop here and return to the project later. No AI account or model download is required for these edits.
 
@@ -62,11 +72,11 @@ A created scene is saved in the project folder. You can stop here and return to 
 | You want to | What to do next |
 | --- | --- |
 | Use AI suggestions | Follow [Setup and AI providers](setup-and-ai.md). You can close AI settings and keep working. |
-| Import a screenplay | Read [Script import](script-import-and-revisions.md) first. A fresh installation is missing the separate import tools. |
-| Save PDFs or issue a call sheet | Install Google Chrome if Backlot reports it missing, then quit and reopen Backlot. |
+| Import a revised screenplay | Follow [Script import](script-import-and-revisions.md) and review the changes before confirming. |
+| Save PDFs or issue a call sheet | Use Save PDF or Issue in the app. The desktop PDF renderer is included. |
 | Email a call sheet | Use [Call sheets](call-sheets.md). In-app delivery needs extra configuration; manual email attachments are an alternative after a PDF is saved. |
 
-The [six-scene Fountain sample](sample/Night-Ferry.fountain) and [tagged Final Draft sample](sample/Night-Ferry-tagged.fdx) are for an installation whose script-import tools are already available. They do not install those tools.
+The sample scripts are fictional and can be imported directly after installing Backlot.
 
 ## If a step fails
 
@@ -74,8 +84,8 @@ The [six-scene Fountain sample](sample/Night-Ferry.fountain) and [tagged Final D
 | --- | --- |
 | Create is unavailable | Fill in Title and check the highlighted required fields. Choose Union status. |
 | The project file already exists | Use Open file… to open the existing project, or start New project again and choose a different empty parent folder. Do not overwrite the existing project. |
-| A script-reading or Python error during import | Dismiss the error with its × button. Continue with Add scene, or report the missing-import-tools message. Switching from FDX to Fountain or setting up AI does not repair a missing reader. |
-| PDFs need Google Chrome | Install Chrome in Applications, then quit and reopen Backlot. Try saving the PDF again. |
+| A script cannot be read | Keep the original, dismiss the error and check that the file is a valid FDX or Fountain screenplay. The project is unchanged. Update an older Backlot installation if it reports a missing Python reader. |
+| An older Backlot asks for Chrome | Update to beta 8 or later. The desktop PDF renderer is now included. |
 | AI is not ready | Close the AI sheet and keep working, or follow its setup and retry steps in [Setup and AI providers](setup-and-ai.md). |
 
 More recovery steps are in [Troubleshooting](troubleshooting.md).

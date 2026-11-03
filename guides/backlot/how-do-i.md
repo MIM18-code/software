@@ -4,7 +4,7 @@ Short recipes for common jobs in Backlot.
 
 ## Import a tagged script and start scheduling
 
-Check [the import prerequisite](setup-and-ai.md#what-each-task-needs) first. For a fresh install without those tools, use [manual scene entry](getting-started.md#add-one-scene-without-importing-a-script).
+Script import is included in beta 8. No separate reader, Python environment or AI account is required.
 
 1. Create a project with its title, folder and union status. The optional Script path attaches the source without importing scenes.
 2. Breakdown `⌘1`: choose Import FDX and select the tagged `.fdx` from Cold Open. Review the proposed changes, choose Confirm import, then check the elements.
@@ -12,6 +12,8 @@ Check [the import prerequisite](setup-and-ai.md#what-each-task-needs) first. For
 4. Calendar `⌘3`: set Production start to place shoot days. Drag a day within the calendar, or choose Change date, to pin a different date.
 
 ## Export a breakdown to Movie Magic
+
+These advanced budget/schedule formats require a separately configured integration. Backlot disables them when it is unavailable. PDF and CSV output are included.
 
 1. Tag the script in Cold Open and export the `.fdx` (or use Review Draft in Backlot…), or import it here.
 2. Reports view: pick the stripboard or one-line schedule export.

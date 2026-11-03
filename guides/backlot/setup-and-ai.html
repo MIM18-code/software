@@ -23,14 +23,14 @@
 <td>No</td>
 </tr>
 <tr>
-<td>Script import and actor sides</td>
-<td>Separate script-reading tools not included in the current installer</td>
-<td>No, but import cannot work without them</td>
+<td>Script import, tagged FDX export and actor sides</td>
+<td>Backlot, with its included screenplay engine</td>
+<td>No extra setup</td>
 </tr>
 <tr>
 <td>Saving PDFs and issuing call sheets</td>
-<td>Google Chrome installed in Applications</td>
-<td>No</td>
+<td>Backlot, with its included desktop PDF renderer</td>
+<td>No extra setup</td>
 </tr>
 <tr>
 <td>Gorilla and Movie Magic interchange files</td>
@@ -43,8 +43,7 @@
 <td>No</td>
 </tr>
 </tbody></table>
-<p>A fresh install currently has no button that installs the script-reading or budget-export tools. If Backlot reports those missing, this is an application setup gap. Opening a Fountain file instead, installing Chrome or signing into AI will not supply them. Use manual scene entry or ask for support for the blocked import/export feature.</p>
-<p>For PDFs, install <a href="https://www.google.com/chrome/">Google Chrome</a> in Applications. Then quit and reopen Backlot so it checks again. Chrome does not supply the script-reading tools.</p>
+<p>Backlot beta 8 includes script reading, tag writing, sides and desktop PDF output. Gorilla/Movie Magic budget and schedule interchange tools remain separate integrations, with their buttons disabled when absent. AI setup does not install those integrations.</p>
 <h2 id="choose-whether-you-want-ai">Choose whether you want AI</h2>
 <p>AI is optional. It helps with tasks such as suggested breakdown elements and synopses. You can dismiss its setup and continue editing the project.</p>
 <table>
@@ -72,10 +71,10 @@
 </tr>
 </tbody></table>
 <p>Pick one provider. Backlot does not silently switch between your local model, plan or API billing. Responses name the provider and model that answered. Saved account connections and keys are kept on this Mac, outside the project file. Cloud requests use that provider&#39;s connection.</p>
-<h2 id="newer-builds-guided-ai-setup">Newer builds: guided AI setup</h2>
+<h2 id="guided-ai-setup">Guided AI setup</h2>
 <p>Click the AI pill at the top, then Set up AI…. The sheet also appears when an AI assist needs setup.</p>
 <p><img src="images/ai-setup.png" alt="Backlot AI setup choices"></p>
-<p>The public beta 7 installer has the earlier provider settings and no Set up AI… button. Use the next section if that button is absent.</p>
+<p>Older beta 7 installations have earlier provider settings and no Set up AI… button. Update to beta 8 for the current setup sheet, or use the earlier-settings notes below.</p>
 <h3 id="use-your-chatgpt-plan">Use your ChatGPT plan</h3>
 <ol>
 <li>Click Sign in with ChatGPT. Complete the sign-in in the browser, then return to Backlot.</li>
@@ -106,5 +105,5 @@
 <p>In-app call-sheet email needs an email service and a configured confirmation site. That is a separate production-delivery setup, not a first-launch requirement.</p>
 <p>To send a sheet without that setup, save the issued PDF and attach it in your usual mail app. Backlot&#39;s distribution panel has no attachment-only email mode. See <a href="call-sheets.html">Call sheets</a>.</p>
 <h2 id="technical-configuration-reference">Technical configuration reference</h2>
-<p>A technician configuring an existing installation can use <a href="reference/OPTIONAL_ENGINES.html">optional external programs</a> and <a href="reference/AI_PROVIDER_POLICY_BACKLOT.html">the AI provider policy</a>. These references contain interpreter, environment and credential-storage details. They are not prerequisites for the manual practice project.</p>
+<p>Technical configuration and the optional integration notes are included in the source archive on the <a href="https://github.com/MIM18-code/homebrew-backlot/releases/latest">Backlot release page</a>. They are not prerequisites for the practice project.</p>
 <footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

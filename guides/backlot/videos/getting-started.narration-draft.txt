@@ -1,23 +1,17 @@
-Your first Backlot project.
+Your first Backlot project: step-by-step screens.
 
-A fresh install opens Projects with no project yet. The yellow notice reports missing import and export components.
+Step-by-step screens: start on Projects and choose New project.
 
-Choose New project, then Choose folder. Select a parent folder for the project.
+Choose a folder, enter a title, and keep or change the project file path.
 
-Enter a title, keep the generated project file, and leave optional files blank.
+Leave optional technical fields blank to create an empty project.
 
-With Non-union selected for this fictional example, choose Create.
+In Breakdown, add a scene manually if you want to start without a script.
 
-The empty project opens on the stripboard. Choose Breakdown to add a scene.
+Or choose Import FDX and select a Final Draft or Fountain screenplay.
 
-Choose Add scene. Enter scene 1, INT. KITCHEN - DAY, and 8 eighths for one page.
+The bundled reader imports scenes. This screen shows the imported sample.
 
-Choose Create. The manually entered scene appears in Breakdown.
+Select an imported scene and use Read scene to check its screenplay text.
 
-On Stripboard, the new scene starts in the unscheduled column.
-
-Import FDX currently requires the missing script engine. We will try the sample and show the result.
-
-Dismiss the error. The manual scene remains; add scenes by hand while import is unavailable.
-
-AI is optional. The project, manual breakdown, and board work without signing in or downloading a model.
+AI is optional. Beta 8 needs no external script reader or Chrome for import.
