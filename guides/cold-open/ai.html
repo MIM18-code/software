@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The assistant and AI setup · Cold Open</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Cold Open user guide</a><a href="https://mindinmotionsoftware.com/#cold-open">Get Cold Open</a><a href="https://mindinmotionsoftware.com/downloads/ColdOpen-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a aria-current="page" href="ai.html">The assistant and AI setup</a></li><li><a href="backlot.html">Handoff to Backlot</a></li><li><a href="breakdown.html">Breakdown tagging</a></li><li><a href="co-writing.html">Co-writing</a></li><li><a href="dictation.html">Format Draft and dictation</a></li><li><a href="exports.html">Exports: PDF, FDX, Fountain, Movie Magic, delivery PDFs and actor sides</a></li><li><a href="getting-started.html">Getting started with Cold Open</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="phone.html">The phone remote</a></li><li><a href="reports.html">Reports and sides</a></li><li><a href="scenes-and-views.html">Scenes, the navigator, and views</a></li><li><a href="script-notes.html">Script notes and project material</a></li><li><a href="settings.html">Settings</a></li><li><a href="table-read.html">Table read and voice packs</a></li><li><a href="title-page-and-revisions.html">Title page, revisions, and locked scene numbers</a></li><li><a href="troubleshooting.html">Troubleshooting</a></li><li><a href="writing.html">Writing and formatting</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="the-assistant-and-ai-setup">The assistant and AI setup</h1>
+<p>Cold Open can ask questions about your script, proofread as you write, and complete sentences. Every one of these is optional: writing, saving and exports work with no AI at all. Nothing is sent anywhere until you ask, and nothing is applied without your acceptance.</p>
+<h2 id="choose-a-provider">Choose a provider</h2>
+<p>Open Settings &gt; AI (Tools &gt; Settings…, <code>⌘,</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>What it is</th>
+<th>What it costs</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Local model (Ollama)</td>
+<td>Runs on this Mac. Nothing leaves it.</td>
+<td>Free. Cold Open can install the local runtime and model; an existing Ollama installation also works.</td>
+</tr>
+<tr>
+<td>Sign in with ChatGPT</td>
+<td>Uses your own ChatGPT plan through OpenAI&#39;s Sign in with ChatGPT for open-source apps</td>
+<td>Your plan&#39;s limits</td>
+</tr>
+<tr>
+<td>Anthropic (Claude)</td>
+<td>Your own API key</td>
+<td>Billed per use by Anthropic</td>
+</tr>
+<tr>
+<td>OpenAI (API key)</td>
+<td>Your own API key</td>
+<td>Billed per use by OpenAI</td>
+</tr>
+<tr>
+<td>Google (Gemini)</td>
+<td>Your own API key</td>
+<td>Billed per use by Google</td>
+</tr>
+</tbody></table>
+<h2 id="guided-setup">Guided setup</h2>
+<p>Choose Tools &gt; Set up AI…, or Set up AI… in Settings &gt; AI. This sheet also opens when an AI request needs a local model that is not ready.</p>
+<p><img src="images/ai-setup.png" alt="The guided AI setup sheet"></p>
+<p>Choose one route:</p>
+<ul>
+<li>Use your ChatGPT plan: choose Sign in with ChatGPT and complete the browser sign-in. If already signed in, choose Use ChatGPT. Eligible requests use your plan after you enable plan usage.</li>
+<li>Run on this Mac: choose Set up local AI for me if the tools are missing or stopped. Cold Open installs and starts the runtime and gets a model if needed. Allow about 4 GB for the runtime and model download. If Ollama is already running without a model, choose Download writing model. Pause keeps completed model files; Resume model download continues a paused model download. If local AI is already ready while another provider is selected, choose Use AI on this Mac.</li>
+</ul>
+<p>The public beta 8 release has the earlier local setup buttons: Download Ollama opens its installer page, Start Ollama starts an installed app, and Download (3.3 GB) gets the model. The newer setup shown above performs those steps for you.</p>
+<p>The sheet reports when the chosen provider is ready. Choose Done, then continue your request. The assistant and breakdown suggestions retry the pending request after setup. Not now closes the sheet; writing stays available. Closing the sheet during a download leaves the download running.</p>
+<p>Nothing downloads or changes provider until you choose it. AI setup is separate from microphone preparation and table-read voice packs.</p>
+<p>For a different local model or address, open Settings &gt; AI &gt; Advanced. Choose an installed local model, then Test connection.</p>
+<p>The status line reports readiness. &quot;Provider reports ready&quot; means the server answered; an individual request can still fail or hit a plan&#39;s usage limit.</p>
+<p><img src="images/settings-ai.png" alt="AI settings"></p>
+<h2 id="ask-about-the-script">Ask about the script</h2>
+<p>Tools &gt; Ask About the Script… opens the Ask panel. It reads your scenes, searches and looks up characters one step at a time; the note under each answer counts what it used. Quick prompts handle common jobs: Summarize scene, Check continuity across the script.</p>
+<p>Tools &gt; Notes on This Scene and Tools &gt; Summarize This Scene work on the current scene directly.</p>
+<h2 id="proofreading">Proofreading</h2>
+<p>The Proofread panel (View &gt; Show Proofread) checks as you write and only suggests. Nothing changes until you accept.</p>
+<p>Its checks, each switchable in Settings &gt; AI: character names, script structure, punctuation, spacing, repeated words, capitals and spelling. Tools &gt; Check Scene with AI and Check Script with AI run a full pass on demand; Tools &gt; Next Proofreading Suggestion (<code>⌘;</code>) walks the results.</p>
+<h2 id="sentence-completion">Sentence completion</h2>
+<p>Off by default. In Settings &gt; AI choose Off, When I press <code>⌘Return</code>, or When I pause while typing. With the keyboard mode, Edit &gt; Complete Sentence (<code>⌘Enter</code>) suggests the rest of the sentence.</p>
+<h2 id="production-questions-from-backlot">Production questions from Backlot</h2>
+<p>The Production data section in Settings &gt; AI can point at a Backlot project:</p>
+<ol>
+<li>Choose Choose…</li>
+<li>Select the Backlot project&#39;s <code>project.json</code>.</li>
+</ol>
+<p>The assistant then answers production questions with that project&#39;s data. Neither app changes anything in the other&#39;s files for this.</p>
+<h2 id="ai-users39-first-use-consent">AI users&#39; first-use consent</h2>
+<p>The first time you use casting help or sentence completion on a cloud provider, Cold Open asks once before sending anything. It always names the provider that answered in the answer&#39;s header.</p>
+<h2 id="video-walkthrough">Video walkthrough</h2>
+<p><a href="videos/ai-setup.mp4">AI setup options</a> · <a href="videos/ai-setup.srt">Captions</a>. See <a href="videos/index.html">video notes and draft narration</a>.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

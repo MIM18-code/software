@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The phone remote · Cold Open</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Cold Open user guide</a><a href="https://mindinmotionsoftware.com/#cold-open">Get Cold Open</a><a href="https://mindinmotionsoftware.com/downloads/ColdOpen-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="ai.html">The assistant and AI setup</a></li><li><a href="backlot.html">Handoff to Backlot</a></li><li><a href="breakdown.html">Breakdown tagging</a></li><li><a href="co-writing.html">Co-writing</a></li><li><a href="dictation.html">Format Draft and dictation</a></li><li><a href="exports.html">Exports: PDF, FDX, Fountain, Movie Magic, delivery PDFs and actor sides</a></li><li><a href="getting-started.html">Getting started with Cold Open</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a aria-current="page" href="phone.html">The phone remote</a></li><li><a href="reports.html">Reports and sides</a></li><li><a href="scenes-and-views.html">Scenes, the navigator, and views</a></li><li><a href="script-notes.html">Script notes and project material</a></li><li><a href="settings.html">Settings</a></li><li><a href="table-read.html">Table read and voice packs</a></li><li><a href="title-page-and-revisions.html">Title page, revisions, and locked scene numbers</a></li><li><a href="troubleshooting.html">Troubleshooting</a></li><li><a href="writing.html">Writing and formatting</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="the-phone-remote">The phone remote</h1>
+<p>An iPhone can read the live script and send back lines, dictated takes and notes for you to accept or ignore on the Mac.</p>
+<p>Tools &gt; Phone Companion… opens the Phone panel.</p>
+<h2 id="connect-at-home-wi-fi">Connect at home (Wi-Fi)</h2>
+<ol>
+<li>Connect the Mac and iPhone to the same private Wi-Fi.</li>
+<li>Open Tools &gt; Phone Companion… and choose the Wi-Fi interface under Connect through.</li>
+<li>Choose connection protection. HTTPS is the default: choose Choose HTTPS certificate and key… and supply a matching certificate and key for the selected Mac IP address. The iPhone must trust the certificate issuer. Alternatively, explicitly choose HTTP · unencrypted, trusted Wi-Fi only for a trusted private network.</li>
+<li>Choose Start phone pairing…. HTTPS pairing stays disabled until its certificate is supplied.</li>
+<li>In the native Cold Open iPhone app, tap <strong>Scan code</strong> and point at the QR code on the Mac. Or choose <strong>Copy app pairing code</strong> on the Mac and <strong>Paste a pairing code</strong> on the phone. For the Safari reader, open the separate <strong>Copy pairing link</strong> URL instead.</li>
+</ol>
+<p>The panel reports whether encryption is active. A one-off pairing expires after two hours; tick Remember this iPhone to survive restarts. Cold Open remembers the phone&#39;s port; keep it unchanged while the phone is remembered.</p>
+<h2 id="connect-from-anywhere-tailscale">Connect from anywhere (Tailscale)</h2>
+<p>Away from home Wi-Fi, Turn on the four checks and Cold Open will tell you exactly what is missing:</p>
+<ol>
+<li>Tailscale installed on this Mac.</li>
+<li>Tailscale signed in and running.</li>
+<li>MagicDNS on.</li>
+<li>HTTPS certificates on. Turn them on in the Tailscale admin console (the panel links there directly).</li>
+</ol>
+<p>Sign in to Tailscale on the iPhone with the same account. In the Mac panel, choose Tailscale under Connect through, then Start phone pairing…. In Cold Open on the iPhone, scan the QR code on the Mac. iCloud Drive can serve as a fallback folder: choose the same folder on the Mac and on the iPhone, and what arrives still lands in the review inbox.</p>
+<h2 id="review-inbox">Review inbox</h2>
+<ol>
+<li>On the iPhone, pick a script line and add a note, or dictate a take.</li>
+<li>On the Mac, the Review inbox lists them with source text.</li>
+<li>Choose Accept or Ignore per item. Accepted and ignored items return to the phone when the live link reconnects.</li>
+</ol>
+<p>Items wait in a bounded local inbox until you handle them, even after sharing stops. Source text that no longer matches is accepted as an unanchored note rather than attached to guessed text.</p>
+<p>The native iPhone app saves unfinished writing on the phone. If the app closes before you send, it reopens your text. If pairing ends while you write, copy your text before pairing again.</p>
+<p>Tools &gt; Stop Phone Sharing ends the stream. The Connect through drop-down at the top of the panel chooses the path: Tailscale, or a named Wi-Fi interface with its address.</p>
+<h2 id="limits-worth-knowing">Limits worth knowing</h2>
+<ul>
+<li>Opening another document ends a one-off link; a remembered iPhone resumes when its script is open again.</li>
+<li>Real iPhone testing beyond Safari pairing, native microphone capture and trusted-CA setups on arbitrary networks are areas still in development; the safest path is the Tailscale one above.</li>
+</ul>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

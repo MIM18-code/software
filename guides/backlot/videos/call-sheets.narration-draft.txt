@@ -1,0 +1,15 @@
+Prepare a call sheet.
+
+Open the sample project.
+
+Choose Call sheets to see the scheduled shooting days.
+
+Select a shooting day to open its draft call sheet.
+
+Review general, crew, and shooting call times.
+
+Choose locations and the crew included on the sheet.
+
+Review individual calls and the day’s scenes.
+
+Return to the top to preview or issue the PDF.

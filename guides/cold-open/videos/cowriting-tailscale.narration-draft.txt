@@ -1,0 +1,15 @@
+Co-writing on different networks.
+
+Open the Co-writing panel for the sample draft.
+
+Choose Share for Co-writing to start a local session.
+
+Choose where the co-writer is located.
+
+For another network, choose On a different network.
+
+The panel explains how to connect both Macs with Tailscale.
+
+Check Tailscale again after connecting; an invite appears when ready.
+
+Stop Sharing when the session is no longer needed.

@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<FinalDraft DocumentType="Script" Template="No" Version="6">
+  <DocumentRef id="3c8ff7c4-61fc-488a-a469-dcc908548d91" />
+  <Content>
+    <Paragraph Type="Scene Heading" id="d21b585e-6c93-483c-a32b-a540c2cdb218">
+      <SceneProperties Length="1/8" Page="1" Title="">
+        <SceneArcBeats />
+      </SceneProperties>
+      <Text>EXT. HARBOR PARKING LOT - NIGHT</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="0fa83cd6-2c22-4c65-ba25-cbc26a313df7">
+      <Text>Rain on the windshield of a dented blue </Text>
+      <Text TagNumber="1">pickup truck</Text>
+      <Text>. DANA REYES (30s, ferry mechanic, coffee in a thermos) sits behind the wheel, watching the last ferry load.</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="e14e18ad-4911-4ff2-acaa-6aa2d634f94e">
+      <Text>A TICKET AGENT waves a </Text>
+      <Text TagNumber="3">flashlight</Text>
+      <Text> at the line of cars.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="f5280449-2e11-4f72-8751-0b413744a087">
+      <Text>DANA</Text>
+    </Paragraph>
+    <Paragraph Type="Parenthetical" id="7f45aaf3-7754-4d10-82b7-528ae7af0c3f">
+      <Text>(to herself)</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="c2d9c50e-1f34-4251-8433-68d18f0d3663">
+      <Text>Twelve minutes. Plenty of time.</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="17f1e8c2-7b52-4484-b0e7-58953d7ba8f9">
+      <Text>She grabs a </Text>
+      <Text TagNumber="2">canvas tool bag</Text>
+      <Text> from the passenger seat and runs.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading" id="1ebe6135-b2d1-4d3c-82c5-fd231cd46e1b">
+      <SceneProperties Length="1/8" Page="1" Title="">
+        <SceneArcBeats />
+      </SceneProperties>
+      <Text>INT. FERRY - ENGINE ROOM - NIGHT</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="066d9a4b-8d9a-432a-869d-e861b450055e">
+      <Text>Hot, loud, dim. Pipes sweat. MILO OKAFOR (60s, chief engineer, reading glasses on a cord) taps a pressure gauge with a </Text>
+      <Text TagNumber="4">wrench</Text>
+      <Text>.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="d2abed32-c854-4380-a622-3a94ca61f3c0">
+      <Text>MILO</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="6e1c3d5b-b471-4f82-b03d-f8740c83b9a1">
+      <Text>You're late.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="ec91269e-0ad8-479e-a0b6-ee61a81b2793">
+      <Text>DANA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="545787c7-86ec-4af5-8ddb-d5d860a453dd">
+      <Text>I'm early for tomorrow.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="6aa0ef11-b70b-4f53-89f4-1de6690fd6a9">
+      <Text>MILO</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="66fc194d-13fa-4157-a129-0ac3fbccdcd4">
+      <Text>The port engine's been coughing since Seattle.</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="2436bba7-5a46-4151-9a6f-be60e9ae1005">
+      <Text>Dana kneels at the engine, opens her tool bag, pulls out a </Text>
+      <Text TagNumber="3">flashlight</Text>
+      <Text>.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="054ebd40-6316-4a63-bf60-7ad1044504c4">
+      <Text>DANA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="934519a7-d1ab-46f2-941b-cfe26da76d53">
+      <Text>Hand me the torque wrench.</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="6bb839a0-3f0a-4a09-8e2d-c9727c85d684">
+      <Text>He does. Their hands touch the same tool for a beat too long.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading" id="53c8245b-bb44-4f45-a194-137179720dad">
+      <SceneProperties Length="1/8" Page="1" Title="">
+        <SceneArcBeats />
+      </SceneProperties>
+      <Text>EXT. FERRY - UPPER DECK - NIGHT</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="97d2e3c3-9493-489e-999a-0417e5f9fe20">
+      <Text>Wind. Rain. PASSENGERS huddle under the overhang. A GIRL (8) in a yellow raincoat presses her face to the railing.</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="b73790d5-ea4c-429b-85a6-195234622439">
+      <Text>Dana climbs the ladder, wiping grease off on her jeans. She spots the girl.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="16f29e69-9fbe-4b68-a4f2-390d55f3c000">
+      <Text>DANA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="37655e10-ea5d-42f5-a336-c92d7fa3a8ea">
+      <Text>Where are your people?</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="dad9e7a4-0826-4434-aca7-360e0752cb5a">
+      <Text>GIRL</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="e87d756e-5633-472a-9a86-0fc0e5512724">
+      <Text>Inside. I wanted to see the lighthouse.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="3a2ea5d5-4539-4ecc-b6f2-8ef7b18200e9">
+      <Text>DANA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="49000f32-a21e-405b-a0a8-e3116547cad3">
+      <Text>That's the lighthouse. Now you've seen it.</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="eb78faa4-8292-4e3b-a3b1-323158aba9d7">
+      <Text>The lighthouse beam sweeps across them both.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading" id="004922ac-11c3-4e6e-837f-af20fdd253ee">
+      <SceneProperties Length="1/8" Page="1" Title="">
+        <SceneArcBeats />
+      </SceneProperties>
+      <Text>INT. FERRY - PASSENGER CABIN - NIGHT</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="a46200ef-d6ac-4f2a-a108-ebe333482fab">
+      <Text>Rows of vinyl seats. A vending machine hums. CAPTAIN ROSA VEGA (50s, uniform, radio on her hip) walks the aisle.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="5cd21ddf-eba3-42e3-9bdc-55de7625ddaf">
+      <Text>CAPTAIN VEGA</Text>
+    </Paragraph>
+    <Paragraph Type="Parenthetical" id="6bf57219-ef7a-4ff4-9301-3215cccc55df">
+      <Text>(into radio)</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="4b17ad4c-f22c-4fa7-8e7c-c2ca83298d2b">
+      <Text>Engine room, talk to me.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="df8bd880-8576-422a-bf2a-a6f2d30b4d50">
+      <Text>MILO (V.O.)</Text>
+    </Paragraph>
+    <Paragraph Type="Parenthetical" id="206b866d-b3fa-4380-9fc8-fbb4da47946a">
+      <Text>(over radio)</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="ddf0da57-5723-4b1e-a6f2-fa2228a57bea">
+      <Text>Dana's on it. Give us ten.</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="d7547d26-f687-46f9-bbda-d91994680374">
+      <Text>Captain Vega finds the girl's MOTHER asleep across three seats and gently shakes her.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading" id="3be978ec-7967-41e9-816b-8aff8238124d">
+      <SceneProperties Length="1/8" Page="1" Title="">
+        <SceneArcBeats />
+      </SceneProperties>
+      <Text>INT. FERRY - ENGINE ROOM - CONTINUOUS</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="a9a1027e-bc3f-4f8f-8830-021f12b2e55a">
+      <Text>Dana tightens a fitting. The engine note smooths out.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="61841fd4-be1b-4ea2-a916-15c6b4bd079f">
+      <Text>MILO</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="76cb3906-7b58-4825-ae0a-f7c046fb50b2">
+      <Text>Listen to that.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="7a308bf5-2062-420c-8039-e551e89ed30e">
+      <Text>DANA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="0d369f3f-2860-4e95-9c1f-fc2a3abbc038">
+      <Text>That's the sound of me getting paid.</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="9ef9e670-6bfb-4ac2-a218-7b9b3c287eba">
+      <Text>Milo laughs, then coughs. He hides a pill bottle in his coat pocket. Dana sees it.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="c6aa214c-9701-4018-abfe-a547d0c1c2a0">
+      <Text>DANA (CONT'D)</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="5557da85-775c-4190-a05c-38eb336c9e1a">
+      <Text>Milo.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="cabc14eb-9f48-456c-88a4-19b6fecb8114">
+      <Text>MILO</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="e63d8d35-0567-4005-a1e1-ac3630db8903">
+      <Text>Not tonight.</Text>
+    </Paragraph>
+    <Paragraph Type="Scene Heading" id="0d18e719-ab6d-4d54-9352-ce1d0d6cffff">
+      <SceneProperties Length="1/8" Page="1" Title="">
+        <SceneArcBeats />
+      </SceneProperties>
+      <Text>EXT. ISLAND DOCK - DAWN</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="5928f5ab-4814-4b3a-bf45-a19834640bf3">
+      <Text>The ferry noses into the slip. Gulls. Dana walks off with her tool bag, Milo beside her. The girl waves from the deck in her yellow raincoat.</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="a2f39278-893a-482f-b6a6-a1c7155702e8">
+      <Text>MILO</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="32ee4305-f723-46b1-acae-5568babef1b1">
+      <Text>Same time tomorrow?</Text>
+    </Paragraph>
+    <Paragraph Type="Character" id="11e638c6-871b-4b2f-bb89-4cd9905d7e29">
+      <Text>DANA</Text>
+    </Paragraph>
+    <Paragraph Type="Dialogue" id="12114fe0-37fa-4cf7-b625-105fa455d46f">
+      <Text>I'll bring the coffee.</Text>
+    </Paragraph>
+    <Paragraph Type="Action" id="ee445a28-9dae-44e9-879a-c8fcc9eb3216">
+      <Text>FADE OUT.</Text>
+    </Paragraph>
+  </Content>
+  <TitlePage>
+    <Content>
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center">
+        <Text Style="Underline+AllCaps">NIGHT FERRY</Text>
+      </Paragraph>
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center">
+        <Text>Written by</Text>
+      </Paragraph>
+      <Paragraph Alignment="Center" />
+      <Paragraph Alignment="Center">
+        <Text>Sam Rivera</Text>
+      </Paragraph>
+    </Content>
+  </TitlePage>
+  <TagData>
+    <TagCategories>
+      <TagCategory Color="#72006500AB00" Id="3f101bb7-c655-48f1-9fd1-eeb8778d5dd6" Name="Cast Members" Number="1" Style="Bold" />
+      <TagCategory Color="#A60073005E00" Id="09939dbf-9f59-4586-943c-5b1e38c10d1c" Name="Props" Number="2" Style="Bold" />
+      <TagCategory Color="#55007F009D00" Id="f2f45837-2896-4a33-b857-04e8639373c7" Name="Location Details" Number="3" Style="Bold" />
+      <TagCategory Color="#5200A1009A00" Id="c7e1ee2c-f426-428c-baad-89db81e39968" Name="Special Effects" Number="4" Style="Bold" />
+      <TagCategory Color="#1300A3007700" Id="f22c232a-a2a3-4aa9-8a58-3fa72cd735b8" Name="Sound" Number="5" Style="Bold" />
+      <TagCategory Color="#DF0084004C00" Id="eeb804e3-0783-4a78-8800-31ac0241f499" Name="Wardrobe" Number="6" Style="Bold" />
+      <TagCategory Color="#B6005800AE00" Id="e893a76e-f9f9-44ff-833a-74051aa38176" Name="Makeup/Hair" Number="7" Style="Bold" />
+      <TagCategory Color="#3C009100A100" Id="60bf3625-c232-4e31-a1c4-ff4343672847" Name="Vehicles" Number="8" Style="Bold" />
+      <TagCategory Color="#C600A7004600" Id="7690f324-a09f-43f4-b400-7d66c0bbab12" Name="Animals" Number="9" Style="Bold" />
+      <TagCategory Color="#A60073005E00" Id="5bdb63b7-2b3a-42bf-8159-428de2ed3811" Name="Greenery" Number="10" Style="Bold" />
+      <TagCategory Color="#93008E009300" Id="d85a1e06-12a5-4f9a-a0ab-94a11e99ab22" Name="Set" Number="11" Style="Bold" />
+      <TagCategory Color="#F2003D003D00" Id="0ca4850c-1377-4ca7-a3b8-9a16821258a9" Name="Stunts" Number="12" Style="Bold" />
+      <TagCategory Color="#6F006F006F00" Id="8fd15a7e-e100-460e-8468-10483b046398" Name="Extras/Background" Number="13" Style="Bold" />
+      <TagCategory Color="#00008F00D400" Id="ea7af350-a2d8-4d6c-90c8-5d6f861bcb29" Name="Music" Number="14" Style="Bold" />
+      <TagCategory Color="#D4008A000000" Id="d4b6b5b9-6e4b-4602-a129-a2e64f46561e" Name="Special Equipment" Number="15" Style="Bold" />
+      <TagCategory Color="#B5008B002F00" Id="b3a7620f-d39e-4db1-a002-b9afed65cb20" Name="Set Dressing" Number="16" Style="Bold" />
+    </TagCategories>
+    <TagDefinitions>
+      <TagDefinition CatId="60bf3625-c232-4e31-a1c4-ff4343672847" Id="0be68c42-3f0f-4e50-bda8-0db5a2a49a1e" Label="pickup truck" Number="1" />
+      <TagDefinition CatId="09939dbf-9f59-4586-943c-5b1e38c10d1c" Id="07cdb07f-7f56-49d5-8849-bcc9c3ccd75d" Label="canvas tool bag" Number="2" />
+      <TagDefinition CatId="09939dbf-9f59-4586-943c-5b1e38c10d1c" Id="af1a9d12-3ea2-448c-903a-a6521810706f" Label="flashlight" Number="3" />
+      <TagDefinition CatId="09939dbf-9f59-4586-943c-5b1e38c10d1c" Id="ea28713c-9f5e-4fb2-ad77-c56b344b64ce" Label="wrench" Number="4" />
+    </TagDefinitions>
+  </TagData>
+</FinalDraft>

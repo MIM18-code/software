@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:11,000
+A fresh install opens Projects with no project yet. The yellow notice reports missing import and export components.
+
+2
+00:00:12,582 --> 00:00:23,582
+Choose New project, then Choose folder. Select a parent folder for the project.
+
+3
+00:00:25,145 --> 00:00:36,145
+Enter a title, keep the generated project file, and leave optional files blank.
+
+4
+00:00:37,761 --> 00:00:48,761
+With Non-union selected for this fictional example, choose Create.
+
+5
+00:00:50,310 --> 00:01:01,310
+The empty project opens on the stripboard. Choose Breakdown to add a scene.
+
+6
+00:01:02,865 --> 00:01:13,865
+Choose Add scene. Enter scene 1, INT. KITCHEN - DAY, and 8 eighths for one page.
+
+7
+00:01:15,412 --> 00:01:26,412
+Choose Create. The manually entered scene appears in Breakdown.
+
+8
+00:01:29,241 --> 00:01:40,241
+On Stripboard, the new scene starts in the unscheduled column.
+
+9
+00:01:41,783 --> 00:01:52,783
+{\an8}Import FDX currently requires the missing script engine. We will try the sample and show the result.
+
+10
+00:01:55,934 --> 00:02:06,934
+Dismiss the error. The manual scene remains; add scenes by hand while import is unavailable.
+
+11
+00:02:08,467 --> 00:02:19,467
+AI is optional. The project, manual breakdown, and board work without signing in or downloading a model.

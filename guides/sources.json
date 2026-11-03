@@ -1,0 +1,12 @@
+[
+  {
+    "app": "cold-open",
+    "repository": "MIM18-code/screenwriting-app",
+    "revision": "a53d5e957c9952724a4a3f27a662ab3971bed4d4"
+  },
+  {
+    "app": "backlot",
+    "repository": "MIM18-code/backlot-private",
+    "revision": "44a85e14fc6a684b2b41bc28bf8fd8c983d7df3d"
+  }
+]

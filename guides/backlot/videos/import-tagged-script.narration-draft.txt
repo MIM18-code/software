@@ -1,0 +1,15 @@
+Import a tagged screenplay.
+
+Open the Night Ferry sample project.
+
+Open Breakdown to view scenes and elements.
+
+Choose Import FDX and select the tagged screenplay.
+
+Review how incoming scenes and existing scenes match.
+
+Review cast changes and absent scenes before continuing.
+
+Confirm the import to apply the reviewed changes.
+
+Review the imported scene and tags in Breakdown.

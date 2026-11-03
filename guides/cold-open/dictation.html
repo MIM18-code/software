@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Format Draft and dictation · Cold Open</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Cold Open user guide</a><a href="https://mindinmotionsoftware.com/#cold-open">Get Cold Open</a><a href="https://mindinmotionsoftware.com/downloads/ColdOpen-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="ai.html">The assistant and AI setup</a></li><li><a href="backlot.html">Handoff to Backlot</a></li><li><a href="breakdown.html">Breakdown tagging</a></li><li><a href="co-writing.html">Co-writing</a></li><li><a aria-current="page" href="dictation.html">Format Draft and dictation</a></li><li><a href="exports.html">Exports: PDF, FDX, Fountain, Movie Magic, delivery PDFs and actor sides</a></li><li><a href="getting-started.html">Getting started with Cold Open</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="phone.html">The phone remote</a></li><li><a href="reports.html">Reports and sides</a></li><li><a href="scenes-and-views.html">Scenes, the navigator, and views</a></li><li><a href="script-notes.html">Script notes and project material</a></li><li><a href="settings.html">Settings</a></li><li><a href="table-read.html">Table read and voice packs</a></li><li><a href="title-page-and-revisions.html">Title page, revisions, and locked scene numbers</a></li><li><a href="troubleshooting.html">Troubleshooting</a></li><li><a href="writing.html">Writing and formatting</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="format-draft-and-dictation">Format Draft and dictation</h1>
+<p>Format Draft turns rough text into screenplay elements. Dictation writes the rough text in the first place.</p>
+<h2 id="format-draft">Format Draft</h2>
+<p>Format &gt; Format Draft Selection / Paragraph (<code>⌘⇧Enter</code>) formats the selected text, or the current paragraph if nothing is selected, into screenplay elements.</p>
+<p>The toolbar calls it &quot;Format Draft&quot; with the shortcut shown next to it.</p>
+<ol>
+<li>Paste or type a rough passage. Wording from Wispr Flow, a dictation transcript or a friend&#39;s email all work.</li>
+<li>Select it.</li>
+<li>Press <code>⌘⇧Enter</code> or choose Format &gt; Format Draft Selection / Paragraph.</li>
+<li>Review the result. If a preview opens, choose Apply formatting or Keep original.</li>
+</ol>
+<p>Without a selection, only the current paragraph is formatted. To preview every result before it replaces your text, turn on &quot;Always preview before replacing the draft&quot; in Settings &gt; Draft formatting. It is off by default. Uncertain results, wording changes and styled text always show a preview regardless of the setting. Other results apply directly as one undoable edit.</p>
+<h2 id="the-formatting-model">The formatting model</h2>
+<p>Format Draft runs on a small model on your Mac, through Ollama. No microphone is needed and no text goes to the cloud for this. To set it up:</p>
+<ol>
+<li>Try Format Draft. If the default formatter is missing, its setup opens. You can also open Tools &gt; Manage Local Formatting Models….</li>
+<li>Choose Set up formatting on this Mac… and confirm Download model. Cold Open can install and start the local runtime for you; allow about 4 GB for the runtime and model. In earlier beta 8 builds, install and open Ollama first, then choose Refresh model status.</li>
+<li>Wait for the formatter download to finish. The model is qwen3.5:4b. Cold Open displays its size as 3.10 GB, using binary units; the <a href="https://ollama.com/library/qwen3.5:4b">Ollama registry</a> uses decimal sizes. This is a one-time download outside Cold Open&#39;s release.</li>
+<li>Choose Pin and use this version for Format Draft. A newer download never replaces the pinned version without your say.</li>
+</ol>
+<p>The same model setting lives under Settings &gt; Dictation (Model server: Ollama, or an OpenAI-compatible server such as LM Studio on the local machine only).</p>
+<h2 id="dictation">Dictation</h2>
+<p>Tools &gt; Start/Stop Dictation (<code>⌘⇧D</code>) starts and stops recording. Talk the scene in order; no voice commands are needed. What you get is draft text on the page, in the sequence you spoke.</p>
+<p><img src="images/panel-dictation.png" alt="The Dictate panel"></p>
+<p>To set the engine, open Settings &gt; Dictation:</p>
+<ol>
+<li>Speech engine: Parakeet (recommended), Apple speech recognition (macOS 26 or later), or Whisper.</li>
+<li>Choose Prepare engine. Cold Open includes the Parakeet speech model. You can use it offline from the first recording. Apple speech needs macOS 26 or later. Prepare engine may download and install the <a href="https://developer.apple.com/documentation/speech/assetinventory">system speech asset</a> for your selected language if it is missing. Prepare it while online before recording offline.</li>
+<li>Dictation button: click to start and stop, or hold to talk.</li>
+</ol>
+<p>macOS asks for microphone access the first time; only recording needs it.</p>
+<p>To format what you dictated, select the paragraphs and press <code>⌘⇧Enter</code>. The Dictate panel also accepts a pasted transcript: paste it, then choose Format.</p>
+<h2 id="what-each-piece-costs">What each piece costs</h2>
+<ul>
+<li>Cold Open itself is free.</li>
+<li>The local formatter model is a 3.10 GB Ollama model, downloaded once, on your disk.</li>
+<li>Dictation runs on your Mac. The app download includes Parakeet. Wispr Flow users can use Flow’s normal shortcut in the script editor.</li>
+<li>Wispr Flow, if you use it, bills under its own plan; Cold Open only receives its text.</li>
+</ul>
+<h2 id="video-walkthrough">Video walkthrough</h2>
+<p><a href="videos/format-draft-dictation.mp4">Format a transcript and set up dictation</a> · <a href="videos/format-draft-dictation.srt">Captions</a>. See <a href="videos/index.html">video notes and draft narration</a>.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

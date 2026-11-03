@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Getting started with Backlot · Backlot</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Backlot user guide</a><a href="https://mindinmotionsoftware.com/#backlot">Get Backlot</a><a href="https://mindinmotionsoftware.com/downloads/Backlot-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="breakdown.html">Breakdown</a></li><li><a href="budget-and-costs.html">Budget and costs</a></li><li><a href="calendar.html">Calendar</a></li><li><a href="call-sheets.html">Call sheets</a></li><li><a href="day-reports.html">Day reports</a></li><li><a aria-current="page" href="getting-started.html">Getting started with Backlot</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="people-and-dood.html">People and the DOOD</a></li><li><a href="projects-and-sending.html">Projects, backups, and sending a copy</a></li><li><a href="reports-and-exports.html">Reports and exports</a></li><li><a href="script-import-and-revisions.html">Script import, revisions, and live script</a></li><li><a href="setup-and-ai.html">Setup and AI providers</a></li><li><a href="stripboard.html">Stripboard</a></li><li><a href="troubleshooting.html">Troubleshooting Backlot</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="getting-started-with-backlot">Getting started with Backlot</h1>
+<p>Start by making one empty project and adding a scene. This needs Backlot alone. AI, script import, printing and email have separate setup, so you can leave them until you need them.</p>
+<p>The downloadable app requires an Apple silicon Mac running macOS 13 or later.</p>
+<h2 id="install-without-using-terminal">Install without using Terminal</h2>
+<ol>
+<li>Open the <a href="https://github.com/MIM18-code/homebrew-backlot/releases/latest">Backlot downloads page</a>.</li>
+<li>Under Assets, click the file whose name ends in <code>.dmg</code>. The source archives are for developers.</li>
+<li>Open the downloaded file. Drag Backlot to the Applications shortcut in the installer window.</li>
+<li>After copying finishes, eject the Backlot installer in Finder.</li>
+<li>Open Applications, then double-click Backlot. If macOS asks whether to open an app downloaded from the Internet, click Open.</li>
+</ol>
+<p>If the app will not open, download a fresh DMG from that page and copy it again. If it still fails, report the exact message with your Mac model and macOS version on the <a href="https://github.com/MIM18-code/homebrew-backlot/issues">public Backlot issue tracker</a>. You do not need to change security settings to follow this guide.</p>
+<p>The app does not update itself. To update without Terminal, repeat these steps with the newer DMG and choose Replace when Finder asks about the existing app.</p>
+<h2 id="your-first-launch">Your first launch</h2>
+<p><img src="images/first-run-home.png" alt="Projects on a fresh installation, with no recent projects"></p>
+<p>Projects is the starting screen. On a new installation, Recent says Nothing opened yet. Create a project or open a file. An empty list is expected.</p>
+<p>You may see a yellow notice about missing script-reading or budget-export tools. That notice does not prevent making a project, adding scenes by hand, arranging the board or editing a budget. It does mean the named import or export feature is unavailable. Setting up AI does not fix those tools.</p>
+<p>The current installer has no point-and-click setup for the missing script-import tools. You can continue with the manual example below. See <a href="setup-and-ai.html">what is required for each task</a> before trying an import.</p>
+<h2 id="make-an-empty-practice-project">Make an empty practice project</h2>
+<p>Use the title Night Ferry Practice for this example.</p>
+<ol>
+<li>Click New project.</li>
+<li>Click Choose folder. Choose an empty folder where you want to keep this practice project. You can make one in Finder with File &gt; New Folder, then select it in Backlot&#39;s folder window. Apple&#39;s <a href="https://support.apple.com/guide/mac-help/mh26885/mac">folder instructions</a> show that step.</li>
+<li>Enter Night Ferry Practice in Title.</li>
+<li>Leave the generated Project file value unchanged for this first project. Backlot has filled in the file location for you.</li>
+<li>Leave Company, Prepared by, Script path, Budget JSON to import and Scenes JSON blank. They are optional.</li>
+<li>For this fictional practice project, choose Non-union under Union status. For a real production, choose its actual status, or Unknown until you have confirmed it. A SAG-AFTRA project also asks for its SAG agreement.</li>
+<li>Click Create. Backlot opens the new project on an empty Stripboard.</li>
+</ol>
+<p><img src="images/first-run-new-project.png" alt="The new-project form on a fresh installation"></p>
+<p>The current form shows technical file and JSON fields even when you only want an empty project. Leaving those optional fields blank is the intended route here. Choosing a script path attaches a source file; it does not import scenes.</p>
+<p>Keep the whole project folder when you back it up or move it. Its project file, attachments, journal and saved documents belong together.</p>
+<h2 id="add-one-scene-without-importing-a-script">Add one scene without importing a script</h2>
+<ol>
+<li>In the left sidebar, click Breakdown.</li>
+<li>Click Add scene.</li>
+<li>Enter <code>1</code> for Scene number and <code>INT. KITCHEN - DAY</code> for Slug line.</li>
+<li>Leave Pages (eighths) at <code>8</code>, which means one page. Optionally add a short Synopsis.</li>
+<li>Click Create. The scene is now in the breakdown.</li>
+<li>Click Stripboard to start arranging your scenes. The new scene waits in the unscheduled drawer until you add it to the board. Follow <a href="stripboard.html">Stripboard</a> when you are ready to build shooting days.</li>
+</ol>
+<p><img src="images/first-run-manual-scene.png" alt="A manually created scene without script-import tools"></p>
+<p>A created scene is saved in the project folder. You can stop here and return to the project later. No AI account or model download is required for these edits.</p>
+<h2 id="add-optional-features-when-you-need-them">Add optional features when you need them</h2>
+<table>
+<thead>
+<tr>
+<th>You want to</th>
+<th>What to do next</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Use AI suggestions</td>
+<td>Follow <a href="setup-and-ai.html">Setup and AI providers</a>. You can close AI settings and keep working.</td>
+</tr>
+<tr>
+<td>Import a screenplay</td>
+<td>Read <a href="script-import-and-revisions.html">Script import</a> first. A fresh installation is missing the separate import tools.</td>
+</tr>
+<tr>
+<td>Save PDFs or issue a call sheet</td>
+<td>Install Google Chrome if Backlot reports it missing, then quit and reopen Backlot.</td>
+</tr>
+<tr>
+<td>Email a call sheet</td>
+<td>Use <a href="call-sheets.html">Call sheets</a>. In-app delivery needs extra configuration; manual email attachments are an alternative after a PDF is saved.</td>
+</tr>
+</tbody></table>
+<p>The <a href="sample/Night-Ferry.fountain">six-scene Fountain sample</a> and <a href="sample/Night-Ferry-tagged.fdx">tagged Final Draft sample</a> are for an installation whose script-import tools are already available. They do not install those tools.</p>
+<h2 id="if-a-step-fails">If a step fails</h2>
+<table>
+<thead>
+<tr>
+<th>What you see</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Create is unavailable</td>
+<td>Fill in Title and check the highlighted required fields. Choose Union status.</td>
+</tr>
+<tr>
+<td>The project file already exists</td>
+<td>Use Open file… to open the existing project, or start New project again and choose a different empty parent folder. Do not overwrite the existing project.</td>
+</tr>
+<tr>
+<td>A script-reading or Python error during import</td>
+<td>Dismiss the error with its × button. Continue with Add scene, or report the missing-import-tools message. Switching from FDX to Fountain or setting up AI does not repair a missing reader.</td>
+</tr>
+<tr>
+<td>PDFs need Google Chrome</td>
+<td>Install Chrome in Applications, then quit and reopen Backlot. Try saving the PDF again.</td>
+</tr>
+<tr>
+<td>AI is not ready</td>
+<td>Close the AI sheet and keep working, or follow its setup and retry steps in <a href="setup-and-ai.html">Setup and AI providers</a>.</td>
+</tr>
+</tbody></table>
+<p>More recovery steps are in <a href="troubleshooting.html">Troubleshooting</a>.</p>
+<h2 id="find-the-next-view">Find the next view</h2>
+<p>Click the view name in the left sidebar. Keyboard shortcuts are optional.</p>
+<table>
+<thead>
+<tr>
+<th>View</th>
+<th>Use it for</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Breakdown</td>
+<td>Scenes and production elements</td>
+<td>⌘1</td>
+</tr>
+<tr>
+<td>Stripboard</td>
+<td>Shooting order and day breaks</td>
+<td>⌘2</td>
+</tr>
+<tr>
+<td>Calendar</td>
+<td>Shoot dates</td>
+<td>⌘3</td>
+</tr>
+<tr>
+<td>Budget</td>
+<td>Planned spending</td>
+<td>⌘4</td>
+</tr>
+<tr>
+<td>Costs</td>
+<td>Money committed and spent</td>
+<td>⌘5</td>
+</tr>
+<tr>
+<td>DOOD</td>
+<td>Who works on which day</td>
+<td>⌘6</td>
+</tr>
+<tr>
+<td>People</td>
+<td>Cast, crew, contacts and locations</td>
+<td>⌘7</td>
+</tr>
+<tr>
+<td>Call sheets</td>
+<td>Daily calls and instructions</td>
+<td>⌘8</td>
+</tr>
+<tr>
+<td>Day reports</td>
+<td>What happened on the shoot day</td>
+<td>⌘9</td>
+</tr>
+</tbody></table>
+<p>Photos, Reports and History are further down the sidebar. The appearance button switches Light, Dark and Match macOS. The AI pill at the top opens AI settings when you choose to use them.</p>
+<h2 id="homebrew-alternative">Homebrew alternative</h2>
+<p>If you already use Homebrew, you can install with these commands instead of the DMG:</p>
+<pre><code class="language-bash">brew tap MIM18-code/backlot
+brew trust MIM18-code/backlot
+brew install --cask backlot
+</code></pre>
+<p>Homebrew requires <a href="https://docs.brew.sh/Tap-Trust">explicit trust for third-party taps</a>. To update, run <code>brew upgrade --cask backlot</code>.</p>
+<h2 id="video-walkthrough">Video walkthrough</h2>
+<p><a href="videos/getting-started.mp4">First launch and an empty practice project</a> · <a href="videos/getting-started.srt">Captions</a>. See <a href="videos/index.html">video notes and draft narration</a>.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

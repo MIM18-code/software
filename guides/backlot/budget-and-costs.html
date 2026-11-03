@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Budget and costs · Backlot</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Backlot user guide</a><a href="https://mindinmotionsoftware.com/#backlot">Get Backlot</a><a href="https://mindinmotionsoftware.com/downloads/Backlot-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="breakdown.html">Breakdown</a></li><li><a aria-current="page" href="budget-and-costs.html">Budget and costs</a></li><li><a href="calendar.html">Calendar</a></li><li><a href="call-sheets.html">Call sheets</a></li><li><a href="day-reports.html">Day reports</a></li><li><a href="getting-started.html">Getting started with Backlot</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="people-and-dood.html">People and the DOOD</a></li><li><a href="projects-and-sending.html">Projects, backups, and sending a copy</a></li><li><a href="reports-and-exports.html">Reports and exports</a></li><li><a href="script-import-and-revisions.html">Script import, revisions, and live script</a></li><li><a href="setup-and-ai.html">Setup and AI providers</a></li><li><a href="stripboard.html">Stripboard</a></li><li><a href="troubleshooting.html">Troubleshooting Backlot</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="budget-and-costs">Budget and costs</h1>
+<p><img src="images/budget.png" alt="A sample production budget"></p>
+<p>The Budget view (<code>⌘4</code>) plans spending. The Costs view (<code>⌘5</code>) records what actually went out. Both live in this guide page.</p>
+<h2 id="build-the-budget">Build the budget</h2>
+<ol>
+<li>Add accounts, then lines under them.</li>
+<li>Lines support arithmetic expressions.</li>
+<li>Lines can take a global value, for example Shoot days. Changing the global re-prices every line that uses it. The global does not follow the board: the Mismatches row in the Budget view tells you when it, or a day-priced line, disagrees with the board&#39;s day count.</li>
+<li>Add rates and fringes per line. The union status from project creation sets the SAG agreement.</li>
+</ol>
+<p>Keyboard basics in the budget grid: <code>⌘Enter</code> adds a line below the current line, Enter commits and moves down, Tab moves to the next field, and <code>1,000</code> is accepted as 1000.</p>
+<h2 id="alternatives">Alternatives</h2>
+<p>An alternative is a full second plan. Making one copies lines and rates, never money spent: every alternative shows the same actuals, so switching alternatives changes the plan and can never change what was spent. Compare a five-day and a six-day shoot by flipping between alternatives. The active alternative is marked; Budget administration and alternatives shows the list and switches it.</p>
+<p>If a project saved in an older version had separate actuals per alternative, Backlot keeps the active budget&#39;s actual when the alternatives disagreed, and the line&#39;s notes record what the others had.</p>
+<h2 id="actuals-efc-and-cents">Actuals, EFC and cents</h2>
+<p>Each line, account and section reports four figures: committed, spent, forecast and variance against budget. All amounts store in whole cents.</p>
+<ul>
+<li>Type an actual or an estimated final cost (EFC) override on a budget line. It counts for that line&#39;s account, once for the project, in every alternative. In an alternative without that line, the actual still counts toward the account, on a row marked &quot;not in this alternative&quot;; the × on that row clears it in every alternative.</li>
+<li>A posted purchase order, invoice or receipt on the line replaces a typed actual with what was posted, credits included.</li>
+<li>A posted credit alone reduces the typed actual: type $500.00, post a $50.00 refund, and the line shows $450.00.</li>
+<li>Drafts and voided records change nothing.</li>
+</ul>
+<h2 id="purchase-orders-invoices-petty-cash">Purchase orders, invoices, petty cash</h2>
+<ol>
+<li>Raise a purchase order to reserve a number before committing.</li>
+<li>Enter an invoice when the bill arrives; then approve, receive, pay or void it.</li>
+<li>For petty cash, issue an envelope to a contact and reconcile it later.</li>
+</ol>
+<h2 id="which-board-am-i-looking-at">Which board am I looking at</h2>
+<p>When a total surprises you, check the active board (Board menu, Stripboard) and the active alternative (Budget administration and alternatives) before anything else. See <a href="troubleshooting.html">Troubleshooting</a>.</p>
+<p><img src="images/costs.png" alt="Spending records in Costs"></p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

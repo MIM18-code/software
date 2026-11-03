@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:09,000
+Open the Dictate panel to work with a transcript.
+
+2
+00:00:10,207 --> 00:00:19,207
+Paste or type rough dialogue and action into the transcript box.
+
+3
+00:00:20,420 --> 00:00:29,420
+Choose Format to turn the transcript into screenplay elements.
+
+4
+00:00:30,664 --> 00:00:39,664
+Review the proposed scene before inserting it.
+
+5
+00:00:40,968 --> 00:00:49,968
+Insert the reviewed elements into the draft.
+
+6
+00:00:51,198 --> 00:01:00,198
+The new scene is now part of the draft.
+
+7
+00:01:01,502 --> 00:01:10,502
+Settings > Draft formatting controls preview and local formatter setup.

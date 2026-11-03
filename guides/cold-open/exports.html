@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exports: PDF, FDX, Fountain, Movie Magic, delivery PDFs and actor sides · Cold Open</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Cold Open user guide</a><a href="https://mindinmotionsoftware.com/#cold-open">Get Cold Open</a><a href="https://mindinmotionsoftware.com/downloads/ColdOpen-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="ai.html">The assistant and AI setup</a></li><li><a href="backlot.html">Handoff to Backlot</a></li><li><a href="breakdown.html">Breakdown tagging</a></li><li><a href="co-writing.html">Co-writing</a></li><li><a href="dictation.html">Format Draft and dictation</a></li><li><a aria-current="page" href="exports.html">Exports: PDF, FDX, Fountain, Movie Magic, delivery PDFs and actor sides</a></li><li><a href="getting-started.html">Getting started with Cold Open</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="phone.html">The phone remote</a></li><li><a href="reports.html">Reports and sides</a></li><li><a href="scenes-and-views.html">Scenes, the navigator, and views</a></li><li><a href="script-notes.html">Script notes and project material</a></li><li><a href="settings.html">Settings</a></li><li><a href="table-read.html">Table read and voice packs</a></li><li><a href="title-page-and-revisions.html">Title page, revisions, and locked scene numbers</a></li><li><a href="troubleshooting.html">Troubleshooting</a></li><li><a href="writing.html">Writing and formatting</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="exports-pdf-fdx-fountain-movie-magic-delivery-pdfs-and-actor-sides">Exports: PDF, FDX, Fountain, Movie Magic, delivery PDFs and actor sides</h1>
+<p>Everything lives in the File menu.</p>
+<h2 id="exchange-formats">Exchange formats</h2>
+<table>
+<thead>
+<tr>
+<th>Command (File menu)</th>
+<th>Produces</th>
+<th>Keeps</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Export Final Draft (.fdx)…</td>
+<td><code>.fdx</code></td>
+<td>Revision colors, tags, script notes, scene numbers, dual dialogue, styles.</td>
+</tr>
+<tr>
+<td>Export Movie Magic Scheduling (.sex)…</td>
+<td><code>.sex</code></td>
+<td>Scene data and breakdown tags for Movie Magic Scheduling.</td>
+</tr>
+<tr>
+<td>Export Fountain…</td>
+<td><code>.fountain</code></td>
+<td>Text and element types only. No revision colors, tags, locked scene numbers or script notes.</td>
+</tr>
+<tr>
+<td>Save (<code>⌘S</code>)</td>
+<td><code>.screenplay</code></td>
+<td>Everything, including history identity, project material and structure points.</td>
+</tr>
+</tbody></table>
+<p>Two cautions before an export:</p>
+<ul>
+<li>Draft history snapshots stay on this Mac. A <code>.screenplay</code> master preserves their identifier; neither native nor exchange files carry the snapshots to another Mac.</li>
+<li>If a script note lost the text it was pinned to, Cold Open blocks the FDX export and tells you, rather than silently saving a changed note. Reattach the note and export again.</li>
+</ul>
+<p>File &gt; Show in Finder reveals the saved screenplay you have open. To find an export, use the folder you chose in its save dialog.</p>
+<h2 id="pdf-and-printing">PDF and printing</h2>
+<ul>
+<li>File &gt; Export PDF… (<code>⌘⇧E</code>) writes the screenplay with its pagination to a PDF.</li>
+<li>File &gt; Print… (<code>⌘P</code>) prints. Print Preview has a check box to print only the revised pages, and it applies to that printout only.</li>
+<li>Settings &gt; Printing controls scene number placement (left, right, both, none), automatic (CONT&#39;D), (MORE) and (CONT&#39;D) at page breaks, header text, paper (US Letter or A4), title page, revision marks in the margin and revised pages in their revision color.</li>
+</ul>
+<p>PDF export keeps every character even when the layout font has no glyph for it; the fallback borrows a system font, discloses the substitution and lets you consent first. Cyrillic and Greek render in Courier New, which is lighter than Courier.</p>
+<h2 id="delivery-pdfs-and-actor-sides">Delivery PDFs and actor sides</h2>
+<p><img src="images/cmd-delivery.open.png" alt="Delivery preview"></p>
+<p>File &gt; Delivery PDF, Watermarks and Actor Sides… previews before it exports:</p>
+<ol>
+<li>Choose the document: Full screenplay (without title page), Actor / scene sides, or Selected elements in screenplay layout.</li>
+<li>Optionally set Recipient, Watermark, Header and Footer. Fields available in header and footer: <code>{title}</code>, <code>{date}</code>, <code>{page}</code>, <code>{pages}</code>, <code>{recipient}</code>, <code>{source}</code>. Page counts refer to the delivery itself; <code>{source}</code> references the original draft.</li>
+<li>Optionally tick Emphasize the selected character&#39;s lines to bold the actor&#39;s own speeches in sides.</li>
+<li>Choose the Clean preset or the Recipient preset, then Export previewed PDF….</li>
+</ol>
+<p>Source page positions and scene numbers are preserved, and excluded material is omitted rather than covered up. For a full draft with its title page and production revision controls, use the normal Export PDF….</p>
+<p>The compact actor booklet, when you choose it, repaginates and carries original scene and page references so the actor can find their page in the shooting script.</p>
+<p>PDF rendering uses this Mac&#39;s fonts. If you deliver in a script with non-Latin text, review the shaping and any font substitution before sending it out.</p>
+<h2 id="full-path-summary">Full path summary</h2>
+<p>A production workflow looks like this:</p>
+<ol>
+<li>Tag the script (see <a href="breakdown.html">Breakdown tagging</a>).</li>
+<li>Export <code>.fdx</code> with the tags.</li>
+<li>Import that <code>.fdx</code> into Backlot, or use File &gt; Review Draft in Backlot… directly (see <a href="backlot.html">Handoff to Backlot</a>).</li>
+<li>In Backlot, use Reports for Movie Magic schedule XML and other production exports. For a <code>.sex</code> file, export directly from Cold Open as described above.</li>
+</ol>
+<h2 id="video-walkthrough">Video walkthrough</h2>
+<p><a href="videos/movie-magic-export.mp4">Export for Movie Magic Scheduling</a> · <a href="videos/movie-magic-export.srt">Captions</a>. See <a href="videos/index.html">video notes and draft narration</a>.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

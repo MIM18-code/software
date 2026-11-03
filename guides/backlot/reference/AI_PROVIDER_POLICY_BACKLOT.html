@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>How Backlot applies AI_SUBSCRIPTION_AUTH_POLICY.md · Backlot</title><link rel="stylesheet" href="../guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="../index.html">Backlot user guide</a><a href="https://mindinmotionsoftware.com/#backlot">Get Backlot</a><a href="https://mindinmotionsoftware.com/downloads/Backlot-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="../index.html">Guide home</a></li><li><a href="../breakdown.html">Breakdown</a></li><li><a href="../budget-and-costs.html">Budget and costs</a></li><li><a href="../calendar.html">Calendar</a></li><li><a href="../call-sheets.html">Call sheets</a></li><li><a href="../day-reports.html">Day reports</a></li><li><a href="../getting-started.html">Getting started with Backlot</a></li><li><a href="../how-do-i.html">How do I…?</a></li><li><a href="../people-and-dood.html">People and the DOOD</a></li><li><a href="../projects-and-sending.html">Projects, backups, and sending a copy</a></li><li><a href="../reports-and-exports.html">Reports and exports</a></li><li><a href="../script-import-and-revisions.html">Script import, revisions, and live script</a></li><li><a href="../setup-and-ai.html">Setup and AI providers</a></li><li><a href="../stripboard.html">Stripboard</a></li><li><a href="../troubleshooting.html">Troubleshooting Backlot</a></li><li><a href="../videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="how-backlot-applies-ai_subscription_auth_policymd">How Backlot applies AI_SUBSCRIPTION_AUTH_POLICY.md</h1>
+<p>The policy in docs/AI_SUBSCRIPTION_AUTH_POLICY.md (Joshua, 2026-09-06, researched against the providers&#39; own documentation) is mandatory for every provider change in this repository. This note records where Backlot stands against it so agents and reviewers do not re-derive it.</p>
+<h2 id="provider-modes-that-ship">Provider modes that ship</h2>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Policy row</th>
+<th>Backlot</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Local model through Ollama</td>
+<td>not a subscription; no provider account</td>
+<td>Default. qwen3.5:4b.</td>
+</tr>
+<tr>
+<td>Gemini, Anthropic, OpenAI with the user&#39;s own API key</td>
+<td>ALLOW (API auth, API billing)</td>
+<td>Keys stay in ~/.backlot/assist.json with mode 0600, shown masked, never in the project file, logs or MCP output. The settings panel says the key is billed by the provider.</td>
+</tr>
+<tr>
+<td>The user&#39;s ChatGPT plan</td>
+<td>ALLOW as OpenAI&#39;s Sign in with ChatGPT plan usage for open-source and locally hosted apps (policy section 2)</td>
+<td>Built on 2026-11-01, ported from Cold Open so both apps behave the same. The service registers Backlot with the user&#39;s ChatGPT account in the system browser, keeps the tokens OpenAI issues to Backlot in <code>~/.backlot/chatgpt.enc</code> (0600, AES-256-GCM, key in the login Keychain), and calls <code>POST https://api.openai.com/v1/responses</code> with <code>store: false</code> and <code>stream: true</code>. It replaced the <code>codex app-server</code> route, which let Codex own the login and is now retired.</td>
+</tr>
+<tr>
+<td>Claude through a Claude Pro or Max subscription (<code>claude -p</code>)</td>
+<td>DENY</td>
+<td>Removed on 2026-09-06. A settings file that still names it falls back to &quot;none&quot; and <code>/assist/status</code> explains why.</td>
+</tr>
+</tbody></table>
+<h2 id="rules-already-enforced-in-code">Rules already enforced in code</h2>
+<ul>
+<li>Backlot uses the account connection issued to it through the provider&#39;s own sign-in flow. It does not reuse credentials from another application. API requests authenticate with the selected provider; saved credentials are not included in project files or MCP output.</li>
+<li>No silent fallback between billing modes: the provider is one explicit setting.</li>
+<li>MCP tools never return provider credentials; the app&#39;s own per-run bearer token is separate from provider auth and is now confined by round 16b.</li>
+<li>Assist requests through the app say which provider answered (<code>provider</code> and <code>model</code> in every <code>/assist/run</code> response and in the toast).</li>
+</ul>
+<h2 id="the-chatgpt-plan-integration-in-full">The ChatGPT plan integration, in full</h2>
+<p>The code is <code>packages/service/src/assist/chatgpt/</code> (ported from Cold Open&#39;s <code>apps/desktop/src/main/ai/chatgpt-*.ts</code> at 2af3e70) and <code>packages/service/src/assist/providers/chatgpt.ts</code>. Every network call it makes:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>GET https://auth.openai.com/.well-known/openid-configuration</code></td>
+<td>discovery; every endpoint must be on the issuer&#39;s origin</td>
+</tr>
+<tr>
+<td>system browser to the discovered <code>authorization_endpoint</code></td>
+<td>registration (<code>dynamic_agent_client</code>, <code>agent_name_hint=Backlot</code>) or reauthorization with the saved client, plus consent</td>
+</tr>
+<tr>
+<td><code>POST</code> the discovered <code>token_endpoint</code></td>
+<td>code exchange and refresh, with the issued <code>client_id</code>, PKCE and <code>resource=https://api.openai.com/v1</code></td>
+</tr>
+<tr>
+<td><code>GET</code> the discovered <code>jwks_uri</code></td>
+<td>ID-token signature check</td>
+</tr>
+<tr>
+<td><code>POST</code> the discovered <code>revocation_endpoint</code></td>
+<td>sign-out, refresh token first</td>
+</tr>
+<tr>
+<td><code>GET https://api.openai.com/v1/models</code></td>
+<td>the signed-in account&#39;s model picker</td>
+</tr>
+<tr>
+<td><code>POST https://api.openai.com/v1/responses</code></td>
+<td>one assist, <code>store: false</code>, <code>stream: true</code>, success only on <code>response.completed</code></td>
+</tr>
+</tbody></table>
+<p>The app reaches it through these service routes, which return account metadata only:</p>
+<table>
+<thead>
+<tr>
+<th>kind</th>
+<th>path</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>route</td>
+<td><code>/assist/chatgpt/status</code></td>
+</tr>
+<tr>
+<td>route</td>
+<td><code>/assist/chatgpt/models</code></td>
+</tr>
+<tr>
+<td>route</td>
+<td><code>/assist/chatgpt/sign-in</code></td>
+</tr>
+<tr>
+<td>route</td>
+<td><code>/assist/chatgpt/cancel</code></td>
+</tr>
+<tr>
+<td>route</td>
+<td><code>/assist/chatgpt/sign-out</code></td>
+</tr>
+<tr>
+<td>route</td>
+<td><code>/assist/chatgpt/select</code></td>
+</tr>
+<tr>
+<td>route</td>
+<td><code>/assist/chatgpt/resume</code></td>
+</tr>
+<tr>
+<td>route</td>
+<td><code>/assist/chatgpt/welcomed</code></td>
+</tr>
+</tbody></table>
+<p>Never used: Codex&#39;s login or credential file, the <code>chatgptAuthTokens</code> variant, ChatGPT&#39;s <code>backend-api</code>, and any token another program stored. The guardrail is <code>packages/service/test/policy.test.ts</code>; it fails the build on any of those appearing in shipped code, and on OpenAI&#39;s sign-in host appearing outside the sign-in module.</p>
+<h2 id="open-items">Open items</h2>
+<p>Re-read OpenAI&#39;s Sign in with ChatGPT pages (policy section 19) before changing the flow, and whenever Cold Open&#39;s copy changes, so the two apps stay the same. If Backlot ever charges money or runs any part of this on a server, ChatGPT plan usage stops until OpenAI approves it through its interest form.</p>
+<p>Contributors using Claude Code or Codex to work on this repository are covered by policy section 9&#39;s last paragraph: developing Backlot with a subscription client is fine; shipping that subscription as the app&#39;s provider is not.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="../LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

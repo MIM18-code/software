@@ -1,0 +1,15 @@
+Build a shooting schedule.
+
+Open the sample project and choose Stripboard.
+
+The left column holds scenes that are not yet scheduled.
+
+Choose an unscheduled scene and press Enter to add it to the board.
+
+The board groups scene strips by shooting day.
+
+Add a day break to divide the schedule.
+
+Calendar displays the schedule once a start date is set.
+
+DOOD summarizes cast and element days across the board.

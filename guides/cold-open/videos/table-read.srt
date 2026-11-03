@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:09,000
+Open the Listen panel for a table read.
+
+2
+00:00:10,025 --> 00:00:19,025
+Choose a reading mode and range.
+
+3
+00:00:20,130 --> 00:00:29,130
+Quick Read uses an optional local voice pack. Set up a voice engine before playing.
+
+4
+00:00:30,234 --> 00:00:39,234
+Review the character voice assignments.
+
+5
+00:00:40,240 --> 00:00:49,240
+Adjust playback speed and pauses to suit the read.
+
+6
+00:00:50,245 --> 00:00:59,245
+Use Play to start the chosen range.
+
+7
+00:01:00,350 --> 00:01:09,350
+The panel also offers options to save or export the read.

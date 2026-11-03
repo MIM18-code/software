@@ -1,0 +1,15 @@
+Set up a table read.
+
+Open the Listen panel for a table read.
+
+Choose a reading mode and range.
+
+Quick Read uses an optional local voice pack. Set up a voice engine before playing.
+
+Review the character voice assignments.
+
+Adjust playback speed and pauses to suit the read.
+
+Use Play to start the chosen range.
+
+The panel also offers options to save or export the read.

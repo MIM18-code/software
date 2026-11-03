@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Troubleshooting Backlot · Backlot</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Backlot user guide</a><a href="https://mindinmotionsoftware.com/#backlot">Get Backlot</a><a href="https://mindinmotionsoftware.com/downloads/Backlot-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="breakdown.html">Breakdown</a></li><li><a href="budget-and-costs.html">Budget and costs</a></li><li><a href="calendar.html">Calendar</a></li><li><a href="call-sheets.html">Call sheets</a></li><li><a href="day-reports.html">Day reports</a></li><li><a href="getting-started.html">Getting started with Backlot</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="people-and-dood.html">People and the DOOD</a></li><li><a href="projects-and-sending.html">Projects, backups, and sending a copy</a></li><li><a href="reports-and-exports.html">Reports and exports</a></li><li><a href="script-import-and-revisions.html">Script import, revisions, and live script</a></li><li><a href="setup-and-ai.html">Setup and AI providers</a></li><li><a href="stripboard.html">Stripboard</a></li><li><a aria-current="page" href="troubleshooting.html">Troubleshooting Backlot</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="troubleshooting-backlot">Troubleshooting Backlot</h1>
+<h2 id="unexpected-totals">Unexpected totals</h2>
+<ol>
+<li>Check which board is active: the Board menu at the top of the Stripboard.</li>
+<li>Check which budget alternative is active: Budget view &gt; Budget administration and alternatives. The active one is marked.</li>
+<li>Budget lines do not read the board&#39;s day count; they use the Shoot days global. The Mismatches row in the Budget view says when that global or a day-priced line disagrees with the board.</li>
+<li>For dated fringes, the board&#39;s dates decide how much of the fringe is charged, so fixing the Calendar can fix the fringe math.</li>
+<li>Actuals and estimated final cost overrides are the same in every alternative: switching alternatives changes budget figures, never what was spent.</li>
+</ol>
+<h2 id="a-first-launch-notice-mentions-missing-tools">A first-launch notice mentions missing tools</h2>
+<p>Read the feature named in the notice. Script import, budget interchange exports and PDF printing have different requirements. You can still create a project, add scenes manually and work on the board or budget.</p>
+<p>The installer currently does not provide a setup button for the separate script-import and budget-export tools. Report the missing feature and the exact message. AI setup does not install those tools.</p>
+<h2 id="a-project-will-not-create">A project will not create</h2>
+<p>If Create is disabled, fill Title and check the required fields highlighted by the form. Keep the generated Project file location for your first project, and leave the optional script and JSON fields blank.</p>
+<p>If Backlot says the project file already exists, choose Open file… to reopen that project. For a separate practice project, start New project again and choose a different empty parent folder. The title alone does not change the generated file location in this version.</p>
+<h2 id="reports-will-not-save-as-pdf">Reports will not save as PDF</h2>
+<ol>
+<li>If Backlot says PDFs need Google Chrome, install <a href="https://www.google.com/chrome/">Chrome</a> in Applications.</li>
+<li>Quit Backlot and open it again, then retry Save PDF or Issue.</li>
+<li>If Chrome is already in Applications and the error remains, report the message. Choosing an unusual browser location currently requires technical configuration; the app does not offer a browser chooser.</li>
+</ol>
+<h2 id="script-import-fails">Script import fails</h2>
+<p>If the error says the screenwriting bridge, Python interpreter or engine is missing, the separate import tools are unavailable. The current installer does not include them or provide a point-and-click installer.</p>
+<p><img src="images/first-run-import-error.png" alt="A fresh-install import failure with the separate script tools missing"></p>
+<p>Dismiss the error with its × button and return to Breakdown &gt; Add scene to enter scenes manually. FDX and Fountain use the same reader, so changing the file extension will not fix a missing reader. Sign-in and local AI downloads are unrelated to this requirement.</p>
+<p>If the import tools are available but one file fails, keep the original script and report the error. An import preview must succeed before you confirm any scene changes.</p>
+<h2 id="gorilla-or-movie-magic-export-fails">Gorilla or Movie Magic export fails</h2>
+<p>An error naming the budget bridge or its Python interpreter means the separate budget-export tools are unavailable. Your project and ordinary budget edits remain available. The app needs an installation or repair flow for this feature; changing your AI provider will not repair it.</p>
+<h2 id="call-sheet-delivery-looks-stuck">Call sheet delivery looks stuck</h2>
+<ol>
+<li>Open the issue&#39;s delivery history: every attempt and its outcome is listed.</li>
+<li>Retry failed deliveries; resend to late additions; remind unconfirmed recipients.</li>
+<li>A delivery with unknown outcome must be resolved first, by design, so retrying cannot send twice.</li>
+</ol>
+<h2 id="email-is-refused">Email is refused</h2>
+<p>In-app call-sheet email needs a configured email service and confirmation site. If they have not been set up for this installation, save the issued PDF and attach it manually in your own mail app. The <a href="setup-and-ai.html#email-and-confirmation-links">delivery setup notes</a> explain the difference.</p>
+<h2 id="an-ai-assist-answers-with-the-wrong-provider">An AI assist answers with the wrong provider</h2>
+<p>The provider is one explicit setting with no silent fallback. Open the AI settings from the AI pill in the top bar and check the active provider; every response names the provider that answered.</p>
+<h2 id="union-status-changed-after-project-start">Union status changed after project start</h2>
+<p>Recalculate. The union status set at creation drives hold calculations, the SAG agreement and DOOD assumptions; changing it later does not silently re-price what is on the board.</p>
+<h2 id="a-change-went-the-wrong-way">A change went the wrong way</h2>
+<p>Undo it in the History view (or <code>⌘Z</code> outside a text field), or restore a backup from the Home view. Both actions are journaled, so undoing the undo is possible.</p>
+<h2 id="ask-for-help">Ask for help</h2>
+<p>Report a problem on the <a href="https://github.com/MIM18-code/homebrew-backlot/issues">public Backlot issue tracker</a>. Include the exact message, Backlot version, macOS version and the action you tried. Describe whether you started with an empty project or opened an existing one. You can report the error without attaching your screenplay, account keys or a production project.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Getting started with Cold Open · Cold Open</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Cold Open user guide</a><a href="https://mindinmotionsoftware.com/#cold-open">Get Cold Open</a><a href="https://mindinmotionsoftware.com/downloads/ColdOpen-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="ai.html">The assistant and AI setup</a></li><li><a href="backlot.html">Handoff to Backlot</a></li><li><a href="breakdown.html">Breakdown tagging</a></li><li><a href="co-writing.html">Co-writing</a></li><li><a href="dictation.html">Format Draft and dictation</a></li><li><a href="exports.html">Exports: PDF, FDX, Fountain, Movie Magic, delivery PDFs and actor sides</a></li><li><a aria-current="page" href="getting-started.html">Getting started with Cold Open</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="phone.html">The phone remote</a></li><li><a href="reports.html">Reports and sides</a></li><li><a href="scenes-and-views.html">Scenes, the navigator, and views</a></li><li><a href="script-notes.html">Script notes and project material</a></li><li><a href="settings.html">Settings</a></li><li><a href="table-read.html">Table read and voice packs</a></li><li><a href="title-page-and-revisions.html">Title page, revisions, and locked scene numbers</a></li><li><a href="troubleshooting.html">Troubleshooting</a></li><li><a href="writing.html">Writing and formatting</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="getting-started-with-cold-open">Getting started with Cold Open</h1>
+<p>Cold Open is a free, open-source screenwriting app for the Mac. It writes screenplays with Final Draft&#39;s elements and pagination, opens and saves Final Draft (.fdx) files, and reads and writes Fountain. Co-writers, your iPhone and the Backlot production app can all follow the same script while you write.</p>
+<p>You need an Apple silicon Mac running macOS 14 Sonoma or later. Local table-read voices need macOS 15.</p>
+<p><img src="images/00-first-run.png" alt="Cold Open&#39;s first-run screen"></p>
+<h2 id="install">Install</h2>
+<p>Pick one of these two ways.</p>
+<h3 id="download-the-app">Download the app</h3>
+<ol>
+<li>Open <a href="https://github.com/MIM18-code/cold-open/releases">the releases page</a> (or <a href="https://mindinmotionsoftware.com">mindinmotionsoftware.com</a>).</li>
+<li>Download the <code>.dmg</code>.</li>
+<li>Double-click the <code>.dmg</code> and drag Cold Open to Applications.</li>
+<li>Eject the <code>.dmg</code>.</li>
+</ol>
+<p>Or install with Homebrew:</p>
+<pre><code class="language-bash">brew tap MIM18-code/cold-open
+brew trust MIM18-code/cold-open
+brew install --cask cold-open
+</code></pre>
+<p>Homebrew requires explicit trust for third-party taps. The second command grants it for this tap; see <a href="https://docs.brew.sh/Tap-Trust">Homebrew tap trust</a>.</p>
+<h3 id="first-launch">First launch</h3>
+<p>The app is signed and notarized, so macOS shows the standard &quot;Cold Open is an app downloaded from the Internet&quot; question the first time:</p>
+<ol>
+<li>Open Cold Open from Applications or Launchpad.</li>
+<li>Click Open in the question.</li>
+</ol>
+<p>That question appears once. After that the app opens normally.</p>
+<h2 id="cold-open-is-free">Cold Open is free</h2>
+<p>Cold Open costs nothing and no account is needed. Writing, saving and exports work without any AI setup. Optional downloads (see below) are separate software and use their own accounts or plans.</p>
+<h2 id="five-minute-first-project">Five-minute first project</h2>
+<ol>
+<li>Open Cold Open.</li>
+<li>Press <code>⌘N</code> (File &gt; New) to start a new script.</li>
+<li>Type a scene heading, for example <code>INT. KITCHEN - NIGHT</code>.</li>
+<li>Press Return twice. The new paragraph is Action. Type a line of action.</li>
+<li>Press Return, then <code>⌘3</code>. The paragraph becomes a Character cue. Type <code>DANA</code>.</li>
+<li>Press Return once. The paragraph becomes Dialogue. Type the speech.</li>
+<li>Repeat with any element from the Script panel: Scene Heading <code>⌘1</code>, Action <code>⌘2</code>, Character <code>⌘3</code>, Parenthetical <code>⌘4</code>, Dialogue <code>⌘5</code>, Transition <code>⌘6</code>, Shot <code>⌘7</code>, General <code>⌘0</code>.</li>
+<li>Press <code>⌘S</code> (File &gt; Save), name the file, and save it.</li>
+</ol>
+<p>Cold Open&#39;s own <code>.screenplay</code> format saves revision colors, tags, scene number locks, notes, structure points and a history identifier. History snapshots stay separately on this Mac; copying the screenplay alone does not transfer those saved versions. <code>.fdx</code> keeps Final Draft&#39;s data. <code>.fountain</code> keeps plain text only.</p>
+<h2 id="try-the-sample">Try the sample</h2>
+<p>The <a href="sample/Night-Ferry.fountain">Night Ferry sample script</a> is fictional and is the script used in this guide. Download it to follow the examples with your own copy.</p>
+<p>The <a href="sample/Night-Ferry-tagged.fdx">tagged Final Draft sample</a> includes prop and vehicle tags for the import and export examples.</p>
+<h2 id="bring-in-an-existing-draft">Bring in an existing draft</h2>
+<ol>
+<li>Press <code>⌘O</code> (File &gt; Open…).</li>
+<li>Choose a <code>.fdx</code>, <code>.fountain</code> or <code>.screenplay</code> file.</li>
+</ol>
+<p>Every page in this guide:</p>
+<ul>
+<li><a href="writing.html">Writing and formatting</a></li>
+<li><a href="dictation.html">Format Draft and dictation</a></li>
+<li><a href="scenes-and-views.html">Scenes and the navigator, views</a></li>
+<li><a href="title-page-and-revisions.html">Title page, revisions and locked scene numbers</a></li>
+<li><a href="script-notes.html">Script notes and project material</a></li>
+<li><a href="reports.html">Reports and sides</a></li>
+<li><a href="breakdown.html">Breakdown tagging</a></li>
+<li><a href="exports.html">Exports: PDF, FDX, Fountain, Movie Magic</a></li>
+<li><a href="table-read.html">Table read and voice packs</a></li>
+<li><a href="ai.html">The assistant and AI setup</a></li>
+<li><a href="co-writing.html">Co-writing</a></li>
+<li><a href="phone.html">The phone remote</a></li>
+<li><a href="backlot.html">Handoff to Backlot</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="how-do-i.html">How do I…?</a></li>
+<li><a href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<h2 id="video-walkthrough">Video walkthrough</h2>
+<p><a href="videos/getting-started.mp4">Editor and views</a> · <a href="videos/getting-started.srt">Captions</a>. See <a href="videos/index.html">video notes and draft narration</a>.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>
