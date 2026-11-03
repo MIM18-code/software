@@ -16,6 +16,6 @@ AI, Tailscale and table-read recordings demonstrate setup and controls. They sto
 
 The AI setup and co-writing examples use synthetic runtime and network status to show first-use controls without installing tools or exposing account information. They do not prove a download or remote connection.
 
-The editor overview was captured on beta 7. The AI setup and co-writing clips show the newer development screens. The remaining recordings were captured on beta 8. The guide explains the earlier setup buttons in the public beta 8 release as well.
+The editor overview was captured on beta 7. The AI setup and co-writing clips show the flow now included in beta 9. The remaining recordings were captured on beta 8. Some button labels vary; the guide identifies earlier controls where relevant.
 
 Captured on November 2, 2026. The downloadable [Fountain](../sample/Night-Ferry.fountain) and [tagged FDX](../sample/Night-Ferry-tagged.fdx) samples contain six scenes. Backlot screenshots use a separate demonstration project with additional fictional scenes.
