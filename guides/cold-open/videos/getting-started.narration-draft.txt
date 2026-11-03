@@ -1,0 +1,15 @@
+Getting started with Cold Open.
+
+Open the Night Ferry sample screenplay.
+
+The script page is the main writing area.
+
+The scene list helps you move through the draft.
+
+The Outline view summarizes your scenes.
+
+Return to the script to continue writing.
+
+The Reports command opens script reports.
+
+Close the report to return to the draft.

@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:09,000
+Open the Night Ferry sample screenplay.
+
+2
+00:00:11,396 --> 00:00:20,396
+The script page is the main writing area.
+
+3
+00:00:21,399 --> 00:00:30,399
+The scene list helps you move through the draft.
+
+4
+00:00:31,410 --> 00:00:40,410
+The Outline view summarizes your scenes.
+
+5
+00:00:41,424 --> 00:00:50,424
+Return to the script to continue writing.
+
+6
+00:00:51,434 --> 00:01:00,434
+The Reports command opens script reports.
+
+7
+00:01:01,458 --> 00:01:10,458
+Close the report to return to the draft.

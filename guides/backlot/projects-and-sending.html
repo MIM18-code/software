@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Projects, backups, and sending a copy · Backlot</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Backlot user guide</a><a href="https://mindinmotionsoftware.com/#backlot">Get Backlot</a><a href="https://mindinmotionsoftware.com/downloads/Backlot-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="breakdown.html">Breakdown</a></li><li><a href="budget-and-costs.html">Budget and costs</a></li><li><a href="calendar.html">Calendar</a></li><li><a href="call-sheets.html">Call sheets</a></li><li><a href="day-reports.html">Day reports</a></li><li><a href="getting-started.html">Getting started with Backlot</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="people-and-dood.html">People and the DOOD</a></li><li><a aria-current="page" href="projects-and-sending.html">Projects, backups, and sending a copy</a></li><li><a href="reports-and-exports.html">Reports and exports</a></li><li><a href="script-import-and-revisions.html">Script import, revisions, and live script</a></li><li><a href="setup-and-ai.html">Setup and AI providers</a></li><li><a href="stripboard.html">Stripboard</a></li><li><a href="troubleshooting.html">Troubleshooting Backlot</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="projects-backups-and-sending-a-copy">Projects, backups, and sending a copy</h1>
+<p><img src="images/history.png" alt="The project change journal"></p>
+<p>A Backlot project is one folder: <code>project.json</code> with attachments, issued PDFs, the journal and the backups beside it.</p>
+<h2 id="back-the-right-thing-up">Back the right thing up</h2>
+<p>Back up the entire project folder, not <code>project.json</code> alone. Attachments and issued call sheets live beside it.</p>
+<h2 id="undo-and-the-journal">Undo and the journal</h2>
+<p>The History view lists changes with a note and offers Undo where it is available. Press <code>⌘Z</code> outside a text field to undo the latest eligible change. Sent call sheets and reports remain sent; their delivery records and changes they lock cannot be undone. History explains other blocked actions, including gaps in the journal.</p>
+<ol>
+<li>Undo and redo add new entries rather than rewriting existing ones, so the journal is a complete record.</li>
+<li>If an undo would overwrite a later edit, Backlot blocks it and names the conflicting entry.</li>
+</ol>
+<h2 id="backups-and-restores">Backups and restores</h2>
+<ol>
+<li>Backlot writes a backup once a day, and before risky operations such as restoring, renumbering and sorting the board.</li>
+<li>The thirty newest backups of each kind are kept, so a run of sorts or imports cannot push out the daily backups.</li>
+<li>Restore one from the Home view. The restore is recorded in the journal and is undoable like any other change.</li>
+</ol>
+<p>Backlot asks for a confirm before sorting, renumbering and draft re-imports apply.</p>
+<h2 id="send-a-project">Send a project</h2>
+<ol>
+<li>File &gt; Send a Copy, or Send a copy on the Home view.</li>
+<li>Backlot saves one <code>.backlot</code> file holding the project, its history, attachments, saved call sheets and reports, then offers Mail, Messages or AirDrop.</li>
+<li>The other person opens the <code>.backlot</code> file with Backlot.</li>
+</ol>
+<p>When they send it back and you double-click it, Backlot recognizes the project and offers to replace your copy. Your own copy is saved first, as a <code>.backlot</code> file in the project&#39;s backups folder; files you keep in the project folder stay where they are.</p>
+<p>Backlot cannot combine two sets of edits. While the other person has the project, leave your copy alone. If both copies changed, Backlot says so before replacing, and replacing keeps only theirs; choose Open as Separate Project to keep both side by side and go back from that saved backup whenever you want.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

@@ -1,0 +1,23 @@
+Your first Backlot project.
+
+A fresh install opens Projects with no project yet. The yellow notice reports missing import and export components.
+
+Choose New project, then Choose folder. Select a parent folder for the project.
+
+Enter a title, keep the generated project file, and leave optional files blank.
+
+With Non-union selected for this fictional example, choose Create.
+
+The empty project opens on the stripboard. Choose Breakdown to add a scene.
+
+Choose Add scene. Enter scene 1, INT. KITCHEN - DAY, and 8 eighths for one page.
+
+Choose Create. The manually entered scene appears in Breakdown.
+
+On Stripboard, the new scene starts in the unscheduled column.
+
+Import FDX currently requires the missing script engine. We will try the sample and show the result.
+
+Dismiss the error. The manual scene remains; add scenes by hand while import is unavailable.
+
+AI is optional. The project, manual breakdown, and board work without signing in or downloading a model.

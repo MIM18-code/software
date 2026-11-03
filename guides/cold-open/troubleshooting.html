@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Troubleshooting · Cold Open</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Cold Open user guide</a><a href="https://mindinmotionsoftware.com/#cold-open">Get Cold Open</a><a href="https://mindinmotionsoftware.com/downloads/ColdOpen-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="ai.html">The assistant and AI setup</a></li><li><a href="backlot.html">Handoff to Backlot</a></li><li><a href="breakdown.html">Breakdown tagging</a></li><li><a href="co-writing.html">Co-writing</a></li><li><a href="dictation.html">Format Draft and dictation</a></li><li><a href="exports.html">Exports: PDF, FDX, Fountain, Movie Magic, delivery PDFs and actor sides</a></li><li><a href="getting-started.html">Getting started with Cold Open</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="phone.html">The phone remote</a></li><li><a href="reports.html">Reports and sides</a></li><li><a href="scenes-and-views.html">Scenes, the navigator, and views</a></li><li><a href="script-notes.html">Script notes and project material</a></li><li><a href="settings.html">Settings</a></li><li><a href="table-read.html">Table read and voice packs</a></li><li><a href="title-page-and-revisions.html">Title page, revisions, and locked scene numbers</a></li><li><a aria-current="page" href="troubleshooting.html">Troubleshooting</a></li><li><a href="writing.html">Writing and formatting</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="troubleshooting">Troubleshooting</h1>
+<p>Cold Open leaves state readable on purpose: errors stay in a place you can open and act on, not in a toast that vanishes.</p>
+<h2 id="first-addresses">First addresses</h2>
+<ol>
+<li>Tools &gt; Operation Error History…: the Activity dialog lists persistent errors with retry where one exists.</li>
+<li>The status bar and the panels&#39; own headers carry per-feature state (model, sync, phone) with their retry paths.</li>
+<li>Tools &gt; Command Palette… lists any command with the reason it is currently unavailable.</li>
+</ol>
+<h2 id="the-ai-provider-is-not-ready">The AI provider is not ready</h2>
+<ol>
+<li>Settings &gt; AI: read the status line. &quot;Provider reports ready&quot; means the server answered; requests can still fail or hit a usage limit afterward.</li>
+<li>Local (Ollama): choose Tools &gt; Set up AI… &gt; Set up local AI for me, or Download writing model if Ollama is already running. Earlier beta 8 builds show separate install/start buttons. If using a custom model, check Settings &gt; AI &gt; Advanced; its name must exist in Ollama (<code>ollama list</code> in a terminal shows what is pulled).</li>
+<li>ChatGPT: sign in again from Settings &gt; AI if the status is stale; the browser opens, then the connection resumes. Usage limits are your plan&#39;s, not Cold Open&#39;s.</li>
+<li>API keys: check the key and its remaining balance with your provider.</li>
+</ol>
+<p>Nothing switches from local to cloud (or the reverse) by itself; if a provider is down, the feature that used it is down until you pick another provider.</p>
+<h2 id="format-draft-says-it-has-no-model">Format Draft says it has no model</h2>
+<ol>
+<li>Tools &gt; Manage Local Formatting Models….</li>
+<li>Choose Set up formatting on this Mac… and confirm Download model. In earlier beta 8 builds, install and open Ollama first, then choose Refresh model status.</li>
+<li>Wait for the formatter download, then choose Pin and use this version for Format Draft. The model manager displays 3.10 GB for the model alone.</li>
+<li>A broken or partial download resumes rather than restarting; Pause cancels Cold Open&#39;s request only.</li>
+</ol>
+<p>Format Draft for pasted text needs no microphone, only this model.</p>
+<h2 id="dictation-does-not-start">Dictation does not start</h2>
+<ol>
+<li>Settings &gt; Dictation: choose Prepare engine. The app includes Parakeet and loads it locally. Apple speech requires macOS 26 or later and may download the system speech asset for your language; prepare it before going offline.</li>
+<li>macOS needs microphone permission the first time. Check System Settings &gt; Privacy &amp; Security &gt; Microphone.</li>
+<li>The speech helper path is found automatically; if it is not, Choose… points at it manually.</li>
+</ol>
+<h2 id="voice-packs-fail-to-download">Voice packs fail to download</h2>
+<ol>
+<li>Tools &gt; Settings… &gt; Local features: Refresh voice packs.</li>
+<li>In the packs dialog, cancel and resume the download; a resumed pack continues rather than restarting.</li>
+<li>Neural packs need macOS 15. On macOS 14, use installed Apple Premium or Enhanced voices (System Settings &gt; Accessibility &gt; Spoken Content &gt; System Voice &gt; Manage Voices). Quick Read uses a neural pack and also needs macOS 15.</li>
+<li>Clearing the speech cache never removes weights; if disk space is tight, clear the cache, not the packs.</li>
+</ol>
+<h2 id="co-writing-will-not-connect">Co-writing will not connect</h2>
+<ol>
+<li>Open the Connection diagnostics in the Co-writing panel: it separates what your Mac reports from whether a live connection exists.</li>
+<li>Same-network share: both Macs need the same Wi-Fi. On a hotel or captive network this may fail; use Tailscale.</li>
+<li>With no network at all, the invite only works on this Mac; Cold Open says so when you share.</li>
+<li>Tailscale: both Macs signed in, MagicDNS on, and the same tailnet.</li>
+<li>A self-hosted relay: check the relay address in Settings &gt; Co-writing and that the relay is running.</li>
+<li>Folder sync: the shown status is local truth. Confirm the file actually arrived on the other Mac before you trust it.</li>
+</ol>
+<h2 id="one-scene-number-two-scenes">One scene number, two scenes</h2>
+<ol>
+<li>Production &gt; Scene Number Conflicts….</li>
+<li>Cold Open shows each conflict; resolve by renumbering or accepting which scene keeps which.</li>
+<li>Coordinate anything already published with your production team before renumbering.</li>
+</ol>
+<h2 id="someone39s-typing-ended-up-in-the-wrong-place-after-a-scene-move">Someone&#39;s typing ended up in the wrong place after a scene move</h2>
+<ol>
+<li>Production &gt; Scene Move Conflicts….</li>
+<li>Cut the flagged text and paste it into the moved scene. Cold Open never deletes it for you. The watch has limits (moves older than the last eight per writer, and typing left by an Undo of a move can go unnoticed); nothing is lost either way, it just may not be flagged.</li>
+</ol>
+<h2 id="an-fdx-export-refuses-to-run">An FDX export refuses to run</h2>
+<p>A script note is detached from the text it was pinned to. Reattach it from the Script Notes panel and export again. Cold Open blocks the export instead of saving a changed note.</p>
+<h2 id="the-file-changed-while-cold-open-was-saving">The file changed while Cold Open was saving</h2>
+<p>The app pauses autosave rather than overwriting an externally changed file; Settings &gt; Native autosave offers Save / resolve file conflict… to settle it. External-change detection covers ordinary edits; make a backup copy before you trust a conflicted merge by hand.</p>
+<h2 id="cold-open-crashed">Cold Open crashed</h2>
+<p>Recovery is separate from autosave and from history. On the next launch, accept the recovery prompt; the recovered snapshot is per document and explicit. File &gt; Draft History / Named Snapshot… (<code>⌘⇧H</code>) holds up to 64 versions (128 MB) per document with up to 20 named snapshots protected from pruning.</p>
+<h2 id="gatekeeper-will-not-open-the-app">Gatekeeper will not open the app</h2>
+<p>Cold Open ships signed and notarized. &quot;Cold Open is an app downloaded from the Internet&quot; needs one click on Open, once. If macOS shows &quot;damaged&quot; instead, the download is broken: delete the app and download the <code>.dmg</code> again, or reinstall the Homebrew cask.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

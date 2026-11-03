@@ -1,0 +1,15 @@
+Format a transcript.
+
+Open the Dictate panel to work with a transcript.
+
+Paste or type rough dialogue and action into the transcript box.
+
+Choose Format to turn the transcript into screenplay elements.
+
+Review the proposed scene before inserting it.
+
+Insert the reviewed elements into the draft.
+
+The new scene is now part of the draft.
+
+Settings > Draft formatting controls preview and local formatter setup.

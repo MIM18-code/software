@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Script import, revisions, and live script · Backlot</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Backlot user guide</a><a href="https://mindinmotionsoftware.com/#backlot">Get Backlot</a><a href="https://mindinmotionsoftware.com/downloads/Backlot-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="breakdown.html">Breakdown</a></li><li><a href="budget-and-costs.html">Budget and costs</a></li><li><a href="calendar.html">Calendar</a></li><li><a href="call-sheets.html">Call sheets</a></li><li><a href="day-reports.html">Day reports</a></li><li><a href="getting-started.html">Getting started with Backlot</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="people-and-dood.html">People and the DOOD</a></li><li><a href="projects-and-sending.html">Projects, backups, and sending a copy</a></li><li><a href="reports-and-exports.html">Reports and exports</a></li><li><a aria-current="page" href="script-import-and-revisions.html">Script import, revisions, and live script</a></li><li><a href="setup-and-ai.html">Setup and AI providers</a></li><li><a href="stripboard.html">Stripboard</a></li><li><a href="troubleshooting.html">Troubleshooting Backlot</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="script-import-revisions-and-live-script">Script import, revisions, and live script</h1>
+<p>Scripts get into Backlot three ways, and revised drafts re-import with a review step.</p>
+<h2 id="import">Import</h2>
+<p>Script import needs separate reading tools that the current installer does not include. If the startup notice names missing script tools, use <a href="getting-started.html#add-one-scene-without-importing-a-script">manual scene entry</a> for now. FDX and Fountain both need the reader; AI setup does not install it.</p>
+<ol>
+<li>In the Breakdown view, choose Import FDX.</li>
+<li>Pick an <code>.fdx</code> (tagged or not) or a <code>.fountain</code> file.</li>
+<li>Review the proposed changes and choose Confirm import. Backlot reads the scenes, the cast from dialogue cues, and from a tagged FDX the breakdown elements in their categories.</li>
+</ol>
+<p>Reading scripts needs the screenwriting engine and its Python interpreter (see <a href="troubleshooting.html">Troubleshooting</a> if it goes missing). If the reader works but a particular FDX fails, try re-exporting that script as Fountain.</p>
+<h2 id="re-import-a-revised-draft">Re-import a revised draft</h2>
+<ol>
+<li>Import the new draft.</li>
+<li>Backlot previews the change: matched, added and missing scenes, with scenes whose text changed listed.</li>
+<li>Confirm the import only after reviewing the proposal.</li>
+</ol>
+<p>Backlot proposes marking missing scenes as omitted rather than deleting them; omitted scenes show greyed at zero pages until you restore one. Changed scenes get a colored tab in standard revision order: white, blue, pink, yellow, then later colors. The confirm step exists so nothing lands on the board unread.</p>
+<p>The Cold Open handoff (&quot;Review Draft in Backlot…&quot;) keeps matched scene identities from the last reviewed import, so renaming a scene heading keeps it the same scene.</p>
+<h2 id="live-script">Live script</h2>
+<p>To follow a script while it is still being written:</p>
+<ol>
+<li>In Cold Open, choose File &gt; Copy Read-only Invite (from the Co-writing panel).</li>
+<li>In Backlot, choose Breakdown &gt; Live script… and paste the invite.</li>
+<li>Backlot lists what changed since your last reconcile: added, removed, renumbered or retitled scenes, and any scene whose length moved by 2/8 page or more.</li>
+<li>Choose Reconcile. The review opens on a frozen copy of the live script.</li>
+</ol>
+<p>Backlot cannot edit the script and refuses a read-write invite for exactly that reason. If the host stops sharing, Backlot keeps the last script it saw.</p>
+<h2 id="video-walkthrough">Video walkthrough</h2>
+<p><a href="videos/import-tagged-script.mp4">Import and reconcile a tagged script</a> · <a href="videos/import-tagged-script.srt">Captions</a>. See <a href="videos/index.html">video notes and draft narration</a>.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

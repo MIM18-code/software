@@ -1,0 +1,17 @@
+Tag a prop and send the draft to Backlot.
+
+Select the words for the prop in the screenplay.
+
+Open Breakdown tagging for the selected text.
+
+Name the element and apply it as a prop.
+
+Open Review Draft in Backlot from the File menu.
+
+Choose the open Night Ferry production project.
+
+Preview the captured draft and its production changes.
+
+Review matched scenes, cast changes, and the new element.
+
+Apply the reviewed import, then check the schedule in Backlot.

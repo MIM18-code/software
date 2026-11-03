@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:09,000
+Open the Co-writing panel for the sample draft.
+
+2
+00:00:10,212 --> 00:00:19,212
+Choose Share for Co-writing to start a local session.
+
+3
+00:00:20,447 --> 00:00:29,447
+Choose where the co-writer is located.
+
+4
+00:00:30,754 --> 00:00:39,754
+For another network, choose On a different network.
+
+5
+00:00:41,009 --> 00:00:50,009
+The panel explains how to connect both Macs with Tailscale.
+
+6
+00:00:51,315 --> 00:01:00,315
+Check Tailscale again after connecting; an invite appears when ready.
+
+7
+00:01:01,542 --> 00:01:10,542
+Stop Sharing when the session is no longer needed.

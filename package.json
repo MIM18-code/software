@@ -1,0 +1,1 @@
+{"name":"mindinmotion-software-site","private":true,"type":"module","scripts":{"build:guides":"node scripts/build-guides.mjs && python3 scripts/package-guides.py","check:guides":"python3 scripts/check-guides.py"},"devDependencies":{"marked":"18.1.3"}}

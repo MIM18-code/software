@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:09,000
+Open the sample project and choose Stripboard.
+
+2
+00:00:10,036 --> 00:00:19,036
+The left column holds scenes that are not yet scheduled.
+
+3
+00:00:20,106 --> 00:00:29,106
+Choose an unscheduled scene and press Enter to add it to the board.
+
+4
+00:00:30,120 --> 00:00:39,120
+The board groups scene strips by shooting day.
+
+5
+00:00:40,146 --> 00:00:49,146
+Add a day break to divide the schedule.
+
+6
+00:00:50,175 --> 00:00:59,175
+Calendar displays the schedule once a start date is set.
+
+7
+00:01:00,206 --> 00:01:09,206
+DOOD summarizes cast and element days across the board.

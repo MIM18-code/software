@@ -1,0 +1,15 @@
+Set up AI.
+
+Open Set up AI from the Tools menu.
+
+Choose between a ChatGPT plan and AI on this Mac.
+
+Cold Open can set up a local runtime and writing model.
+
+Allow about 4 GB if the local tools need to be downloaded.
+
+Close setup and open AI settings for additional providers.
+
+Advanced settings contain the local connection options.
+
+Close settings, then open Ask to use the assistant.

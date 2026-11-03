@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Co-writing · Cold Open</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Cold Open user guide</a><a href="https://mindinmotionsoftware.com/#cold-open">Get Cold Open</a><a href="https://mindinmotionsoftware.com/downloads/ColdOpen-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="ai.html">The assistant and AI setup</a></li><li><a href="backlot.html">Handoff to Backlot</a></li><li><a href="breakdown.html">Breakdown tagging</a></li><li><a aria-current="page" href="co-writing.html">Co-writing</a></li><li><a href="dictation.html">Format Draft and dictation</a></li><li><a href="exports.html">Exports: PDF, FDX, Fountain, Movie Magic, delivery PDFs and actor sides</a></li><li><a href="getting-started.html">Getting started with Cold Open</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="phone.html">The phone remote</a></li><li><a href="reports.html">Reports and sides</a></li><li><a href="scenes-and-views.html">Scenes, the navigator, and views</a></li><li><a href="script-notes.html">Script notes and project material</a></li><li><a href="settings.html">Settings</a></li><li><a href="table-read.html">Table read and voice packs</a></li><li><a href="title-page-and-revisions.html">Title page, revisions, and locked scene numbers</a></li><li><a href="troubleshooting.html">Troubleshooting</a></li><li><a href="writing.html">Writing and formatting</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="co-writing">Co-writing</h1>
+<p>Cold Open shares the live script with other writers. Everyone edits the same draft; presence and conflict notices keep changes separate instead of overwriting each other.</p>
+<p><img src="images/panel-collab.png" alt="Co-writing panel"></p>
+<h2 id="share">Share</h2>
+<ol>
+<li>Open the <code>.screenplay</code> file you want to share. Co-writing is a native-format feature.</li>
+<li>Choose File &gt; Share for Co-writing….</li>
+<li>Cold Open opens the session. Under Where is your co-writer?, choose On the same Wi-Fi or local network, or On a different network.</li>
+<li>Once the selected route connects, copy the Editing invite privately to your co-writer. They open the link in Cold Open, check the invitation and choose Join. If their messaging app shows plain text, they can paste the link into File &gt; Join Co-writing Session….</li>
+</ol>
+<p>Earlier beta 8 builds show invites immediately and use an Invite over choice when Tailscale is available. The newer panel asks for the co-writer&#39;s location first.</p>
+<p>Connection diagnostics in the panel show the local address versus a live connection, so a no-network situation is visible instead of silent.</p>
+<h2 id="on-the-same-network">On the same network</h2>
+<p>Connect both Macs to the same trusted Wi-Fi or local network. Choose that route under Where is your co-writer?. If no network is found, the local option says On this Mac only; connect to the network before sending a local invite.</p>
+<h2 id="in-another-city-tailscale">In another city: Tailscale</h2>
+<p>Choose On a different network. Install Tailscale on both Macs, sign in and connect. If the co-writer cannot see your Mac, use Share on the Mac&#39;s entry in the Tailscale Machines page and send that access invitation privately. After they accept it, return to Cold Open and choose Check Tailscale again if shown. Copy the Editing invite when it appears. Keep the host Mac awake with the script open. Tailscale offers a free Personal plan for non-commercial use; check its <a href="https://tailscale.com/pricing">current plans</a> for your production. Accounts belong to Tailscale.</p>
+<h2 id="in-another-city-your-own-relay">In another city: your own relay</h2>
+<p>Settings &gt; Co-writing has a Self-hosted relay box. Leave it empty to share over the local network. Otherwise run the relay from a clone of this repository after installing its dependencies with <code>npm install</code>. It requires the Node version listed in the repository&#39;s <code>package.json</code>. From the repository root:</p>
+<pre><code class="language-bash">node packages/relay/src/cli.ts --port 4455 --host 0.0.0.0
+</code></pre>
+<p>Put the relay address in Settings &gt; Co-writing. The <a href="https://github.com/MIM18-code/cold-open/blob/main/packages/relay/README.md">relay setup instructions</a> cover its address, TLS and room lifetime. You own the relay; Cold Open and the writers&#39; Macs send script data through it.</p>
+<h2 id="the-writer39s-name">The writer&#39;s name</h2>
+<p>Settings &gt; Co-writing: &quot;Your name, as other writers see it&quot;. Set it before you share; co-writers see this name next to edits.</p>
+<h2 id="folder-sync-through-icloud-or-dropbox">Folder sync through iCloud or Dropbox</h2>
+<p>The Co-writing panel offers Sync Through Folder: save as a <code>.screenplay</code> file inside a sync folder and other Macs pick it up. Two honest limits appear in the panel itself:</p>
+<ol>
+<li>The shown status confirms local activity, not upload to iCloud/Dropbox or receipt on another Mac.</li>
+<li>Keep a saved local copy and check the receiving draft before relying on the sync.</li>
+</ol>
+<h2 id="invites-and-leaving">Invites and leaving</h2>
+<p>File &gt; Copy Co-writing Invite and Copy Read-only Invite re-copy the invites, read-only being what you hand Backlot or an iPhone reader. Stop Sharing ends a session hosted on your Mac. On a team relay, Leave Session disconnects your Mac. Other writers can keep working and the existing invites can still be used.</p>
+<h2 id="one-more-thing-that-follows-the-script">One more thing that follows the script</h2>
+<p>Backlot can follow this same draft as it is written: see &quot;Live script&quot; in the <a href="backlot.html">Backlot pages</a>.</p>
+<h2 id="video-walkthrough">Video walkthrough</h2>
+<p><a href="videos/cowriting-tailscale.mp4">Tailscale co-writing setup</a> · <a href="videos/cowriting-tailscale.srt">Captions</a>. See <a href="videos/index.html">video notes and draft narration</a>.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

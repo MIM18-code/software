@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Table read and voice packs · Cold Open</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Cold Open user guide</a><a href="https://mindinmotionsoftware.com/#cold-open">Get Cold Open</a><a href="https://mindinmotionsoftware.com/downloads/ColdOpen-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="ai.html">The assistant and AI setup</a></li><li><a href="backlot.html">Handoff to Backlot</a></li><li><a href="breakdown.html">Breakdown tagging</a></li><li><a href="co-writing.html">Co-writing</a></li><li><a href="dictation.html">Format Draft and dictation</a></li><li><a href="exports.html">Exports: PDF, FDX, Fountain, Movie Magic, delivery PDFs and actor sides</a></li><li><a href="getting-started.html">Getting started with Cold Open</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="phone.html">The phone remote</a></li><li><a href="reports.html">Reports and sides</a></li><li><a href="scenes-and-views.html">Scenes, the navigator, and views</a></li><li><a href="script-notes.html">Script notes and project material</a></li><li><a href="settings.html">Settings</a></li><li><a aria-current="page" href="table-read.html">Table read and voice packs</a></li><li><a href="title-page-and-revisions.html">Title page, revisions, and locked scene numbers</a></li><li><a href="troubleshooting.html">Troubleshooting</a></li><li><a href="writing.html">Writing and formatting</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="table-read-and-voice-packs">Table read and voice packs</h1>
+<p>Tools &gt; Table Read… (<code>⌘⇧L</code>) opens the Listen panel and reads the script aloud with distinct voices per character.</p>
+<p><img src="images/panel-tableRead.png" alt="Table read panel"></p>
+<h2 id="voice-engines">Voice engines</h2>
+<p>The Voice engine list shows the engines and their tiers. Cold Open checks what is ready as the panel opens.</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Voices</th>
+<th>Setup</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Quick Read</td>
+<td>Phonon or Kokoro</td>
+<td>Download an optional local voice pack.</td>
+</tr>
+<tr>
+<td>Local presets</td>
+<td>Ming</td>
+<td>Download an optional local voice pack.</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Qwen3-TTS Base</td>
+<td>Download a compatible local voice pack.</td>
+</tr>
+<tr>
+<td>Built in</td>
+<td>Apple Premium and Enhanced voices</td>
+<td>Install voices in System Settings &gt; Accessibility &gt; Spoken Content &gt; System Voice &gt; Manage Voices if none are installed.</td>
+</tr>
+</tbody></table>
+<p>Quick Read also needs a download. It is not an already-installed fallback. Neural packs need Apple silicon, macOS 15 or later, and the bundled voice helper. The pack manager shows each pack&#39;s size, memory requirement and license before you download it.</p>
+<p>Choose Set up voice packs… or Manage voice packs… to install a pack. You can cancel, resume and verify its download. If a pack is installed but not loaded, choose Load voice engine. Play becomes available when the engine is ready. Nothing downloads without your request.</p>
+<p>The generated-speech cache can be cleared in Settings &gt; Local features; clearing it never removes the model weights.</p>
+<h2 id="run-a-read">Run a read</h2>
+<ol>
+<li>Choose the mode: Full script, Dialogue only, Scene or selection, Rehearsal, or Compare takes.</li>
+<li>Choose the reading range: Current scene, Whole script, From current paragraph, or Selected paragraphs. Rehearsal tools let you loop the range, repeat a role, or Compare takes.</li>
+<li>Choose Play.</li>
+</ol>
+<p>Speed runs 0.75x to 1.5x; the pause between lines is 180, 400 or 800 ms, or none. Dual dialogue reads sequentially or simultaneously. The panel estimates the read&#39;s duration, for example &quot;approximately 1 min&quot;.</p>
+<p>Tools &gt; Pause / Resume Table Read (<code>⌘⇧Space</code>) and Tools &gt; Stop Table Read control playback from the menu at any time.</p>
+<h2 id="casting">Casting</h2>
+<p>The Cast section lists the speaking characters. Narration &amp; playback controls whether action, headings, parentheticals and character names are spoken. Gender is taken from the script itself: descriptions, role words, pronouns and first names; where those say nothing, your chosen AI provider reads the character&#39;s scenes. A cloud provider asks for consent before its first casting request.</p>
+<ol>
+<li>Choose a voice per character with Choose voice and audition it with the play button beside it.</li>
+<li>Choose Recast to hear alternatives and accept only the ones you want.</li>
+<li>Choose Lock to protect a choice from automatic recasting.</li>
+<li>Install VoiceDesign… adds a designed voice pack for that role if you want a custom sound.</li>
+</ol>
+<h2 id="save-and-export">Save and export</h2>
+<p>A <code>.fountain</code> or <code>.fdx</code> file does not store the table read. The panel offers:</p>
+<ol>
+<li>Save table-read file next to this script: a read file that keeps voices, locks and pronunciations beside the script.</li>
+<li>Export bundle… / Import bundle…: moves the whole setup to another Mac; with Include a rendered WAV it carries the audio too.</li>
+<li>Export cast… / Import cast…: just the voice assignments.</li>
+<li>Export this range as WAV…: writes audio. Exports use natural speed, the chosen line gap and the captured draft; playback speed, looping and role rehearsal do not affect the file.</li>
+</ol>
+<h2 id="read-along-on-the-phone">Read along on the phone</h2>
+<p>The Listen panel works together with the <a href="phone.html">phone remote</a>: received notes attach to the line being heard.</p>
+<h2 id="video-walkthrough">Video walkthrough</h2>
+<p><a href="videos/table-read.mp4">Table-read setup and controls</a> · <a href="videos/table-read.srt">Captions</a>. See <a href="videos/index.html">video notes and draft narration</a>.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

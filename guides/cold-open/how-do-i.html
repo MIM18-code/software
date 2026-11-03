@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>How do I…? · Cold Open</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Cold Open user guide</a><a href="https://mindinmotionsoftware.com/#cold-open">Get Cold Open</a><a href="https://mindinmotionsoftware.com/downloads/ColdOpen-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="ai.html">The assistant and AI setup</a></li><li><a href="backlot.html">Handoff to Backlot</a></li><li><a href="breakdown.html">Breakdown tagging</a></li><li><a href="co-writing.html">Co-writing</a></li><li><a href="dictation.html">Format Draft and dictation</a></li><li><a href="exports.html">Exports: PDF, FDX, Fountain, Movie Magic, delivery PDFs and actor sides</a></li><li><a href="getting-started.html">Getting started with Cold Open</a></li><li><a aria-current="page" href="how-do-i.html">How do I…?</a></li><li><a href="phone.html">The phone remote</a></li><li><a href="reports.html">Reports and sides</a></li><li><a href="scenes-and-views.html">Scenes, the navigator, and views</a></li><li><a href="script-notes.html">Script notes and project material</a></li><li><a href="settings.html">Settings</a></li><li><a href="table-read.html">Table read and voice packs</a></li><li><a href="title-page-and-revisions.html">Title page, revisions, and locked scene numbers</a></li><li><a href="troubleshooting.html">Troubleshooting</a></li><li><a href="writing.html">Writing and formatting</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="how-do-i">How do I…?</h1>
+<p>Short recipes for common jobs.</p>
+<h2 id="tag-a-script-and-send-it-to-backlot">Tag a script and send it to Backlot</h2>
+<ol>
+<li>Tag the script: Tools &gt; Tag Selected Text… per passage (see <a href="breakdown.html">Breakdown tagging</a>), or Tools &gt; Suggest Breakdown Tags… for a first pass.</li>
+<li>Open the project in Backlot.</li>
+<li>In Cold Open, File &gt; Review Draft in Backlot….</li>
+<li>Pick the project, set cast reconciliation, choose Preview captured draft.</li>
+<li>Review the scene matches, cast changes and tags in Cold Open. Resolve any unmatched identities; choose Review revised choices after changing options.</li>
+<li>Choose Apply reviewed import…. Then check the affected days in Backlot.</li>
+</ol>
+<h2 id="export-a-breakdown-to-movie-magic">Export a breakdown to Movie Magic</h2>
+<ol>
+<li>Tag the script in Cold Open.</li>
+<li>File &gt; Export Movie Magic Scheduling (.sex)….</li>
+<li>Import the <code>.sex</code> in Movie Magic Scheduling. Cold Open&#39;s <code>.sex</code> export carries the scene data and tags the breakdown needs.</li>
+</ol>
+<h2 id="co-write-with-someone-in-another-city">Co-write with someone in another city</h2>
+<ol>
+<li>Install Tailscale on both Macs and sign in with the same account (or accounts that share a tailnet).</li>
+<li>Cold Open: Settings &gt; Co-writing, set the name your partner sees.</li>
+<li>File &gt; Share for Co-writing…; choose On a different network. Connect Tailscale and choose Check Tailscale again if prompted.</li>
+<li>Copy the Editing invite privately to your partner. They choose File &gt; Join Co-writing Session… and paste it.</li>
+<li>Check the panel&#39;s diagnostics if either side cannot reach the other.</li>
+</ol>
+<p>No Tailscale and not on one network? Follow the <a href="co-writing.html#in-another-city-your-own-relay">self-hosted relay setup</a>, then put its address in Settings &gt; Co-writing and share as usual.</p>
+<h2 id="get-ai-working">Get AI working</h2>
+<p>Local, free, private:</p>
+<ol>
+<li>Tools &gt; Set up AI… &gt; Run on this Mac.</li>
+<li>Choose Set up local AI for me, or Download writing model if Ollama is already running. Earlier beta 8 builds show separate Ollama install/start and model download buttons; see <a href="ai.html">AI setup</a>.</li>
+<li>If the model is already ready, choose Use AI on this Mac when offered. Wait for AI on this Mac is ready, then choose Done.</li>
+<li>Open Ask (Tools &gt; Ask About the Script…) or request breakdown suggestions. Format Draft has its own pinned-model controls under Tools &gt; Manage Local Formatting Models….</li>
+</ol>
+<p>With your ChatGPT plan:</p>
+<ol>
+<li>Tools &gt; Set up AI… &gt; Sign in with ChatGPT.</li>
+<li>Complete the browser sign-in and enable plan usage if requested. If already signed in, choose Use ChatGPT, then Done.</li>
+<li>Ask About the Script…; ChatGPT usage counts against your own plan.</li>
+</ol>
+<h2 id="get-the-table-read-set-up">Get the table read set up</h2>
+<ol>
+<li>Tools &gt; Table Read… (Listen panel).</li>
+<li>Manage voice packs…; download a local neural pack (see sizes in <a href="table-read.html">Table read</a>). Apple silicon and macOS 15+ needed for the neural pack route.</li>
+<li>Assign a voice per character, Recast until you like them, Lock the ones you want to keep.</li>
+<li>Press Play. Export a WAV with Export this range as WAV… when it suits a scene.</li>
+</ol>
+<h2 id="produce-sides-for-tomorrow39s-rehearsal">Produce sides for tomorrow&#39;s rehearsal</h2>
+<ol>
+<li>File &gt; Export Sides…; tick the scenes (add scenes by hand for the silent reads).</li>
+<li>Choose Final Draft or Fountain if the actors&#39; readers are technical.</li>
+<li>For PDF sides: File &gt; Delivery PDF, Watermarks and Actor Sides…, document &quot;Actor / scene sides&quot;, tick Emphasize the selected character&#39;s lines, set the recipient watermark, Export previewed PDF….</li>
+</ol>
+<h2 id="number-scenes-and-start-a-revision-pass">Number scenes and start a revision pass</h2>
+<ol>
+<li>Script &gt; Number Scenes.</li>
+<li>Production &gt; Revision Mode.</li>
+<li>Production &gt; New Revision Set…: pick the color of your next draft, set the date and mark, Create revision set.</li>
+<li>Rewrite. Changed text carries the mark; Settings &gt; Printing decides whether marked pages print in color.</li>
+</ol>
+<h2 id="keep-a-dangerous-cut">Keep a dangerous cut</h2>
+<ol>
+<li>Select the passage.</li>
+<li>Tools &gt; Save Selected Passage to Cuts….</li>
+<li>Delete from the script with confidence. The copy stays in the Notes panel under Cuts; nothing prints.</li>
+</ol>
+<h2 id="draft-in-bed-on-the-phone">Draft in bed on the phone</h2>
+<ol>
+<li>Mac and iPhone on one Wi-Fi, or Tailscale on both (see <a href="phone.html">The phone remote</a>).</li>
+<li>Tools &gt; Phone Companion…: choose the connection and configure its protection as described in <a href="phone.html">The phone remote</a>, then Start phone pairing….</li>
+<li>On the iPhone, open the companion, pick the line, and leave notes or dictate takes.</li>
+<li>On the Mac, accept the good ones from the Review inbox.</li>
+</ol>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

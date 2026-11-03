@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Setup and AI providers · Backlot</title><link rel="stylesheet" href="guide.css"></head>
+<body><a class="skip" href="#content">Skip to content</a><header><a class="brand" href="index.html">Backlot user guide</a><a href="https://mindinmotionsoftware.com/#backlot">Get Backlot</a><a href="https://mindinmotionsoftware.com/downloads/Backlot-user-guide.zip" download>Download complete guide</a></header><div class="layout"><nav aria-label="Guide pages"><details><summary>Guide pages</summary><ul><li><a href="index.html">Guide home</a></li><li><a href="breakdown.html">Breakdown</a></li><li><a href="budget-and-costs.html">Budget and costs</a></li><li><a href="calendar.html">Calendar</a></li><li><a href="call-sheets.html">Call sheets</a></li><li><a href="day-reports.html">Day reports</a></li><li><a href="getting-started.html">Getting started with Backlot</a></li><li><a href="how-do-i.html">How do I…?</a></li><li><a href="people-and-dood.html">People and the DOOD</a></li><li><a href="projects-and-sending.html">Projects, backups, and sending a copy</a></li><li><a href="reports-and-exports.html">Reports and exports</a></li><li><a href="script-import-and-revisions.html">Script import, revisions, and live script</a></li><li><a aria-current="page" href="setup-and-ai.html">Setup and AI providers</a></li><li><a href="stripboard.html">Stripboard</a></li><li><a href="troubleshooting.html">Troubleshooting Backlot</a></li><li><a href="videos/index.html">Video walkthroughs</a></li></ul></details></nav><main id="content"><h1 id="setup-and-ai-providers">Setup and AI providers</h1>
+<p>You can create projects, add scenes by hand, arrange a schedule and edit budgets without AI or extra downloads. Start with <a href="getting-started.html">the empty practice project</a> if you have just installed Backlot.</p>
+<p>Extra setup belongs to the feature you choose to use. A warning about one missing tool does not mean all of Backlot is unavailable.</p>
+<h2 id="what-each-task-needs">What each task needs</h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Required for this task</th>
+<th>Required for the empty practice project?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Manual scenes, scheduling, budgets, contacts and draft forms</td>
+<td>Backlot</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>AI suggestions</td>
+<td>A working local model, a ChatGPT connection with plan usage, or a supported API key</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Script import and actor sides</td>
+<td>Separate script-reading tools not included in the current installer</td>
+<td>No, but import cannot work without them</td>
+</tr>
+<tr>
+<td>Saving PDFs and issuing call sheets</td>
+<td>Google Chrome installed in Applications</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Gorilla and Movie Magic interchange files</td>
+<td>Separate budget-export tools not included in the current installer</td>
+<td>No</td>
+</tr>
+<tr>
+<td>In-app call-sheet email and receipt confirmations</td>
+<td>An email service and a configured confirmation site</td>
+<td>No</td>
+</tr>
+</tbody></table>
+<p>A fresh install currently has no button that installs the script-reading or budget-export tools. If Backlot reports those missing, this is an application setup gap. Opening a Fountain file instead, installing Chrome or signing into AI will not supply them. Use manual scene entry or ask for support for the blocked import/export feature.</p>
+<p>For PDFs, install <a href="https://www.google.com/chrome/">Google Chrome</a> in Applications. Then quit and reopen Backlot so it checks again. Chrome does not supply the script-reading tools.</p>
+<h2 id="choose-whether-you-want-ai">Choose whether you want AI</h2>
+<p>AI is optional. It helps with tasks such as suggested breakdown elements and synopses. You can dismiss its setup and continue editing the project.</p>
+<table>
+<thead>
+<tr>
+<th>Choice</th>
+<th>What you need</th>
+<th>What happens to the project text you submit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Run on this Mac</td>
+<td>Ollama and a downloaded local model</td>
+<td>The AI request stays on this Mac.</td>
+</tr>
+<tr>
+<td>Your ChatGPT plan</td>
+<td>Sign in and enable plan usage</td>
+<td>The request goes to your selected ChatGPT connection under its plan limits.</td>
+</tr>
+<tr>
+<td>Your own API key</td>
+<td>A key from Anthropic, OpenAI or Google</td>
+<td>The request goes to that provider and uses its separately billed API service.</td>
+</tr>
+</tbody></table>
+<p>Pick one provider. Backlot does not silently switch between your local model, plan or API billing. Responses name the provider and model that answered. Saved account connections and keys are kept on this Mac, outside the project file. Cloud requests use that provider&#39;s connection.</p>
+<h2 id="newer-builds-guided-ai-setup">Newer builds: guided AI setup</h2>
+<p>Click the AI pill at the top, then Set up AI…. The sheet also appears when an AI assist needs setup.</p>
+<p><img src="images/ai-setup.png" alt="Backlot AI setup choices"></p>
+<p>The public beta 7 installer has the earlier provider settings and no Set up AI… button. Use the next section if that button is absent.</p>
+<h3 id="use-your-chatgpt-plan">Use your ChatGPT plan</h3>
+<ol>
+<li>Click Sign in with ChatGPT. Complete the sign-in in the browser, then return to Backlot.</li>
+<li>If asked, click Enable ChatGPT plan usage. Being signed in without plan usage is not enough to run an assist.</li>
+<li>If already signed in, click Use ChatGPT. Choose an available model when prompted. Backlot can reuse an existing model choice if it is still available.</li>
+<li>Wait for ChatGPT is ready, then click Done.</li>
+</ol>
+<p>If the browser sign-in is cancelled, return to the sheet and try Sign in with ChatGPT again. If it still says it is waiting, click Cancel sign-in first. If the account offers no models, click Try again; if the list remains empty, close the sheet and continue without AI or choose another provider. Project editing does not depend on completing this sign-in.</p>
+<h3 id="run-ai-on-this-mac">Run AI on this Mac</h3>
+<ol>
+<li>If the sheet shows Download Ollama, click it. Install and open the downloaded Ollama app, then return to Backlot. This button opens the download page; it does not perform the installation for you.</li>
+<li>If the sheet shows Start Ollama, click it. If starting fails, open Ollama from Applications and return to the sheet.</li>
+<li>Click Download (3.3 GB) when offered. This is an optional model download, separate from Backlot&#39;s installer. Stay online while it downloads.</li>
+<li>Pause stops the current download request. Resume download keeps the downloaded model data. If the download fails, use Retry download after checking the connection and free disk space.</li>
+<li>If a usable local model is already present while another provider is selected, click Use AI on this Mac.</li>
+<li>Wait for AI on this Mac is ready, then click Done.</li>
+</ol>
+<p>Closing the sheet leaves an active model download running. Not now closes the sheet without requiring you to finish setup. A pending Breakdown request retries after setup is saved successfully.</p>
+<h2 id="public-beta-7-earlier-ai-settings">Public beta 7: earlier AI settings</h2>
+<p>Click the AI pill at the top. The settings list the providers directly.</p>
+<ul>
+<li>To skip AI, close settings and continue the practice project.</li>
+<li>For ChatGPT, choose Your ChatGPT plan and Continue with ChatGPT. Complete the browser sign-in, enable plan usage if requested, and choose an available model.</li>
+<li>For local AI, install and open Ollama separately, then install the model named in the settings and use Warm up now. This earlier build does not install Ollama for you. If you do not already know that setup, use the app without AI rather than changing unfamiliar settings to get through the first project.</li>
+</ul>
+<p>A Claude Pro or Max subscription is not a provider option. Your own Anthropic API key is a separate route.</p>
+<h2 id="email-and-confirmation-links">Email and confirmation links</h2>
+<p>In-app call-sheet email needs an email service and a configured confirmation site. That is a separate production-delivery setup, not a first-launch requirement.</p>
+<p>To send a sheet without that setup, save the issued PDF and attach it in your usual mail app. Backlot&#39;s distribution panel has no attachment-only email mode. See <a href="call-sheets.html">Call sheets</a>.</p>
+<h2 id="technical-configuration-reference">Technical configuration reference</h2>
+<p>A technician configuring an existing installation can use <a href="reference/OPTIONAL_ENGINES.html">optional external programs</a> and <a href="reference/AI_PROVIDER_POLICY_BACKLOT.html">the AI provider policy</a>. These references contain interpreter, environment and credential-storage details. They are not prerequisites for the manual practice project.</p>
+<footer>MindInMotion LLC. Beta software; the guide identifies differences between released and newer screens. <a href="LICENSE.txt">Guide license</a>.</footer></main></div></body></html>

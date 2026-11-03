@@ -1,0 +1,15 @@
+Export for Movie Magic Scheduling.
+
+Review the sample screenplay before exporting.
+
+Breakdown tags can accompany scene data in the export.
+
+Export Movie Magic Scheduling creates a .sex file.
+
+Choose a destination and save the export.
+
+Keep a .screenplay master alongside exchange files.
+
+Final Draft export is another way to exchange a tagged script.
+
+Import the resulting file in your scheduling application.
