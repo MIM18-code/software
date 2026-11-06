@@ -28,7 +28,9 @@ Script > Duplicate / Move / Split / Merge Scene… opens a preview before it tou
 
 Numbered or page-locked drafts are refused. Split needs the caret placed in the script first.
 
-## The five views
+## The views
+
+The switcher in the middle of the title bar reads Brainstorm, Write and Plan. Write is the script page and is where Cold Open opens. Plan is a menu of the planning views. Brainstorm opens a page for loose ideas; see [Brainstorm](script-notes.md#brainstorm).
 
 | View | Shortcut | What it shows |
 | --- | --- | --- |
@@ -38,6 +40,7 @@ Numbered or page-locked drafts are refused. Split needs the caret placed in the 
 | Story Map | `⌃⌘4` | Scenes positioned by structure points you place. |
 | Beats | `⌃⌘5` | Ideas parked before you promote them into scenes. |
 | Canvas | `⌃⌘6` | The beat canvas: arrange beats freely or link them to scenes. |
+| Brainstorm | `⌃⌘7` | A new note ready to type or dictate, with your open notes under it. |
 
 ## Story Map and structure points
 
