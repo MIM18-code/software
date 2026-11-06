@@ -23,7 +23,7 @@ Notes whose text moved away from their anchor become orphans; you can reattach t
 
 The Tools menu keeps them together: Tools > Notes, Bookmarks and Alternatives opens the panel, and the shorter items create each kind:
 
-1. Tools > New Note… (`⌘⇧M`): a note, with replies, that belongs to the project rather than one passage.
+1. Tools > New Note (`⌘⇧M`): a small floating box that saves as you type, attached to the line the caret is on. Press Dictate to talk instead of typing, and `⌘↵` or Esc when you're done. Tools > New Note with Title… opens the longer form.
 2. Tools > New Bookmark… (`⌘⇧B`): a mark at a spot in the script.
 3. Tools > Save Selected Passage to Cuts…: keeps a copy of selected text and formatting without deleting anything from the draft.
 4. Tools > New Alternative…: alternate wording. The script is unchanged until you swap it in, and the swap is reversible.
@@ -32,6 +32,16 @@ The Tools menu keeps them together: Tools > Notes, Bookmarks and Alternatives op
 The panel groups them under Project material with filters: Notes, Bookmarks, Alternatives, Cuts, and Include resolved notes. Searching filters them as you type.
 
 None of this prints or exports with ordinary script exports. Save a `.screenplay` file to keep the project material across sessions and edits.
+
+## Brainstorm
+
+Click Brainstorm, left of Write in the title bar, and the caret is already in a new note. Type an idea, or press Dictate and talk; the microphone only starts when you press it. The note saves as you go.
+
+Press `⌘↵` or Done to finish the note and start the next one. Your open notes are listed under the box, where you can edit, resolve, reply to or remove them. Brainstorm notes aren't attached to a line in the script, and they also appear in the Notes panel.
+
+## Since last time
+
+When notes arrive while you're away, from the iPhone or a co-writer, the status bar shows how many are new. Click it, or choose Tools > Notes Since Last Time, to see them in a tray where you can resolve a note, pin it to the passage at the caret, or dismiss it.
 
 ## Editing character dialogue as a block
 

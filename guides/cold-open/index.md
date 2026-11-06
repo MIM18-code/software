@@ -11,7 +11,7 @@ Cold Open is in beta. This guide covers 0.1.0 beta 9, including bundled offline 
 | [Getting started](getting-started.md) | Install (DMG or Homebrew), first launch, and a five-minute first project. |
 | [Writing and formatting](writing.md) | Elements, keyboard flow, SmartType, templates, smart paste, find and replace, tabs. |
 | [Format Draft and dictation](dictation.md) | Turn rough text into screenplay elements, set up the local formatter, dictate. |
-| [Scenes, the navigator, and views](scenes-and-views.md) | Reorder scenes, scene operations, Cards, Outline, Story Map, Beats, Canvas. |
+| [Scenes, the navigator, and views](scenes-and-views.md) | Reorder scenes, scene operations, Cards, Outline, Story Map, Beats, Canvas, Brainstorm. |
 | [Title page, revisions, and locked scene numbers](title-page-and-revisions.md) | Title pages, colored revisions, locked pages and numbers, omissions, draft history. |
 | [Script notes and project material](script-notes.md) | Script notes that reach Final Draft, plus notes, bookmarks, cuts, alternatives. |
 | [Reports and sides](reports.md) | The nine reports, their exports, and scene sides. |
