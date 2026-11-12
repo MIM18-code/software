@@ -2,7 +2,20 @@
 
 Public downloads for Cold Open, Backlot, Dumptruck, Lacquer and Writers Block, served by GitHub Pages at [mindinmotionsoftware.com](https://mindinmotionsoftware.com/).
 
-The landing page is `index.html`. It checks the public GitHub releases for current versions, sizes, download links and checksums. Its built-in links remain available when the API cannot be reached. Update those fallback links when publishing an app release.
+The landing page is `index.html`, and each app has a page of its own (`cold-open/`, `writers-block/`, `backlot/`, `dumptruck/`, `lacquer/`). They are generated, so edit the source and rebuild:
+
+```sh
+python3 scripts/build-site.py   # needs Python 3 with Pillow
+python3 scripts/check-guides.py
+```
+
+- The words, page titles and descriptions are in `scripts/build-site.py`.
+- Release facts (version, size, download link, checksum) are in `releases.json`. The pages also read the newest GitHub release when they load, so `releases.json` is only what shows when GitHub cannot be reached. After an app release, edit that app's entry, rebuild and commit.
+- The look is `assets/site.css`. `assets/site.js` holds the copy buttons and the release lookup.
+- The build also writes `sitemap.xml`, `robots.txt`, `404.html` and the share images in `assets/og/`.
+- Screenshots are in `assets/shots/` as WebP at two widths, `<app>-1600.webp` and `<app>-800.webp`.
+
+Each app page has its own title, description, canonical link and `SoftwareApplication` data for search engines. The sitemap is at `/sitemap.xml`; submit it once in Google Search Console and Bing Webmaster Tools.
 
 ## User guides
 

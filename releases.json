@@ -1,0 +1,53 @@
+{
+  "_comment": "Fallback release facts written into the pages. The pages also read the newest GitHub release when they load, so these only show when GitHub cannot be reached. After a release: edit the app's entry, run `python3 scripts/build-site.py`, commit.",
+  "cold-open": {
+    "version": "0.1.0 beta 12",
+    "size": "717 MB",
+    "dmg": "https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.12/ColdOpen-0.1.0-beta.12.dmg",
+    "dmg_file": "ColdOpen-0.1.0-beta.12.dmg",
+    "sha256": "a7e32f6bbe80d441a131f451cd9709034e8a402d7cd9847aa2a88f0a1eb4f27f",
+    "release": "https://github.com/MIM18-code/cold-open/releases/tag/v0.1.0-beta.12",
+    "source": "https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.12/ColdOpen-0.1.0-beta.12-source.tar.gz",
+    "source_note": "6.9 MB",
+    "sums": "https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.12/SHA256SUMS"
+  },
+  "backlot": {
+    "version": "0.7.0 beta 8",
+    "size": "138 MB",
+    "dmg": "https://github.com/MIM18-code/homebrew-backlot/releases/download/v0.7.0-beta.8/Backlot-0.7.0-beta.8.dmg",
+    "dmg_file": "Backlot-0.7.0-beta.8.dmg",
+    "sha256": "68d84ebc1bda6488b518afa819981fe18220065cbb6ae279c0c80bbb3f24b949",
+    "release": "https://github.com/MIM18-code/homebrew-backlot/releases/tag/v0.7.0-beta.8",
+    "source": "https://github.com/MIM18-code/homebrew-backlot/releases/download/v0.7.0-beta.8/Backlot-0.7.0-beta.8-source.tar.gz",
+    "source_note": "3.4 MB",
+    "sums": "https://github.com/MIM18-code/homebrew-backlot/releases/download/v0.7.0-beta.8/SHA256SUMS"
+  },
+  "dumptruck": {
+    "version": "0.5.22 beta",
+    "size": "120 MB",
+    "dmg": "https://github.com/MIM18-code/dumptruck/releases/download/v0.5.22-beta/Dumptruck-0.5.22-beta-arm64.dmg",
+    "dmg_file": "Dumptruck-0.5.22-beta-arm64.dmg",
+    "sha256": "910cdb45dc926ecf15768d43b31c4bae1a5724c81b748291be58c5822d8ea1b9",
+    "release": "https://github.com/MIM18-code/dumptruck/releases/tag/v0.5.22-beta"
+  },
+  "lacquer": {
+    "version": "0.2.1 beta",
+    "size": "26 MB",
+    "dmg": "https://github.com/MIM18-code/lacquer/releases/download/v0.2.1-beta/Lacquer-0.2.1-arm64.dmg",
+    "dmg_file": "Lacquer-0.2.1-arm64.dmg",
+    "sha256": "0af8c03e86fff174f453cf71fb31f7cf95134a4126533c7081bd5f14502acd6b",
+    "release": "https://github.com/MIM18-code/lacquer/releases/tag/v0.2.1-beta",
+    "source": "https://github.com/MIM18-code/lacquer/releases/download/v0.2.1-beta/Lacquer-0.2.1-source.tar.gz",
+    "source_note": "19 MB",
+    "sums": "https://github.com/MIM18-code/lacquer/releases/download/v0.2.1-beta/SHA256SUMS"
+  },
+  "writers-block": {
+    "version": "0.3.1 beta",
+    "size": "166 MB",
+    "dmg": "https://github.com/MIM18-code/writers-block-releases/releases/download/v0.3.1-beta/WritersBlock-0.3.1-arm64.dmg",
+    "dmg_file": "WritersBlock-0.3.1-arm64.dmg",
+    "sha256": "a1f4284359191548791b4bcb5e68ab6f4d4e2c43dd1e26fc3d5106b17b45bc7f",
+    "release": "https://github.com/MIM18-code/writers-block-releases/releases/tag/v0.3.1-beta",
+    "sums": "https://github.com/MIM18-code/writers-block-releases/releases/download/v0.3.1-beta/SHA256SUMS"
+  }
+}

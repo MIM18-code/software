@@ -24,6 +24,9 @@ class Page(HTMLParser):
 
 pages = {file: Page(file.read_text()) for file in root.glob('guides/**/*.html')}
 pages[root / 'index.html'] = Page((root / 'index.html').read_text())
+for app_page in sorted(root.glob('*/index.html')):
+    if app_page.parent.name not in ('guides', 'downloads', 'node_modules'):
+        pages[app_page] = Page(app_page.read_text())
 checked = 0
 for file, page in pages.items():
     for link in page.links:
