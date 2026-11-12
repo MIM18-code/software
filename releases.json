@@ -31,15 +31,15 @@
     "release": "https://github.com/MIM18-code/dumptruck/releases/tag/v0.6.0-beta"
   },
   "lacquer": {
-    "version": "0.2.1 beta",
+    "version": "0.2.2 beta",
     "size": "26 MB",
-    "dmg": "https://github.com/MIM18-code/lacquer/releases/download/v0.2.1-beta/Lacquer-0.2.1-arm64.dmg",
-    "dmg_file": "Lacquer-0.2.1-arm64.dmg",
-    "sha256": "0af8c03e86fff174f453cf71fb31f7cf95134a4126533c7081bd5f14502acd6b",
-    "release": "https://github.com/MIM18-code/lacquer/releases/tag/v0.2.1-beta",
-    "source": "https://github.com/MIM18-code/lacquer/releases/download/v0.2.1-beta/Lacquer-0.2.1-source.tar.gz",
-    "source_note": "19 MB",
-    "sums": "https://github.com/MIM18-code/lacquer/releases/download/v0.2.1-beta/SHA256SUMS"
+    "dmg": "https://github.com/MIM18-code/lacquer/releases/download/v0.2.2-beta/Lacquer-0.2.2-arm64.dmg",
+    "dmg_file": "Lacquer-0.2.2-arm64.dmg",
+    "sha256": "55b6d14b38af399a5e3073912bca539b44570f233c12b3d602b037dad68a6b9f",
+    "release": "https://github.com/MIM18-code/lacquer/releases/tag/v0.2.2-beta",
+    "source": "https://github.com/MIM18-code/lacquer/releases/download/v0.2.2-beta/Lacquer-0.2.2-source.tar.gz",
+    "source_note": "20 MB",
+    "sums": "https://github.com/MIM18-code/lacquer/releases/download/v0.2.2-beta/SHA256SUMS"
   },
   "writers-block": {
     "version": "0.3.1 beta",
