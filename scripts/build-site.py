@@ -169,6 +169,7 @@ APPS = {
             ("Verification that reads the drive.", "Copies are written past the macOS file cache, so the verify pass reads the data back from the drive itself instead of from memory."),
             ("Cards that keep shooting.", "Bring back a card that wasn't formatted and Dumptruck copies only the new clips into the same folder, adding a new manifest generation. Changed or reused clip names get a loud warning, never a silent skip."),
             ("A pile of cards at once.", "Drag several cards over and Start Offload copies every one that is ready, all at once or one at a time. A card that can't start stays in the list with the reason."),
+            ("Pause and carry on.", "Pause holds a transfer where it is, and Resume carries on from the same place with nothing copied twice. Pull the wrong card or kill the power and the next run picks up what is already verified."),
             ("Single clips off a drive.", "Pick the clips you want with Choose Source Files…, or drag them in from Finder, and Dumptruck copies just those, straight from the drive. They finish as VERIFIED, not SAFE TO CLEAR, since the rest of the drive wasn't copied."),
             ("Reports for the client.", "Every offload gets an HTML and PDF report with clip thumbnails and metadata, a JSON receipt, ASC MHL v2.0 and legacy MHL v1.1."),
             ("Camera formats.", "Dumptruck reads R3D, BRAW and ARRIRAW files for metadata and thumbnails through bundled helpers, which ask you to accept their terms the first time. Copying and verification work either way."),
