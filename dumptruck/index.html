@@ -22,7 +22,7 @@
 <div class="wrap">
   <header class="masthead">
   <a class="wordmark" href="../">MindInMotion Software</a>
-  <nav aria-label="Apps"><a href="../cold-open/">Cold Open</a><a href="../writers-block/">Writers Block</a><a href="../backlot/">Backlot</a><a href="../dumptruck/" aria-current="page">Dumptruck</a><a href="../lacquer/">Lacquer</a></nav>
+  <nav aria-label="Apps"><a href="../cold-open/">Cold Open</a><a href="../backlot/">Backlot</a><a href="../dumptruck/" aria-current="page">Dumptruck</a><a href="../writers-block/">Writers Block</a><a href="../lacquer/">Lacquer</a></nav>
 </header>
   <header class="app-top">
     <img class="app-icon" src="../assets/dumptruck-512.png" alt="" width="72" height="72">
@@ -41,7 +41,7 @@
       <h2 id="features-title">What it does</h2>
       <dl class="features">
         <div><dt>Verification</dt><dd>Copies are written past the macOS file cache, so the verify pass reads the data back from the drive itself instead of from memory.</dd></div>
-        <div><dt>Cards that come back</dt><dd>Bring back a card that wasn't formatted and Dumptruck copies only the new clips into the same folder, adding a new manifest generation. Changed or reused clip names get a loud warning, never a silent skip.</dd></div>
+        <div><dt>Cards that come back</dt><dd>Bring back a card that wasn't formatted and Dumptruck copies only the new clips into the same folder, adding a new manifest generation.</dd></div>
         <div><dt>Several cards</dt><dd>Drag several cards over and Start Offload copies every one that is ready, all at once or one at a time. A card that can't start stays in the list with the reason.</dd></div>
         <div><dt>Pause and resume</dt><dd>Pause holds a transfer where it is, and Resume carries on from the same place with nothing copied twice. Pull the wrong card or kill the power and the next run picks up what is already verified.</dd></div>
         <div><dt>Single clips</dt><dd>Pick the clips you want with Choose Source Files…, or drag them in from Finder, and Dumptruck copies just those, straight from the drive. They finish as VERIFIED, not SAFE TO CLEAR, since the rest of the drive wasn't copied.</dd></div>
@@ -51,7 +51,6 @@
     </section>
     <section aria-labelledby="clips-title">
       <h2 id="clips-title">See it work</h2>
-      <p class="hint">A screen recording of the app with captions, under a minute long. It has no sound.</p>
       <div class="clips one">
         <figure><video controls muted playsinline preload="none" width="1280" height="672" poster="../assets/video/dumptruck-offload.webp" aria-label="Offloading one card to two drives"><source src="../assets/video/dumptruck-offload.mp4" type="video/mp4"></video><figcaption>Offloading one card to two drives</figcaption></figure>
       </div>
@@ -64,8 +63,6 @@
       <p>Only when two separate physical drives hold verified copies and the card itself read the same twice. Two partitions on one disk count as one drive. One verified drive shows VERIFIED and tells you to keep the card.</p>
       <h3>What does it write besides the copies?</h3>
       <p>An HTML and PDF report with clip thumbnails, a JSON receipt, and ASC MHL v2.0 and legacy MHL v1.1 manifests.</p>
-      <h3>Does it run on Intel Macs or Windows?</h3>
-      <p>No. Dumptruck needs an Apple Silicon Mac with macOS 14 Sonoma or later.</p>
     </section>
     <section id="install" aria-labelledby="install-title">
       <h2 id="install-title">Install</h2>
@@ -97,16 +94,15 @@ brew install --cask dumptruck</pre>
   </main>
   <nav class="others" aria-label="The other apps">
     <h2>The other apps</h2>
-    <ul><li style="--tape: var(--green)"><a href="../cold-open/"><b>Cold Open</b><span>A screenwriting app that opens and saves Final Draft files.</span></a></li><li style="--tape: var(--teal)"><a href="../writers-block/"><b>Writers Block</b><span>Say a scene out loud and get Final Draft paragraphs.</span></a></li><li style="--tape: var(--blue)"><a href="../backlot/"><b>Backlot</b><span>Budgets, breakdowns, schedules and call sheets for a film shoot.</span></a></li><li style="--tape: var(--red)"><a href="../lacquer/"><b>Lacquer</b><span>Makes a Blu-ray from your finished master.</span></a></li></ul>
+    <ul><li style="--tape: var(--green)"><a href="../cold-open/"><b>Cold Open</b><span>A screenwriting app that opens and saves Final Draft files.</span></a></li><li style="--tape: var(--blue)"><a href="../backlot/"><b>Backlot</b><span>Budgets, breakdowns, schedules and call sheets for a film shoot.</span></a></li><li style="--tape: var(--teal)"><a href="../writers-block/"><b>Writers Block</b><span>Say a scene out loud and get Final Draft paragraphs.</span></a></li><li style="--tape: var(--red)"><a href="../lacquer/"><b>Lacquer</b><span>Makes a Blu-ray from your finished master.</span></a></li></ul>
   </nav>
 </div>
 <footer>
   <div class="wrap">
     <div>
-      <p>All five apps are free betas for Apple Silicon Macs. There are no Intel or Windows builds. Every download is signed and notarized by Apple.</p>
-      <p>Cold Open, Backlot and Lacquer are licensed under GPL-3.0, Dumptruck under Apache-2.0 and Writers Block under MIT, all copyright MindInMotion LLC. All five come without warranty. Third-party components keep their own licenses, listed in each release.</p>
+      <p>Copyright MindInMotion LLC. Cold Open, Backlot and Lacquer are GPL-3.0, Dumptruck is Apache-2.0 and Writers Block is MIT. No warranty. Third-party components keep their own licenses, listed in each release.</p>
     </div>
-    <nav aria-label="All apps"><a href="../cold-open/">Cold Open</a><a href="../writers-block/">Writers Block</a><a href="../backlot/">Backlot</a><a href="../dumptruck/">Dumptruck</a><a href="../lacquer/">Lacquer</a><a href="https://github.com/MIM18-code">GitHub</a></nav>
+    <nav aria-label="All apps"><a href="../cold-open/">Cold Open</a><a href="../backlot/">Backlot</a><a href="../dumptruck/">Dumptruck</a><a href="../writers-block/">Writers Block</a><a href="../lacquer/">Lacquer</a><a href="https://github.com/MIM18-code">GitHub</a></nav>
   </div>
 </footer>
 <script src="../assets/site.js" defer></script>
