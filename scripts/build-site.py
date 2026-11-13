@@ -18,13 +18,8 @@ RELEASES = {k: v for k, v in json.loads((ROOT / "releases.json").read_text()).it
             if not k.startswith("_")}
 TODAY = datetime.date.today().isoformat()
 
-# The stages of a film, in order, and the apps that belong to each.
-STAGES = [
-    ("Write", ["cold-open", "writers-block"]),
-    ("Plan", ["backlot"]),
-    ("Shoot", ["dumptruck"]),
-    ("Deliver", ["lacquer"]),
-]
+# Most important first. Sets the order on the home page, the nav and the footer.
+ORDER = ["cold-open", "backlot", "dumptruck", "writers-block", "lacquer"]
 
 APPS = {
     "cold-open": {
@@ -34,7 +29,7 @@ APPS = {
         "macos": "macOS 14 Sonoma or later", "license": "GPL-3.0",
         "category": "DesignApplication",
         "title": "Cold Open: free screenwriting app for Mac, Final Draft compatible",
-        "description": "Cold Open is a free, open-source screenwriting app for Mac. It opens and saves Final Draft .fdx files, reads Fountain, and has templates for film and TV.",
+        "description": "Cold Open is a free, open-source screenwriting app for Mac. It opens and saves Final Draft .fdx files, reads and writes Fountain, and has templates for film and TV.",
         "what": "A free screenwriting app for Mac that opens and saves Final Draft files",
         "tagline": "A screenwriting app that opens and saves Final Draft files.",
         "summary": "Cold Open types like Final Draft: Tab and Return move through scene headings, action, characters and dialogue, and pages break where Final Draft breaks them. It opens and saves .fdx and keeps the Final Draft data it doesn't edit.",
@@ -60,7 +55,6 @@ APPS = {
             ("revisions", "Starting a blue revision set."),
             ("dictation", "The Dictate panel."),
         ],
-        "size_note": "Most of the download is the speech recognition model that lets dictation work offline.",
         "install_note": "Open the disk image and drag Cold Open to Applications. Needs an Apple Silicon Mac with macOS 14 Sonoma or later; local table-read voices need macOS 15.",
         "brew": "cold-open",
         "brew_note": "Homebrew asks you to trust a third-party tap once, which is the second line. Update later with <code>brew upgrade --cask cold-open</code>.",
@@ -70,7 +64,6 @@ APPS = {
             ("Is Cold Open free?", "Yes. It is free and open source under GPL-3.0. The AI features are optional and run on a local model, your own API key or your ChatGPT plan."),
             ("Can it open my Final Draft scripts?", "Yes. It opens and saves .fdx files and keeps the Final Draft data it doesn't edit, so a script can go back to Final Draft afterwards. It reads and writes Fountain as well."),
             ("Why is the download so large?", "Most of it is the speech recognition model that lets dictation work offline. The app is built on Electron, which accounts for most of the rest."),
-            ("Does it run on Intel Macs or Windows?", "No. Cold Open needs an Apple Silicon Mac with macOS 14 Sonoma or later."),
         ],
     },
     "writers-block": {
@@ -85,7 +78,7 @@ APPS = {
         "tagline": "Say a scene out loud and get Final Draft paragraphs.",
         "summary": "Click an empty paragraph in Final Draft, press Command-Option-D and talk through the scene. Press it again and the scene lands at your cursor with the heading, action, character names and dialogue each in its own element.",
         "shot_alt": "Writers Block: the dictated words on the left and the same scene formatted as a screenplay page on the right.",
-        "lede": "Click an empty paragraph in Final Draft, press Command-Option-D and talk through the scene: where you are, what happens, who says what. Press it again and the scene lands at your cursor as real Final Draft paragraphs, with the scene heading, action, character names, parentheticals and dialogue each in its own element. The speech recognition and the formatting both run on your Mac.",
+        "lede": "Click an empty paragraph in Final Draft, press Command-Option-D and talk through the scene: where you are, what happens, who says what. Press it again and the scene lands at your cursor as real Final Draft paragraphs, with the scene heading, action, character names, parentheticals and dialogue each in its own element.",
         "note": "The formatting model gets most takes right, not every one. Read what it pasted the way you'd read any dictated draft. Every recording and transcript is saved, so a take that goes wrong can be fixed or run again.",
         "features": [
             ("What the model does", "The model decides which of your sentences is action and which is dialogue. It isn't asked to rewrite them. When a take drops or changes words, Writers Block pastes it anyway and tells you which words to check."),
@@ -137,8 +130,8 @@ APPS = {
             ("call-sheets", "A call sheet draft beside its PDF preview."),
             ("dood", "Day out of days for cast and elements."),
         ],
-        "extras": ("Script import, scene reading, actor sides, tagged FDX export and PDF printing are included in beta 8. No separate reader, Chrome installation or AI account is needed for them.", [
-            "Gorilla workbook and Movie Magic budget/schedule XML export need a separately configured integration. These formats are disabled when unavailable. PDF and CSV output are included.",
+        "extras": ("Two things need setting up first.", [
+            "Gorilla workbook and Movie Magic budget and schedule XML export need an integration you configure yourself. Until then those formats are turned off. PDF and CSV export work without it.",
             "Email goes through your own Resend account or Google Workspace.",
         ]),
         "install_note": "Open the disk image and drag Backlot to Applications. Needs an Apple Silicon Mac with macOS 13 Ventura or later.",
@@ -149,7 +142,6 @@ APPS = {
             ("Is Backlot free?", "Yes. It is free and open source under GPL-3.0."),
             ("Where is my project stored?", "In one project file on your own disk. Nothing needs an account, and you can email or AirDrop the file to your crew."),
             ("Can it read my script?", "Yes. It imports Final Draft and Fountain drafts, and shows what changed when a revised draft comes in."),
-            ("Does it run on Intel Macs or Windows?", "No. Backlot needs an Apple Silicon Mac with macOS 13 Ventura or later."),
         ],
     },
     "dumptruck": {
@@ -168,7 +160,7 @@ APPS = {
         "note": "SAFE TO CLEAR means the job passed Dumptruck's verification when it ran. It can't protect you from a drive that fails later. Dumptruck is still a beta, so keep your usual backup routine alongside it, and read the report before you erase a card.",
         "features": [
             ("Verification", "Copies are written past the macOS file cache, so the verify pass reads the data back from the drive itself instead of from memory."),
-            ("Cards that come back", "Bring back a card that wasn't formatted and Dumptruck copies only the new clips into the same folder, adding a new manifest generation. Changed or reused clip names get a loud warning, never a silent skip."),
+            ("Cards that come back", "Bring back a card that wasn't formatted and Dumptruck copies only the new clips into the same folder, adding a new manifest generation."),
             ("Several cards", "Drag several cards over and Start Offload copies every one that is ready, all at once or one at a time. A card that can't start stays in the list with the reason."),
             ("Pause and resume", "Pause holds a transfer where it is, and Resume carries on from the same place with nothing copied twice. Pull the wrong card or kill the power and the next run picks up what is already verified."),
             ("Single clips", "Pick the clips you want with Choose Source Files…, or drag them in from Finder, and Dumptruck copies just those, straight from the drive. They finish as VERIFIED, not SAFE TO CLEAR, since the rest of the drive wasn't copied."),
@@ -187,7 +179,6 @@ APPS = {
             ("How does it check a copy?", "It hashes each file as it reads the card, then reads every copy back from the destination drive and compares. The copies are written past the macOS file cache, so that read comes from the drive and not from memory."),
             ("When does a card show SAFE TO CLEAR?", "Only when two separate physical drives hold verified copies and the card itself read the same twice. Two partitions on one disk count as one drive. One verified drive shows VERIFIED and tells you to keep the card."),
             ("What does it write besides the copies?", "An HTML and PDF report with clip thumbnails, a JSON receipt, and ASC MHL v2.0 and legacy MHL v1.1 manifests."),
-            ("Does it run on Intel Macs or Windows?", "No. Dumptruck needs an Apple Silicon Mac with macOS 14 Sonoma or later."),
         ],
     },
     "lacquer": {
@@ -224,13 +215,9 @@ APPS = {
             ("What can I give it?", "A ProRes, DNxHR, H.264 or HEVC master. A 5.1 track is used as is, and six mono tracks are combined into 5.1."),
             ("What does it make?", "A BDMV folder you can burn, a disc image you can upload to a duplicator, or an M2TS for Toast."),
             ("Do I need to install FFmpeg?", "No. FFmpeg and tsMuxeR are built in."),
-            ("Does it run on Intel Macs or Windows?", "No. Lacquer needs an Apple Silicon Mac with macOS 13 Ventura or later."),
         ],
     },
 }
-
-ORDER = [slug for _, slugs in STAGES for slug in slugs]
-
 
 def esc(text):
     return html.escape(text, quote=True)
@@ -299,8 +286,7 @@ def footer(root):
     return f"""<footer>
   <div class="wrap">
     <div>
-      <p>All five apps are free betas for Apple Silicon Macs. There are no Intel or Windows builds. Every download is signed and notarized by Apple.</p>
-      <p>Cold Open, Backlot and Lacquer are licensed under GPL-3.0, Dumptruck under Apache-2.0 and Writers Block under MIT, all copyright MindInMotion LLC. All five come without warranty. Third-party components keep their own licenses, listed in each release.</p>
+      <p>Copyright MindInMotion LLC. Cold Open, Backlot and Lacquer are GPL-3.0, Dumptruck is Apache-2.0 and Writers Block is MIT. No warranty. Third-party components keep their own licenses, listed in each release.</p>
     </div>
     <nav aria-label="All apps">{links}<a href="https://github.com/MIM18-code">GitHub</a></nav>
   </div>
@@ -327,17 +313,15 @@ def build_index():
     parts.append('<body>\n<div class="wrap">\n' + masthead("") + """
 <section class="intro">
   <h1>Free Mac apps for making a film</h1>
-  <p>Write the script, budget and schedule the shoot, back up the camera cards, and put the finished film on a Blu-ray. Five apps from MindInMotion, an independent film company. All of them are free, and four are open source.</p>
+  <p>Write the script, budget and schedule the shoot, back up the camera cards, and put the finished film on a Blu-ray. Five free apps from MindInMotion, an independent film company. Four are open source.</p>
 </section>
 <main>
 """)
     first = True
-    for stage, slugs in STAGES:
-        for slug in slugs:
-            app, rel = APPS[slug], RELEASES[slug]
-            parts.append(f"""<section class="app" id="{slug}" aria-labelledby="{slug}-title" style="--tape: {app["tape"]}">
+    for slug in ORDER:
+        app, rel = APPS[slug], RELEASES[slug]
+        parts.append(f"""<section class="app" id="{slug}" aria-labelledby="{slug}-title" style="--tape: {app["tape"]}">
   <div class="app-text">
-    <p class="stage">{stage}</p>
     <div class="app-head">
       <img src="{app["icon"]}" alt="" width="56" height="56">
       <h2 id="{slug}-title"><a href="{slug}/">{esc(app["name"])}</a></h2>
@@ -353,7 +337,7 @@ def build_index():
   {shot(slug, "", lazy=not first, link=f"{slug}/")}
 </section>
 """)
-            first = False
+        first = False
     parts.append("</main>\n</div>\n" + footer(""))
     (ROOT / "index.html").write_text("".join(parts))
 
@@ -375,16 +359,12 @@ def clips_section(slug, root):
             f'poster="{root}assets/video/{slug}-{name}.webp" aria-label="{esc(title)}">'
             f'<source src="{root}assets/video/{slug}-{name}.mp4" type="video/mp4"></video>'
             f"<figcaption>{esc(title)}</figcaption></figure>")
-    if len(figures) == 1:
-        hint = "A screen recording of the app with captions, under a minute long. It has no sound."
-    else:
-        hint = "Screen recordings of the app with captions, each under a minute long. They have no sound."
+    hint = ""
     if "guide" in app:
         guide = app["guide"][0].rsplit("/", 1)[0] + "/videos/index.html"
-        hint += f' <a href="{root}{guide}">The user guide has the full-length versions.</a>'
+        hint = f'\n      <p class="hint"><a href="{root}{guide}">Full-length versions are in the user guide.</a></p>'
     return f"""<section aria-labelledby="clips-title">
-      <h2 id="clips-title">See it work</h2>
-      <p class="hint">{hint}</p>
+      <h2 id="clips-title">See it work</h2>{hint}
       <div class="clips{" one" if len(figures) == 1 else ""}">
         {chr(10).join("        " + f for f in figures).strip()}
       </div>
