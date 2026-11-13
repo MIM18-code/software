@@ -11,9 +11,10 @@ python3 scripts/check-guides.py
 
 - The words, page titles and descriptions are in `scripts/build-site.py`.
 - Release facts (version, size, download link, checksum) are in `releases.json`. The pages also read the newest GitHub release when they load, so `releases.json` is only what shows when GitHub cannot be reached. After an app release, edit that app's entry, rebuild and commit.
-- The look is `assets/site.css`. `assets/site.js` holds the copy buttons and the release lookup.
+- The look is `assets/site.css`. It uses system fonts, so the pages load nothing from another site except the release lookup. `assets/site.js` holds the copy buttons and that lookup.
 - The build also writes `sitemap.xml`, `robots.txt`, `404.html` and the share images in `assets/og/`.
-- Screenshots are in `assets/shots/` as WebP at two widths, `<app>-1600.webp` and `<app>-800.webp`.
+- Each app's main screenshot is in `assets/shots/` as WebP at two widths, `<app>-1600.webp` and `<app>-800.webp`.
+- The extra screenshots (`assets/shots/<app>-<name>-1440.webp` and `-720.webp`) and the walkthrough clips (`assets/video/`) are made from the guide images and recordings by `python3 scripts/build-media.py`, which needs ffmpeg. Run it when those sources change, then list the new file under the app's `gallery` or `clips` in `scripts/build-site.py`.
 
 Each app page has its own title, description, canonical link and `SoftwareApplication` data for search engines. The sitemap is at `/sitemap.xml`; submit it once in Google Search Console and Bing Webmaster Tools.
 
