@@ -48,6 +48,13 @@ Format Draft for pasted text needs no microphone, only this model.
 5. A self-hosted relay: check the relay address in Settings > Co-writing and that the relay is running.
 6. Folder sync: the shown status is local truth. Confirm the file actually arrived on the other Mac before you trust it.
 
+## The iPhone can't reach the Mac
+
+1. Check the Mac first: it must be awake, with Cold Open and the paired script open. Keep this Mac awake, in the Phone panel, stops it going to sleep on its own while it shares.
+2. Paired at home: the iPhone has to be on the same network as the Mac. Away from home this pairing never connects. Back at the Mac, pair through Tailscale ([The phone remote](phone.md#connect-from-anywhere-tailscale)).
+3. Paired through Tailscale: check that Tailscale is on and signed in to the same account on the iPhone and on the Mac.
+4. What you wrote is not lost. It waits on the iPhone, or goes to the iCloud Drive folder if you chose one, and sends when the iPhone reaches the Mac again.
+
 ## One scene number, two scenes
 
 1. Production > Scene Number Conflicts….

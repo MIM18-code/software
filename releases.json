@@ -1,15 +1,15 @@
 {
   "_comment": "Fallback release facts written into the pages. The pages also read the newest GitHub release when they load, so these only show when GitHub cannot be reached. After a release: edit the app's entry, run `python3 scripts/build-site.py`, commit.",
   "cold-open": {
-    "version": "0.1.0 beta 14",
+    "version": "0.1.0 beta 15",
     "size": "717 MB",
-    "dmg": "https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.14/ColdOpen-0.1.0-beta.14.dmg",
-    "dmg_file": "ColdOpen-0.1.0-beta.14.dmg",
-    "sha256": "0af0c623f1abfbd50a9e5e6d58487e04e4b0f686cad383c6b2a5bf108570c86e",
-    "release": "https://github.com/MIM18-code/cold-open/releases/tag/v0.1.0-beta.14",
-    "source": "https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.14/ColdOpen-0.1.0-beta.14-source.tar.gz",
+    "dmg": "https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.15/ColdOpen-0.1.0-beta.15.dmg",
+    "dmg_file": "ColdOpen-0.1.0-beta.15.dmg",
+    "sha256": "ce2a049595ff0ec692627fd2fa7d32dcb97c29a4689fffd9ec3fca889fe97309",
+    "release": "https://github.com/MIM18-code/cold-open/releases/tag/v0.1.0-beta.15",
+    "source": "https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.15/ColdOpen-0.1.0-beta.15-source.tar.gz",
     "source_note": "7.0 MB",
-    "sums": "https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.14/SHA256SUMS"
+    "sums": "https://github.com/MIM18-code/cold-open/releases/download/v0.1.0-beta.15/SHA256SUMS"
   },
   "backlot": {
     "version": "0.7.0 beta 8",
