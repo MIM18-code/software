@@ -6,13 +6,20 @@ Tools > Phone Companion… opens the Phone panel.
 
 ## Connect at home (Wi-Fi)
 
-1. Connect the Mac and iPhone to the same private Wi-Fi.
+1. Connect the Mac and iPhone to the same Wi-Fi.
 2. Open Tools > Phone Companion… and choose the Wi-Fi interface under Connect through.
-3. Choose connection protection. HTTPS is the default: choose Choose HTTPS certificate and key… and supply a matching certificate and key for the selected Mac IP address. The iPhone must trust the certificate issuer. Alternatively, explicitly choose HTTP · unencrypted, trusted Wi-Fi only for a trusted private network.
-4. Choose Start phone pairing…. HTTPS pairing stays disabled until its certificate is supplied.
-5. In the native Cold Open iPhone app, tap **Scan code** and point at the QR code on the Mac. Or choose **Copy app pairing code** on the Mac and **Paste a pairing code** on the phone. For the Safari reader, open the separate **Copy pairing link** URL instead.
+3. Choose Start phone pairing….
+4. In Cold Open on the iPhone, tap **Scan code** and point at the QR code on the Mac. Or choose **Copy app pairing code** on the Mac and **Paste a pairing code** on the phone.
 
-The panel reports whether encryption is active. A one-off pairing expires after two hours; tick Remember this iPhone to survive restarts. Cold Open remembers the phone's port; keep it unchanged while the phone is remembered.
+The link is encrypted automatically. The QR code carries a secret that never crosses the network, and both devices encrypt everything they send with keys made from it. There is no certificate to install and nothing to choose. Keep the QR code and the copied pairing code private: whoever has one can read the script while the pairing lasts.
+
+A one-off pairing expires after two hours; tick Remember this iPhone to survive restarts. A remembered iPhone uses a fixed port, shown under Advanced; keep it unchanged while the phone is remembered.
+
+If the iPhone answers a fresh code with "Scan the code in the Mac’s Phone panel", update Cold Open on the iPhone. An iPhone that an earlier Cold Open remembered over Wi-Fi no longer connects, because that pairing was not encrypted. The Mac lists it with "Pair this iPhone again": pair it again, then revoke the old entry. Takes still waiting on that iPhone can be sent to the Mac by AirDrop first.
+
+### The table-read page in Safari
+
+The Phone panel can also make a link to a page in Safari that reads the table read aloud and controls the Mac's. A web page cannot use the encrypted link. Over Tailscale the page is served over HTTPS: choose Copy Safari link. On home Wi-Fi the page is off unless you open Advanced and tick Also make a Safari link (not encrypted) before a one-off pairing. Anyone on that Wi-Fi could then read what the page shows and sends. The iPhone app's link stays encrypted either way.
 
 ## Connect from anywhere (Tailscale)
 
@@ -40,4 +47,5 @@ Tools > Stop Phone Sharing ends the stream. The Connect through drop-down at the
 ## Limits worth knowing
 
 - Opening another document ends a one-off link; a remembered iPhone resumes when its script is open again.
-- Real iPhone testing beyond Safari pairing, native microphone capture and trusted-CA setups on arbitrary networks are areas still in development; the safest path is the Tailscale one above.
+- The Safari page on home Wi-Fi is not encrypted. Use the iPhone app, or Tailscale, for anything private.
+- Home Wi-Fi pairing needs a current Cold Open on both the Mac and the iPhone.
