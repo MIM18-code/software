@@ -71,6 +71,6 @@ With your ChatGPT plan:
 ## Draft in bed on the phone
 
 1. Mac and iPhone on one Wi-Fi, or Tailscale on both (see [The phone remote](phone.md)).
-2. Tools > Phone Companion…: choose the connection and configure its protection as described in [The phone remote](phone.md), then Start phone pairing….
+2. Tools > Phone Companion…: choose the connection, then Start phone pairing…. The link is encrypted automatically.
 3. On the iPhone, open the companion, pick the line, and leave notes or dictate takes.
 4. On the Mac, accept the good ones from the Review inbox.
