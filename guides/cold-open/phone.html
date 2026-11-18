@@ -10,20 +10,32 @@
 <li>Choose Start phone pairing….</li>
 <li>In Cold Open on the iPhone, tap <strong>Scan code</strong> and point at the QR code on the Mac. Or choose <strong>Copy app pairing code</strong> on the Mac and <strong>Paste a pairing code</strong> on the phone.</li>
 </ol>
+<p>A pairing made this way works only while the iPhone is on the same network as the Mac, which usually means your home Wi-Fi. To keep working after you leave the house, pair through Tailscale instead (next section). That pairing works at home too.</p>
 <p>The link is encrypted automatically. The QR code carries a secret that never crosses the network, and both devices encrypt everything they send with keys made from it. There is no certificate to install and nothing to choose. Keep the QR code and the copied pairing code private: whoever has one can read the script while the pairing lasts.</p>
 <p>A one-off pairing expires after two hours; tick Remember this iPhone to survive restarts. A remembered iPhone uses a fixed port, shown under Advanced; keep it unchanged while the phone is remembered.</p>
 <p>If the iPhone answers a fresh code with &quot;Scan the code in the Mac’s Phone panel&quot;, update Cold Open on the iPhone. An iPhone that an earlier Cold Open remembered over Wi-Fi no longer connects, because that pairing was not encrypted. The Mac lists it with &quot;Pair this iPhone again&quot;: pair it again, then revoke the old entry. Takes still waiting on that iPhone can be sent to the Mac by AirDrop first.</p>
 <h3 id="the-table-read-page-in-safari">The table-read page in Safari</h3>
 <p>The Phone panel can also make a link to a page in Safari that reads the table read aloud and controls the Mac&#39;s. A web page cannot use the encrypted link. Over Tailscale the page is served over HTTPS: choose Copy Safari link. On home Wi-Fi the page is off unless you open Advanced and tick Also make a Safari link (not encrypted) before a one-off pairing. Anyone on that Wi-Fi could then read what the page shows and sends. The iPhone app&#39;s link stays encrypted either way.</p>
 <h2 id="connect-from-anywhere-tailscale">Connect from anywhere (Tailscale)</h2>
-<p>Away from home Wi-Fi, Turn on the four checks and Cold Open will tell you exactly what is missing:</p>
+<p>Tailscale is a separate app, made by another company, that privately links your own devices over the internet. With it on the Mac and the iPhone, the phone reaches the Mac from a café, a set or another city. You need a Tailscale account; its Personal plan is free (checked November 2026).</p>
+<p>Set this up once, while the iPhone is at the Mac. The Phone panel&#39;s Use from anywhere list ticks off each step as you finish it, and Check again looks afresh.</p>
 <ol>
-<li>Tailscale installed on this Mac.</li>
-<li>Tailscale signed in and running.</li>
-<li>MagicDNS on.</li>
-<li>HTTPS certificates on. Turn them on in the Tailscale admin console (the panel links there directly).</li>
+<li><strong>Install Tailscale on the Mac.</strong> Choose Install Tailscale in the panel.</li>
+<li><strong>Sign in.</strong> Open Tailscale on the Mac and sign in, or make an account. Its icon sits in the menu bar.</li>
+<li><strong>Turn on MagicDNS.</strong> Choose Open Tailscale&#39;s DNS page in the panel. On that page, turn on MagicDNS if it is off. It gives the Mac a name the iPhone can find.</li>
+<li><strong>Turn on HTTPS.</strong> On the same page, find HTTPS Certificates and choose Enable HTTPS. Cold Open uses it to encrypt the link. When you pair, Cold Open gets a certificate for the Mac, and certificates are listed in a public record along with the Mac&#39;s Tailscale name. If the name says more than you&#39;d like, such as your full name, rename the Mac on Tailscale&#39;s Machines page before you pair.</li>
+<li><strong>Install Tailscale on the iPhone.</strong> Get it from the App Store and sign in with the same account as the Mac. The iPhone asks to add a VPN configuration; allow it.</li>
+<li><strong>Pair through Tailscale.</strong> In the Phone panel, choose Tailscale under Connect through, tick Remember this iPhone, choose Start phone pairing…, and confirm with Start private-network link. Scan the QR code in Cold Open on the iPhone. If the panel is showing a pairing code and no Connect through, choose Pair another iPhone (or Stop sharing / revoke link, for a one-off pairing) to bring it back. The list ticks this step once the iPhone has connected.</li>
 </ol>
-<p>Sign in to Tailscale on the iPhone with the same account. In the Mac panel, choose Tailscale under Connect through, then Start phone pairing…. In Cold Open on the iPhone, scan the QR code on the Mac. iCloud Drive can serve as a fallback folder: choose the same folder on the Mac and on the iPhone, and what arrives still lands in the review inbox.</p>
+<p>An iPhone you already paired at home has to be paired again this way, because a home pairing only ever reaches the Mac on its own network. Do it at home, after everything you wrote has reached the Mac: what is still waiting belongs to the old pairing and is not sent through the new one. On the iPhone, tap the tray icon at the top right of the script to open Status and check that nothing says Pending. Then choose Disconnect and pair again, confirm Disconnect, and scan the new code.</p>
+<p>When you leave:</p>
+<ul>
+<li>In the Phone panel, tick Keep this Mac awake while it shares with an iPhone. Leave Cold Open and the paired script open, and Tailscale connected.</li>
+<li>On a MacBook, leave the lid open and the charger in. A closed lid still puts it to sleep, unless the MacBook is connected to a display. The screen can still turn off and lock.</li>
+<li>Keep Tailscale on in the iPhone.</li>
+<li>If the iPhone can&#39;t reach the Mac, what you write waits on the phone and sends when it reaches the Mac again.</li>
+</ul>
+<p>The last, optional item on the list is an iCloud Drive folder. Choose it in the Mac&#39;s Phone panel, then choose the same folder on the iPhone: open Status (the tray icon) and tap Choose iCloud Drive fallback folder. When the iPhone can&#39;t reach the Mac, it saves what you write to that folder. Once iCloud has synced the file to the Mac, it lands in the review inbox.</p>
 <h2 id="review-inbox">Review inbox</h2>
 <ol>
 <li>On the iPhone, pick a script line and add a note, or dictate a take.</li>
