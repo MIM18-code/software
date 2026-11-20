@@ -23,12 +23,12 @@
     "sums": "https://github.com/MIM18-code/homebrew-backlot/releases/download/v0.7.0-beta.8/SHA256SUMS"
   },
   "dumptruck": {
-    "version": "0.6.2 beta",
+    "version": "0.6.3 beta",
     "size": "121 MB",
-    "dmg": "https://github.com/MIM18-code/dumptruck/releases/download/v0.6.2-beta/Dumptruck-0.6.2-beta-arm64.dmg",
-    "dmg_file": "Dumptruck-0.6.2-beta-arm64.dmg",
-    "sha256": "556bcbe392a62caaf4365b0a17174578d1d9f7361bcf9c0f90ede36a2e62cb77",
-    "release": "https://github.com/MIM18-code/dumptruck/releases/tag/v0.6.2-beta"
+    "dmg": "https://github.com/MIM18-code/dumptruck/releases/download/v0.6.3-beta/Dumptruck-0.6.3-beta-arm64.dmg",
+    "dmg_file": "Dumptruck-0.6.3-beta-arm64.dmg",
+    "sha256": "4f03fb21ac01d1aa3253dc36c61b9d99f586f362e0d5aafc103ef3dee5d09073",
+    "release": "https://github.com/MIM18-code/dumptruck/releases/tag/v0.6.3-beta"
   },
   "lacquer": {
     "version": "0.2.2 beta",
