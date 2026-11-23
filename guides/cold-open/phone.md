@@ -57,7 +57,7 @@ Items wait in a bounded local inbox until you handle them, even after sharing st
 
 The native iPhone app saves unfinished writing on the phone. If the app closes before you send, it reopens your text. If pairing ends while you write, copy your text before pairing again.
 
-Tools > Stop Phone Sharing ends the stream. The Connect through drop-down at the top of the panel chooses the path: Tailscale, or a named Wi-Fi interface with its address.
+Tools > Stop One-Off Phone Link ends a one-off pairing. Remembered iPhones stay connected; to remove one, choose Revoke beside it. The Connect through drop-down at the top of the panel chooses the path: Tailscale, or a named Wi-Fi interface with its address.
 
 ## Limits worth knowing
 
