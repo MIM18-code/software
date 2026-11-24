@@ -10,7 +10,7 @@ View > Show Scenes toggles it; View > Toggle Left Sidebar (`⌘⌥S`) hides and 
 
 The list shows every scene with its number, its length in page eighths, and totals ("6 scenes, 2 1/8 pages"). Selecting a scene jumps the editor to it.
 
-- Reorder with the `↑` and `↓` buttons, or drag. Keyboard-only reordering works too.
+- Reorder with the `↑` and `↓` buttons, or drag. From the keyboard, focus a scene and press `⌥↑` or `⌥↓`.
 - View > Previous Scene (`⌘⌥Up`) and Next Scene (`⌘⌥Down`) walk scene to scene.
 - Edit > Select Current Scene (`⌘⇧A`) selects the whole current scene.
 - Script > Go to Scene… (`⌘⇧J`) opens the same list as a picker.
@@ -41,6 +41,8 @@ The switcher in the middle of the title bar reads Brainstorm, Write and Plan. Wr
 | Beats | `⌃⌘5` | Ideas parked before you promote them into scenes. |
 | Canvas | `⌃⌘6` | The beat canvas: arrange beats freely or link them to scenes. |
 | Brainstorm | `⌃⌘7` | A new note ready to type or dictate, with your open notes under it. |
+
+In Cards and Outline, drag a scene to move it, or focus its card or heading and press `⌥` with an arrow key.
 
 ## Story Map and structure points
 

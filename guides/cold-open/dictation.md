@@ -13,7 +13,17 @@ The toolbar calls it "Format Draft" with the shortcut shown next to it.
 3. Press `⌘⇧Enter` or choose Format > Format Draft Selection / Paragraph.
 4. Review the result. If a preview opens, choose Apply formatting or Keep original.
 
-Without a selection, only the current paragraph is formatted. To preview every result before it replaces your text, turn on "Always preview before replacing the draft" in Settings > Draft formatting. It is off by default. Uncertain results, wording changes and styled text always show a preview regardless of the setting. Other results apply directly as one undoable edit.
+Without a selection, only the current paragraph is formatted. To preview each manual formatting result, turn on "Always preview manual Format Draft changes" in Settings > Draft formatting. It is off by default. Uncertain results, wording changes and styled text always show a preview regardless of the setting. Other results apply directly as one undoable edit.
+
+## Automatic formatting for Wispr Flow
+
+Turn on **Auto-format** beside Format Draft, or use Settings > Draft formatting > Automatically format incoming text. Wispr Flow's completed dictation and plain-text paste from other apps then format automatically. The option is off until you enable it.
+
+Each incoming passage goes into its own paragraph. The cursor moves to a fresh line so you can dictate again or keep typing while formatting runs. Earlier writing stays outside the replacement range, including text before and after a paste made in the middle of a paragraph. Successive takes format in order.
+
+If you edit or undo an incoming passage before formatting finishes, that result cannot replace your work. Turning Auto-format off cancels pending formatting and keeps the incoming text. Uncertain results or an unavailable formatter also leave the original words on the page. You can use manual Format Draft to review those passages.
+
+A highlighted selection uses normal paste. Text copied within Cold Open keeps its existing screenplay formatting. Normal typing does not trigger automatic formatting.
 
 ## The formatting model
 
@@ -30,6 +40,12 @@ The same model setting lives under Settings > Dictation (Model server: Ollama, o
 
 Tools > Start/Stop Dictation (`⌘⇧D`) starts and stops recording. Talk the scene in order; no voice commands are needed. What you get is draft text on the page, in the sequence you spoke.
 
+Each take continues at the end of the script, even if you left the cursor earlier in the page. Stop recording and a take that passes the formatting checks appears in the main editor. The cursor stays after the new text, ready for the next take or more typing. Undo removes one take at a time.
+
+To replace existing text, highlight it before starting dictation. The Dictate panel shows the take for review and offers **Replace selected text**. Moving the cursor afterward does not change what will be replaced. If you edit the highlighted passage before applying the take, Cold Open keeps the take for review and refuses to replace your newer work.
+
+Uncertain formatting and spoken edit commands also open the Dictate panel for review. Insert or discard the current take before formatting another transcript. You can type the next transcript while a take is pending; Cold Open keeps that text in its box.
+
 ![The Dictate panel](images/panel-dictation.png)
 
 To set the engine, open Settings > Dictation:
@@ -40,7 +56,9 @@ To set the engine, open Settings > Dictation:
 
 macOS asks for microphone access the first time; only recording needs it.
 
-To format what you dictated, select the paragraphs and press `⌘⇧Enter`. The Dictate panel also accepts a pasted transcript: paste it, then choose Format.
+For Wispr Flow, choose **Continue at end** in the toolbar to put the cursor after your script, then use Flow's shortcut. With Auto-format on, the new passage formats automatically. With it off, select the dictated passage and press `⌘⇧Enter` to format it in place. Without a selection, manual Format Draft formats the current paragraph.
+
+The Dictate panel also accepts a pasted transcript. Paste it, choose Format, then Insert to append the result to the script. Insert returns focus to the editor so you can keep writing.
 
 ## What each piece costs
 

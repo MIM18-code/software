@@ -17,7 +17,7 @@ Tools > Settings… (`⌘,`) opens a single window with these panes. A few refer
 | Workspace memory | Return to the last writing position when reopening a saved script; reopen up to 20 saved scripts and window positions at launch. Positions live in this Mac's settings, never in the file or a cloud. |
 | Local features | Table-read voice packs, the Format Draft formatter, speech-helper diagnostics, optional AI provider readiness, clear generated speech cache. |
 | Formatting models | The pinned Ollama model used by Format Draft (see [Format Draft and dictation](dictation.md)). |
-| Draft formatting | Always preview before replacing; configure local formatter. |
+| Draft formatting | Auto-format incoming dictation and plain-text paste; preview manual changes; configure local formatter. |
 | AI | Set up AI… guided setup, provider choice and keys, Advanced local address/model, sentence completion, proofreading checks, Backlot production data (see [AI setup](ai.md)). |
 | Dictation | Speech engine (Parakeet recommended, Apple speech recognition, Whisper), dictation button style, model server. |
 | Printing | Scene numbers, (CONT'D) behavior, header text, paper, title page, revision marks (see [Exports](exports.md)). |

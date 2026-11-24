@@ -23,11 +23,13 @@ If the iPhone answers a fresh code with "Scan the code in the Mac’s Phone pane
 
 The Phone panel can also make a link to a page in Safari that reads the table read aloud and controls the Mac's. A web page cannot use the encrypted link. Over Tailscale the page is served over HTTPS: choose Copy Safari link. On home Wi-Fi the page is off unless you open Advanced and tick Also make a Safari link (not encrypted) before a one-off pairing. Anyone on that Wi-Fi could then read what the page shows and sends. The iPhone app's link stays encrypted either way.
 
+The page keeps working when the script changes on the Mac. Its playback buttons carry on, and a note you send goes through as long as its passage still has the same words. If the words changed, the page keeps your text and asks you to attach it to a passage again.
+
 ## Connect from anywhere (Tailscale)
 
 Tailscale is a separate app, made by another company, that privately links your own devices over the internet. With it on the Mac and the iPhone, the phone reaches the Mac from a café, a set or another city. You need a Tailscale account; its Personal plan is free (checked November 2026).
 
-Set this up once, while the iPhone is at the Mac. The Phone panel's Use from anywhere list ticks off each step as you finish it, and Check again looks afresh.
+Set this up once, while the iPhone is at the Mac. In the Phone panel, open Use from anywhere. Its list ticks off each step as you finish it, and Check again looks afresh.
 
 1. **Install Tailscale on the Mac.** Choose Install Tailscale in the panel.
 2. **Sign in.** Open Tailscale on the Mac and sign in, or make an account. Its icon sits in the menu bar.

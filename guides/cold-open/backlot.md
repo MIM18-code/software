@@ -17,7 +17,7 @@ File > Review Draft in Backlot… opens the handoff dialog:
 3. Optionally set a Revision label.
 4. Choose Preview captured draft to see what will be sent.
 5. Review the scene matches, cast changes and breakdown elements in this Cold Open dialog. Resolve any unmatched identities. If you change the choices, choose Review revised choices.
-6. Choose Apply reviewed import… to apply the reviewed draft to the Backlot project. Then review the schedule in Backlot.
+6. Choose Apply reviewed import… and confirm to apply the reviewed draft to the Backlot project. Then review the schedule in Backlot.
 
 Preview saves an immutable FDX copy into the chosen project's `.inklot-drafts` folder. It does not change the production project. Cold Open triggers no automatic scheduling, no call-sheet sends and no silent AI breakdown; if Backlot's own synopsis automation is on, it may act after the import lands.
 
